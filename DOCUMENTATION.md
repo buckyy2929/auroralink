@@ -2,6 +2,8 @@
 
 Technical documentation for a **bidirectional mediator** running on AMD Xilinx **Kria K26 Robotics** stacks. The mediator connects a domain that speaks **Xilinx Aurora (AuroraLink serial transport)** with a domain that speaks **Ethernet Global Data (EGD)** over UDP.
 
+For the EMS-oriented design intent (layers, producer/consumer model, buffer states, success criteria), see **[DESIGN_INTENT.md](DESIGN_INTENT.md)**.
+
 ---
 
 ## 1. Problem space
