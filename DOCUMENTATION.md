@@ -61,7 +61,7 @@ flowchart LR
 
 Primary reference collateral in this workspace today:
 
-- **`libEGD-master.zip`** — C/C++ oriented EGD implementation with CMake, Docker build, JsonClient (recommended ergonomics), and raw `EgdClient` for latency-sensitive paths (`README.md` inside archive).
+- **`libEGD-master/`** — C/C++ oriented EGD implementation with CMake, Docker build, JsonClient (recommended ergonomics), and raw `EgdClient` for latency-sensitive paths (`libEGD-master/README.md`).
 - **`EgdSend.c` / `EgdTest.h`** — Minimal POSIX example of **EGD Data Production** messages (PDU type 13, default UDP port **18246**, payload cap **1400** bytes in these headers), useful for conformance testing against the mediator.
 - **Kria CHIL documentation** (`Kria CHIL Documentation.docx` in repo snapshot) — use for robotics-specific BSP, networking, device tree / boot, and Xilinx runtime expectations on Kria robotics SKUs where applicable.
 
@@ -220,7 +220,7 @@ Maintain **machine-readable map artifacts** (`yaml`/`json`/generated headers) co
 - Sanity check UDP multicast/unicast reachability (`DEFAULT_DESTINATION` patterns).
 - Observe interplay between pacing timer strategy and jitter statistics before embedding into multi-thread mediator.
 
-Unpack `libEGD-master/` when integrating C++ mediator services; leverage **JSON client** pathways unless absolute raw timing demands direct `EgdClient` pipelines.
+The `libEGD-master/` sources are tracked in-repo; integrate C++ mediator services from that tree directly. Prefer **JSON client** pathways unless absolute raw timing demands direct `EgdClient` pipelines.
 
 ### 6.2 Aurora companion integration placeholder
 
@@ -269,7 +269,7 @@ Primary inputs today:
 
 ```
 EgdSend.c / EgdTest.h        — Minimal EGD emission & header definitions
-libEGD-master.zip            — Full-featured structured EGD implementation
+libEGD-master/               — Full-featured structured EGD implementation (sources)
 Kria CHIL Documentation.docx — Platform-specific operational guidance
 (EgdSend)                    — Prebuilt aarch64 Linux sample binary artifact
 ```
