@@ -1,0 +1,3689 @@
+Test Circuit
+C
+C Compiled by: DRAFT 1.2
+C Source File:C:\projects\Multiport\multiport_git\models\RTDS_CHIL\PEBB_DCAC\PEBB_DCAC.dfx
+C
+C==============================================================================================
+DRAFT_VERSION=1.2
+TIME_STEP= 1.25E-4 FINISH_TIME= 0.2
+NUMBER_OF_SUBSYSTEMS= 1
+CTLS_ORDER_MODE= AUTO
+MAX_UNIQUEID_CNT= 2665
+DISTRIBUTION_MODE= 0
+SUBSYSTEM_NUMBER= 1
+NUMBER_OF_DRAFT_VARIABLES=18
+SECTION: PRE_PROCESSOR
+       Slider Desc="HW_PAUSE_OC" Group="DraftVariables"   Max=10 Min=0 InitValue=0.32 Units="kA"
+        String Desc="HW_PAUSE_OC" Group="DraftVariables|Annotation" InitValue="kA"
+       Slider Desc="LLLrmtshrt" Group="DraftVariables"   Max=100.0 Min=0.0 InitValue=0.000153 Units=""
+        String Desc="LLLrmtshrt" Group="DraftVariables|Annotation" InitValue=""
+       Slider Desc="LLoadrmtshrt" Group="DraftVariables"   Max=100.0 Min=0.0 InitValue=0.000153 Units=""
+        String Desc="LLoadrmtshrt" Group="DraftVariables|Annotation" InitValue=""
+       Slider Desc="R_hv_load" Group="DraftVariables"   Max=100.0 Min=0.0 InitValue=17.306 Units="ohms"
+        String Desc="R_hv_load" Group="DraftVariables|Annotation" InitValue="ohms"
+       Slider Desc="RBaseLoad" Group="DraftVariables"   Max=100.0 Min=0.0 InitValue=7.6914 Units="ohms"
+        String Desc="RBaseLoad" Group="DraftVariables|Annotation" InitValue="ohms"
+       Slider Desc="RLLrmtshrt" Group="DraftVariables"   Max=100.0 Min=0.0 InitValue=0.0028843 Units=""
+        String Desc="RLLrmtshrt" Group="DraftVariables|Annotation" InitValue=""
+       Slider Desc="RLoadrmtshrt" Group="DraftVariables"   Max=100.0 Min=0.0 InitValue=0.0028843 Units="Ohm"
+        String Desc="RLoadrmtshrt" Group="DraftVariables|Annotation" InitValue="Ohm"
+       Slider Desc="SQ_LOAD_DUTY" Group="DraftVariables"   Max=100 Min=0 InitValue=50 Units="%"
+        String Desc="SQ_LOAD_DUTY" Group="DraftVariables|Annotation" InitValue="%"
+       Slider Desc="SUBSTEP_CNT" Group="DraftVariables"   Max=60 Min=16 InitValue=24 Units=""
+        String Desc="SUBSTEP_CNT" Group="DraftVariables|Annotation" InitValue=""
+    String Desc="CircuitTitle Annotation" Group="Annotation" InitValue="Test Circuit"
+END_SECTION
+
+SECTION: NODE_SECTION
+   NUMBER_OF_NODES= 47
+   INITIAL_NODE_VOLTAGES= 0.0
+      NODE= 1 VBASE= 0 IBASE= 0 NODENAME= "1" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 2 VBASE= 0 IBASE= 0 NODENAME= "2" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 3 VBASE= 3.41 IBASE= 1.0 NODENAME= "v_high_B" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 4 VBASE= 0.871 IBASE= 1.0 NODENAME= "v_dccp" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 5 VBASE= 0 IBASE= 0 NODENAME= "5" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 6 VBASE= 0 IBASE= 0 NODENAME= "6" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 7 VBASE= 0.871 IBASE= 1.0 NODENAME= "v_busp" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 8 VBASE= 3.41 IBASE= 1.0 NODENAME= "v_grid_A" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 9 VBASE= 3.41 IBASE= 1.0 NODENAME= "v_grid_B" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 10 VBASE= 3.41 IBASE= 1.0 NODENAME= "v_grid_C" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 11 VBASE= 0 IBASE= 0 NODENAME= "11" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 12 VBASE= 0 IBASE= 0 NODENAME= "12" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 13 VBASE= 0 IBASE= 0 NODENAME= "13" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 14 VBASE= 0 IBASE= 0 NODENAME= "14" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 15 VBASE= 0 IBASE= 0 NODENAME= "15" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 16 VBASE= 0 IBASE= 0 NODENAME= "16"    
+      NODE= 17 VBASE= 0 IBASE= 0 NODENAME= "17" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 18 VBASE= 0 IBASE= 0 NODENAME= "18" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 19 VBASE= 0 IBASE= 0 NODENAME= "19" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 20 VBASE= 0 IBASE= 0 NODENAME= "20" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 21 VBASE= 0 IBASE= 0 NODENAME= "21" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 22 VBASE= 0 IBASE= 0 NODENAME= "22" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 23 VBASE= 0 IBASE= 0 NODENAME= "23" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 24 VBASE= 0 IBASE= 0 NODENAME= "24" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 25 VBASE= 0 IBASE= 0 NODENAME= "25" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 26 VBASE= 0 IBASE= 0 NODENAME= "26" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 27 VBASE= 0 IBASE= 0 NODENAME= "27" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 28 VBASE= 0 IBASE= 0 NODENAME= "28" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 29 VBASE= 0 IBASE= 0 NODENAME= "29" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 30 VBASE= 0 IBASE= 0 NODENAME= "30" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 31 VBASE= 0 IBASE= 0 NODENAME= "31" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 32 VBASE= 0 IBASE= 0 NODENAME= "32" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 33 VBASE= 0 IBASE= 0 NODENAME= "33" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 34 VBASE= 0 IBASE= 0 NODENAME= "34" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 35 VBASE= 0.001 IBASE= 1.0 NODENAME= "v_n" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 36 VBASE= 3.41 IBASE= 1.0 NODENAME= "v_high_A" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 37 VBASE= 0 IBASE= 0 NODENAME= "37" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 38 VBASE= 0 IBASE= 0 NODENAME= "38" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 39 VBASE= 0 IBASE= 0 NODENAME= "39" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 40 VBASE= 0 IBASE= 0 NODENAME= "40" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 41 VBASE= 0 IBASE= 0 NODENAME= "41" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 42 VBASE= 0 IBASE= 0 NODENAME= "42" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 43 VBASE= 0 IBASE= 0 NODENAME= "43" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 44 VBASE= 0 IBASE= 0 NODENAME= "44" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 45 VBASE= 0 IBASE= 0 NODENAME= "45" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 46 VBASE= 0 IBASE= 0 NODENAME= "46" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+      NODE= 47 VBASE= 3.41 IBASE= 1.0 NODENAME= "v_high_C" MULTIRATE_SS_BOXPARENT= 877 MONITOR_VOLTAGE=1    
+   NUMBER_OF_VSC_NODES= 0
+END_SECTION
+
+SECTION: NETWORK_RLC_BRANCH
+   NUMBER_OF_BRANCHES= 43
+1  7  5.0E-7 0.0 0.0 /-dai2 0 i_low
+4  35  0.0 0.0 5204.0 /
+2  35  300.0 0.0 0.0 /
+34  36  0.0 0.003 0.0 /-dai2 0 i_high_A
+20  35  0.0035 0.0 0.0 /
+21  35  0.0035 0.0 0.0 /
+37  3  0.0 0.003 0.0 /-dai2 0 i_high_B
+22  35  0.0035 0.0 0.0 /
+38  47  0.0 0.003 0.0 /-dai2 0 i_high_C
+0  4  1000000.0 0.0 0.0 /
+0  35  1000000.0 0.0 0.0 /
+7  27  1.0E-6 0.0 0.0 /-dai2 0 i_load
+10  18  1.0E-6 0.0 0.0 /-dai2 0 i_load_C
+8  19  1.0E-6 0.0 0.0 /-dai2 0 i_load_A
+9  17  1.0E-6 0.0 0.0 /-dai2 0 i_load_B
+16  0  1.0 0.0 0.0 /
+DRAFT_UNIQUEID=1933
+6  11  0.0028843 0.000153 0.0  /
+DRAFT_UNIQUEID=1934
+13  11  0.0028843 0.000153 0.0  /
+DRAFT_UNIQUEID=1985
+12  10  0.0028843 0.000153 0.0  /
+DRAFT_UNIQUEID=1935
+14  11  0.0028843 0.000153 0.0  /
+DRAFT_UNIQUEID=1983
+10 15 7.6914 0.0 0.0 / -dai1_AMM 0 IresA5
+9 15 7.6914 0.0 0.0 / -dai1_AMM 0 IresB5
+8 15 7.6914 0.0 0.0 / -dai1_AMM 0 IresC5
+DRAFT_UNIQUEID=1979
+26 24 17.306 0.0 0.0 / -dai1_AMM 0 IresA4
+25 24 17.306 0.0 0.0 / -dai1_AMM 0 IresB4
+23 24 17.306 0.0 0.0 / -dai1_AMM 0 IresC4
+DRAFT_UNIQUEID=1564
+34 36 1.0 0.0 0.0 / -SHARC_AMM 1 i_high_A
+DRAFT_UNIQUEID=1649
+37 3 1.0 0.0 0.0 / -SHARC_AMM 1 i_high_B
+DRAFT_UNIQUEID=1701
+38 47 1.0 0.0 0.0 / -SHARC_AMM 1 i_high_C
+DRAFT_UNIQUEID=1837
+7 27 1.0 0.0 0.0 / -SHARC_AMM 1 i_load
+DRAFT_UNIQUEID=1966
+8 19 1.0 0.0 0.0 / -SHARC_AMM 1 i_load_A
+DRAFT_UNIQUEID=1967
+9 17 1.0 0.0 0.0 / -SHARC_AMM 1 i_load_B
+DRAFT_UNIQUEID=1965
+10 18 1.0 0.0 0.0 / -SHARC_AMM 1 i_load_C
+DRAFT_UNIQUEID=1551
+1 7 1.0 0.0 0.0 / -SHARC_AMM 1 i_low
+DRAFT_UNIQUEID=1601
+7  0  1.0 0.0 0.0 / -SHR_NOD  0    v_busp 0    1    1.0  0
+DRAFT_UNIQUEID=1553
+4  0  1.0 0.0 0.0 / -SHR_NOD  0    v_dccp 0    1    1.0  0
+DRAFT_UNIQUEID=1630
+8  0  1.0 0.0 0.0 / -SHR_NOD  0    v_grid_A 0    1    1.0  0
+DRAFT_UNIQUEID=1632
+9  0  1.0 0.0 0.0 / -SHR_NOD  0    v_grid_B 0    1    1.0  0
+DRAFT_UNIQUEID=1684
+10  0  1.0 0.0 0.0 / -SHR_NOD  0    v_grid_C 0    1    1.0  0
+DRAFT_UNIQUEID=1591
+36  0  1.0 0.0 0.0 / -SHR_NOD  0    v_high_A 0    1    1.0  0
+DRAFT_UNIQUEID=1668
+3  0  1.0 0.0 0.0 / -SHR_NOD  0    v_high_B 0    1    1.0  0
+DRAFT_UNIQUEID=1722
+47  0  1.0 0.0 0.0 / -SHR_NOD  0    v_high_C 0    1    1.0  0
+DRAFT_UNIQUEID=1790
+35  0  1.0 0.0 0.0 / -SHR_NOD  0    v_n 0    1    1.0  0
+END_SECTION
+
+999      / End of Sequencer data
+C
+C ===================================================================================
+SECTION: VALVE_GROUP_DATA
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = box_noTS NameParam = box1 SubSystem = 1
+      DRAFT_UNIQUEID=1346 MULTIRATE_SS_BOXPARENT=877 LOCATION=176 336
+      DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=0
+      CHARDATA_FRMT: <<<box1>>>(((Name)))
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = box_noTS NameParam = Box3 SubSystem = 1
+      DRAFT_UNIQUEID=879 MULTIRATE_SS_BOXPARENT=877 LOCATION=176 144
+      DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=0
+      CHARDATA_FRMT: <<<Box3>>>(((Name)))
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = box_noTS NameParam = box3 SubSystem = 1
+      DRAFT_UNIQUEID=925 MULTIRATE_SS_BOXPARENT=877 LOCATION=560 144
+      DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=0
+      CHARDATA_FRMT: <<<box3>>>(((Name)))
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = box_noTS NameParam = box4 SubSystem = 1
+      DRAFT_UNIQUEID=1010 MULTIRATE_SS_BOXPARENT=877 LOCATION=336 176
+      DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=0
+      CHARDATA_FRMT: <<<box4>>>(((Name)))
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = box_noTS NameParam = box6 SubSystem = 1
+      DRAFT_UNIQUEID=1490 MULTIRATE_SS_BOXPARENT=877 LOCATION=464 144
+      DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=0
+      CHARDATA_FRMT: <<<box6>>>(((Name)))
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = box_noTS NameParam = box7 SubSystem = 1
+      DRAFT_UNIQUEID=2040 HIERARCHY_BOXPARENT=2040 LOCATION=688 624
+      DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=0
+      CHARDATA_FRMT: <<<box7>>>(((Name)))
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = box_noTS NameParam = Box_MV_AC SubSystem = 1
+      DRAFT_UNIQUEID=1902 MULTIRATE_SS_BOXPARENT=877 LOCATION=624 496
+      DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=0
+      CHARDATA_FRMT: <<<Box_MV_AC>>>(((Name)))
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = box_noTS NameParam = Calculations SubSystem = 1
+      DRAFT_UNIQUEID=2175 HIERARCHY_BOXPARENT=2175 LOCATION=688 528
+      DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=0
+      CHARDATA_FRMT: <<<Calculations>>>(((Name)))
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = _hierarchy_cb NameParam = Ckt1 SubSystem = 1
+      DRAFT_UNIQUEID=877 MULTIRATE_SS_BOXPARENT=877 LOCATION=560 528
+      DATA_SIZES: INTDATA=7 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=0
+      INTDATA: 2 superStepMulti
+     INTDATA: 24 SubstepDivisor 1 SubstepBoxType 1 smtsProcesses 2 Type
+     INTDATA: 1 enableSoftScheduling 1 SuperstepBoxType
+      CHARDATA_FRMT: <<<Ckt1>>>(((Name)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = netsolCB NameParam = Ckt1T1 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=877 MULTIRATE_SS_BOXPARENT=877 LOCATION=560 528
+        DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=0 OUTVARS=0
+      RISC: 0 1 STACK_T0 GENERIC 0 0 1 0 0 0 0 1 2
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = box_noTS NameParam = LV_Load SubSystem = 1
+      DRAFT_UNIQUEID=1814 MULTIRATE_SS_BOXPARENT=877 LOCATION=944 496
+      DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=0
+      CHARDATA_FRMT: <<<LV_Load>>>(((Name)))
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = box_noTS NameParam = PEBB_BOX_AC SubSystem = 1
+      DRAFT_UNIQUEID=1545 MULTIRATE_SS_BOXPARENT=877 LOCATION=784 496
+      DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=0
+      CHARDATA_FRMT: <<<PEBB_BOX_AC>>>(((Name)))
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = box_noTS NameParam = Src_Ctrl SubSystem = 1
+      DRAFT_UNIQUEID=2295 HIERARCHY_BOXPARENT=2295 LOCATION=848 560
+      DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=0
+      CHARDATA_FRMT: <<<Src_Ctrl>>>(((Name)))
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = _16b2Word SubSystem = 1 Processor = 1 Priority = 2
+      DRAFT_UNIQUEID=1087 HIERARCHY_BOXPARENT=1010 LOCATION=1840 368
+    DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=16 OUTVARS=1
+    INTDATA: 8 Ninp
+    INVARS: lowside_contact INT IN1 enable_P INT IN2 highside_contact INT IN3 notfault_P INT IN4 IT_@box4_1g INT IN5
+    INVARS: IT_@box4_u INT IN6 IT_@box4_w INT IN7 precharge_contact INT IN8 _dud_ INT IN9 _dud_ INT IN10
+    INVARS: _dud_ INT IN11 _dud_ INT IN12 _dud_ INT IN13 _dud_ INT IN14 _dud_ INT IN15
+    INVARS: _dud_ INT IN16
+    OUTVARS: cc_bits INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = AuroraNC SubSystem = 1 Processor = 1 Priority = 3
+      DRAFT_UNIQUEID=1026 HIERARCHY_BOXPARENT=1010 LOCATION=1552 144
+      DATA_SIZES: INTDATA=262 FLOATDATA=0 CHARDATA_FRMT=514 INVARS=0 OUTVARS=0
+      INTDATA: 1 Card 21 Port 0 enableSeqNum 0 seqNumBlocking 36 numVarsToAURORA
+      INTDATA: 0 SetTypeToAURORA1 1 SetTypeToAURORA2 1 SetTypeToAURORA3 1 SetTypeToAURORA4 1 SetTypeToAURORA5
+      INTDATA: 1 SetTypeToAURORA6 1 SetTypeToAURORA7 1 SetTypeToAURORA8 1 SetTypeToAURORA9 1 SetTypeToAURORA10
+      INTDATA: 1 SetTypeToAURORA11 1 SetTypeToAURORA12 1 SetTypeToAURORA13 1 SetTypeToAURORA14 0 SetTypeToAURORA15
+      INTDATA: 1 SetTypeToAURORA16 1 SetTypeToAURORA17 1 SetTypeToAURORA18 1 SetTypeToAURORA19 1 SetTypeToAURORA20
+      INTDATA: 1 SetTypeToAURORA21 1 SetTypeToAURORA22 1 SetTypeToAURORA23 1 SetTypeToAURORA24 1 SetTypeToAURORA25
+      INTDATA: 1 SetTypeToAURORA26 1 SetTypeToAURORA27 1 SetTypeToAURORA28 1 SetTypeToAURORA29 1 SetTypeToAURORA30
+      INTDATA: 1 SetTypeToAURORA31 1 SetTypeToAURORA32 1 SetTypeToAURORA33 1 SetTypeToAURORA34 0 SetTypeToAURORA35
+      INTDATA: 0 SetTypeToAURORA36 0 SetTypeToAURORA37 0 SetTypeToAURORA38 0 SetTypeToAURORA39 0 SetTypeToAURORA40
+      INTDATA: 0 SetTypeToAURORA41 0 SetTypeToAURORA42 0 SetTypeToAURORA43 0 SetTypeToAURORA44 0 SetTypeToAURORA45
+      INTDATA: 0 SetTypeToAURORA46 0 SetTypeToAURORA47 0 SetTypeToAURORA48 0 SetTypeToAURORA49 0 SetTypeToAURORA50
+      INTDATA: 0 SetTypeToAURORA51 0 SetTypeToAURORA52 0 SetTypeToAURORA53 0 SetTypeToAURORA54 0 SetTypeToAURORA55
+      CHARDATA_FRMT: <<<v_dcc_TX>>>(((out5x))) <<<i_low_TX>>>(((out6x))) <<<dummy_float_TX>>>(((out7x))) <<<pebb_state_cmd>>>(((out8x))) <<<P_cmd>>>(((out9x)))
+      CHARDATA_FRMT: <<<low_contact_cmd>>>(((out10x))) <<<P_ll>>>(((out11x))) <<<P_ul>>>(((out12x))) <<<dummy_float_TX>>>(((out13x))) <<<dummy_float_TX>>>(((out14x)))
+      CHARDATA_FRMT: <<<ctr>>>(((out15x))) <<<dummy_float_TX>>>(((out16x))) <<<dummy_float_TX>>>(((out17x))) <<<dummy_float_TX>>>(((out18x))) <<<dummy_float_TX>>>(((out19x)))
+      CHARDATA_FRMT: <<<PEBB_Vbus_Setp>>>(((out20x))) <<<forceFault_PEBB>>>(((out21x))) <<<dummy_float_TX>>>(((out22x))) <<<dummy_float_TX>>>(((out23x))) <<<dummy_float_TX>>>(((out24x)))
+      CHARDATA_FRMT: <<<dummy_float_TX>>>(((out25x))) <<<en_gridsupport>>>(((out26x))) <<<Q_cmd>>>(((out27x))) <<<Q_limit>>>(((out28x))) <<<i_high_B_TX>>>(((out29x)))
+      INTDATA: 0 SetTypeToAURORA56 0 SetTypeToAURORA57 0 SetTypeToAURORA58 0 SetTypeToAURORA59 0 SetTypeToAURORA60
+      INTDATA: 0 SetTypeToAURORA61 0 SetTypeToAURORA62 0 SetTypeToAURORA63 0 SetTypeToAURORA64 22 numVarsFromAURORA
+      INTDATA: 1 SetTypeFrAURORA1 1 SetTypeFrAURORA2 0 SetTypeFrAURORA3 0 SetTypeFrAURORA4 1 SetTypeFrAURORA5
+      INTDATA: 1 SetTypeFrAURORA6 1 SetTypeFrAURORA7 1 SetTypeFrAURORA8 1 SetTypeFrAURORA9 1 SetTypeFrAURORA10
+      INTDATA: 0 SetTypeFrAURORA11 1 SetTypeFrAURORA12 1 SetTypeFrAURORA13 1 SetTypeFrAURORA14 1 SetTypeFrAURORA15
+      INTDATA: 1 SetTypeFrAURORA16 1 SetTypeFrAURORA17 1 SetTypeFrAURORA18 1 SetTypeFrAURORA19 0 SetTypeFrAURORA20
+      INTDATA: 1 SetTypeFrAURORA21 0 SetTypeFrAURORA22 0 SetTypeFrAURORA23 0 SetTypeFrAURORA24 0 SetTypeFrAURORA25
+      INTDATA: 0 SetTypeFrAURORA26 0 SetTypeFrAURORA27 0 SetTypeFrAURORA28 0 SetTypeFrAURORA29 0 SetTypeFrAURORA30
+      INTDATA: 0 SetTypeFrAURORA31 0 SetTypeFrAURORA32 0 SetTypeFrAURORA33 0 SetTypeFrAURORA34 0 SetTypeFrAURORA35
+      INTDATA: 0 SetTypeFrAURORA36 0 SetTypeFrAURORA37 0 SetTypeFrAURORA38 0 SetTypeFrAURORA39 0 SetTypeFrAURORA40
+      INTDATA: 0 SetTypeFrAURORA41 0 SetTypeFrAURORA42 0 SetTypeFrAURORA43 0 SetTypeFrAURORA44 0 SetTypeFrAURORA45
+      INTDATA: 0 SetTypeFrAURORA46 0 SetTypeFrAURORA47 0 SetTypeFrAURORA48 0 SetTypeFrAURORA49 0 SetTypeFrAURORA50
+      CHARDATA_FRMT: <<<i_high_C_TX>>>(((out30x))) <<<v_high_C_TX>>>(((out31x))) <<<v_stator_A_TX>>>(((out32x))) <<<v_stator_B_TX>>>(((out33x))) <<<v_stator_C_TX>>>(((out34x)))
+      CHARDATA_FRMT: <<<run>>>(((out35x))) <<<RXI_chil>>>(((out36x))) <<<Out37w1>>>(((out37x))) <<<Out38w1>>>(((out38x))) <<<Out39w1>>>(((out39x)))
+      CHARDATA_FRMT: <<<Out40w1>>>(((out40x))) <<<Out41w1>>>(((out41x))) <<<Out42w1>>>(((out42x))) <<<Out43w1>>>(((out43x))) <<<Out44w1>>>(((out44x)))
+      CHARDATA_FRMT: <<<Out45w1>>>(((out45x))) <<<Out46w1>>>(((out46x))) <<<Out47w1>>>(((out47x))) <<<Out48w1>>>(((out48x))) <<<Out49w1>>>(((out49x)))
+      CHARDATA_FRMT: <<<Out50w1>>>(((out50x))) <<<Out51w1>>>(((out51x))) <<<Out52w1>>>(((out52x))) <<<Out53w1>>>(((out53x))) <<<Out54w1>>>(((out54x)))
+      INTDATA: 0 SetTypeFrAURORA51 0 SetTypeFrAURORA52 0 SetTypeFrAURORA53 0 SetTypeFrAURORA54 0 SetTypeFrAURORA55
+      INTDATA: 0 SetTypeFrAURORA56 0 SetTypeFrAURORA57 0 SetTypeFrAURORA58 0 SetTypeFrAURORA59 0 SetTypeFrAURORA60
+      INTDATA: 0 SetTypeFrAURORA61 0 SetTypeFrAURORA62 0 SetTypeFrAURORA63 0 SetTypeFrAURORA64 0 SetTypeToAURORA65
+      INTDATA: 0 SetTypeToAURORA66 0 SetTypeToAURORA67 0 SetTypeToAURORA68 0 SetTypeToAURORA69 0 SetTypeToAURORA70
+      INTDATA: 0 SetTypeToAURORA71 0 SetTypeToAURORA72 0 SetTypeToAURORA73 0 SetTypeToAURORA74 0 SetTypeToAURORA75
+      INTDATA: 0 SetTypeToAURORA76 0 SetTypeToAURORA77 0 SetTypeToAURORA78 0 SetTypeToAURORA79 0 SetTypeToAURORA80
+      INTDATA: 0 SetTypeToAURORA81 0 SetTypeToAURORA82 0 SetTypeToAURORA83 0 SetTypeToAURORA84 0 SetTypeToAURORA85
+      INTDATA: 0 SetTypeToAURORA86 0 SetTypeToAURORA87 0 SetTypeToAURORA88 0 SetTypeToAURORA89 0 SetTypeToAURORA90
+      INTDATA: 0 SetTypeToAURORA91 0 SetTypeToAURORA92 0 SetTypeToAURORA93 0 SetTypeToAURORA94 0 SetTypeToAURORA95
+      INTDATA: 0 SetTypeToAURORA96 0 SetTypeToAURORA97 0 SetTypeToAURORA98 0 SetTypeToAURORA99 0 SetTypeToAURORA100
+      INTDATA: 0 SetTypeToAURORA101 0 SetTypeToAURORA102 0 SetTypeToAURORA103 0 SetTypeToAURORA104 0 SetTypeToAURORA105
+      INTDATA: 0 SetTypeToAURORA106 0 SetTypeToAURORA107 0 SetTypeToAURORA108 0 SetTypeToAURORA109 0 SetTypeToAURORA110
+      CHARDATA_FRMT: <<<Out55w1>>>(((out55x))) <<<Out56w1>>>(((out56x))) <<<Out57w1>>>(((out57x))) <<<Out58w1>>>(((out58x))) <<<Out59w1>>>(((out59x)))
+      CHARDATA_FRMT: <<<Out60w1>>>(((out60x))) <<<Out61w1>>>(((out61x))) <<<Out62w1>>>(((out62x))) <<<Out63w1>>>(((out63x))) <<<Out64w1>>>(((out64x)))
+      CHARDATA_FRMT: <<<switch_P_A_RX>>>(((in1x))) <<<switch_A_RX>>>(((in2x))) <<<cc_bits_RX>>>(((in3x))) <<<ctr_RX>>>(((in4x))) <<<PEBB_next_state_cmd_RX>>>(((in5x)))
+      CHARDATA_FRMT: <<<aplm_enable_RX>>>(((in6x))) <<<SLC_current_state_RX>>>(((in7x))) <<<init_ok_RX>>>(((in8x))) <<<bus_ok_RX>>>(((in9x))) <<<batt_fault_RX>>>(((in10x)))
+      CHARDATA_FRMT: <<<PEBB_next_state_RX>>>(((in11x))) <<<PEBB_Power_RX>>>(((in12x))) <<<APLM_SOC_RX>>>(((in13x))) <<<BATT_SOC_RX>>>(((in14x))) <<<P_llim_RX>>>(((in15x)))
+      INTDATA: 0 SetTypeToAURORA111 0 SetTypeToAURORA112 0 SetTypeToAURORA113 0 SetTypeToAURORA114 0 SetTypeToAURORA115
+      INTDATA: 0 SetTypeToAURORA116 0 SetTypeToAURORA117 0 SetTypeToAURORA118 0 SetTypeToAURORA119 0 SetTypeToAURORA120
+      INTDATA: 0 SetTypeToAURORA121 0 SetTypeToAURORA122 0 SetTypeToAURORA123 0 SetTypeToAURORA124 0 SetTypeToAURORA125
+      INTDATA: 0 SetTypeToAURORA126 0 SetTypeToAURORA127 0 SetTypeToAURORA128 0 SetTypeFrAURORA65 0 SetTypeFrAURORA66
+      INTDATA: 0 SetTypeFrAURORA67 0 SetTypeFrAURORA68 0 SetTypeFrAURORA69 0 SetTypeFrAURORA70 0 SetTypeFrAURORA71
+      INTDATA: 0 SetTypeFrAURORA72 0 SetTypeFrAURORA73 0 SetTypeFrAURORA74 0 SetTypeFrAURORA75 0 SetTypeFrAURORA76
+      INTDATA: 0 SetTypeFrAURORA77 0 SetTypeFrAURORA78 0 SetTypeFrAURORA79 0 SetTypeFrAURORA80 0 SetTypeFrAURORA81
+      INTDATA: 0 SetTypeFrAURORA82 0 SetTypeFrAURORA83 0 SetTypeFrAURORA84 0 SetTypeFrAURORA85 0 SetTypeFrAURORA86
+      INTDATA: 0 SetTypeFrAURORA87 0 SetTypeFrAURORA88 0 SetTypeFrAURORA89 0 SetTypeFrAURORA90 0 SetTypeFrAURORA91
+      INTDATA: 0 SetTypeFrAURORA92 0 SetTypeFrAURORA93 0 SetTypeFrAURORA94 0 SetTypeFrAURORA95 0 SetTypeFrAURORA96
+      INTDATA: 0 SetTypeFrAURORA97 0 SetTypeFrAURORA98 0 SetTypeFrAURORA99 0 SetTypeFrAURORA100 0 SetTypeFrAURORA101
+      INTDATA: 0 SetTypeFrAURORA102 0 SetTypeFrAURORA103 0 SetTypeFrAURORA104 0 SetTypeFrAURORA105 0 SetTypeFrAURORA106
+      CHARDATA_FRMT: <<<Q_ulim_RX>>>(((in16x))) <<<Q_llim_RX>>>(((in17x))) <<<switch_P_B_RX>>>(((in18x))) <<<switch_P_C_RX>>>(((in19x))) <<<PEBB_current_state_RX>>>(((in20x)))
+      CHARDATA_FRMT: <<<P_ulim_RX>>>(((in21x))) <<<CHIL_error>>>(((in22x))) <<<in23w1>>>(((in23x))) <<<in24w1>>>(((in24x))) <<<in25w1>>>(((in25x)))
+      CHARDATA_FRMT: <<<in26w1>>>(((in26x))) <<<in27w1>>>(((in27x))) <<<in28w1>>>(((in28x))) <<<in29w1>>>(((in29x))) <<<in30w1>>>(((in30x)))
+      CHARDATA_FRMT: <<<in31w1>>>(((in31x))) <<<in32w1>>>(((in32x))) <<<in33w1>>>(((in33x))) <<<in34w1>>>(((in34x))) <<<in35w1>>>(((in35x)))
+      CHARDATA_FRMT: <<<in36w1>>>(((in36x))) <<<in37w1>>>(((in37x))) <<<in38w1>>>(((in38x))) <<<in39w1>>>(((in39x))) <<<in40w1>>>(((in40x)))
+      INTDATA: 0 SetTypeFrAURORA107 0 SetTypeFrAURORA108 0 SetTypeFrAURORA109 0 SetTypeFrAURORA110 0 SetTypeFrAURORA111
+      INTDATA: 0 SetTypeFrAURORA112 0 SetTypeFrAURORA113 0 SetTypeFrAURORA114 0 SetTypeFrAURORA115 0 SetTypeFrAURORA116
+      INTDATA: 0 SetTypeFrAURORA117 0 SetTypeFrAURORA118 0 SetTypeFrAURORA119 0 SetTypeFrAURORA120 0 SetTypeFrAURORA121
+      INTDATA: 0 SetTypeFrAURORA122 0 SetTypeFrAURORA123 0 SetTypeFrAURORA124 0 SetTypeFrAURORA125 0 SetTypeFrAURORA126
+      INTDATA: 0 SetTypeFrAURORA127 0 SetTypeFrAURORA128
+      CHARDATA_FRMT: <<<in41w1>>>(((in41x))) <<<in42w1>>>(((in42x))) <<<in43w1>>>(((in43x))) <<<in44w1>>>(((in44x))) <<<in45w1>>>(((in45x)))
+      CHARDATA_FRMT: <<<in46w1>>>(((in46x))) <<<in47w1>>>(((in47x))) <<<in48w1>>>(((in48x))) <<<in49w1>>>(((in49x))) <<<in50w1>>>(((in50x)))
+      CHARDATA_FRMT: <<<in51w1>>>(((in51x))) <<<in52w1>>>(((in52x))) <<<in53w1>>>(((in53x))) <<<in54w1>>>(((in54x))) <<<in55w1>>>(((in55x)))
+      CHARDATA_FRMT: <<<in56w1>>>(((in56x))) <<<in57w1>>>(((in57x))) <<<in58w1>>>(((in58x))) <<<in59w1>>>(((in59x))) <<<in60w1>>>(((in60x)))
+      CHARDATA_FRMT: <<<in61w1>>>(((in61x))) <<<in62w1>>>(((in62x))) <<<in63w1>>>(((in63x))) <<<in64w1>>>(((in64x))) <<<packet_key>>>(((out1x)))
+      CHARDATA_FRMT: <<<i_high_A_TX>>>(((out2x))) <<<v_high_B_TX>>>(((out3x))) <<<v_high_A_TX>>>(((out4x))) <<<Aurora1>>>(((Name))) <<<>>>(((sfx)))
+      CHARDATA_FRMT: <<<packet_key>>>(((out1))) <<<i_high_A_TX>>>(((out2))) <<<v_high_B_TX>>>(((out3))) <<<v_high_A_TX>>>(((out4))) <<<v_dcc_TX>>>(((out5)))
+      CHARDATA_FRMT: <<<i_low_TX>>>(((out6))) <<<dummy_float_TX>>>(((out7))) <<<pebb_state_cmd>>>(((out8))) <<<P_cmd>>>(((out9))) <<<low_contact_cmd>>>(((out10)))
+      CHARDATA_FRMT: <<<P_ll>>>(((out11))) <<<P_ul>>>(((out12))) <<<dummy_float_TX>>>(((out13))) <<<dummy_float_TX>>>(((out14))) <<<ctr>>>(((out15)))
+      CHARDATA_FRMT: <<<dummy_float_TX>>>(((out16))) <<<dummy_float_TX>>>(((out17))) <<<dummy_float_TX>>>(((out18))) <<<dummy_float_TX>>>(((out19))) <<<PEBB_Vbus_Setp>>>(((out20)))
+      CHARDATA_FRMT: <<<forceFault_PEBB>>>(((out21))) <<<dummy_float_TX>>>(((out22))) <<<dummy_float_TX>>>(((out23))) <<<dummy_float_TX>>>(((out24))) <<<dummy_float_TX>>>(((out25)))
+      CHARDATA_FRMT: <<<en_gridsupport>>>(((out26))) <<<Q_cmd>>>(((out27))) <<<Q_limit>>>(((out28))) <<<i_high_B_TX>>>(((out29))) <<<i_high_C_TX>>>(((out30)))
+      CHARDATA_FRMT: <<<v_high_C_TX>>>(((out31))) <<<v_stator_A_TX>>>(((out32))) <<<v_stator_B_TX>>>(((out33))) <<<v_stator_C_TX>>>(((out34))) <<<run>>>(((out35)))
+      CHARDATA_FRMT: <<<RXI_chil>>>(((out36))) <<<Out37w1>>>(((out37))) <<<Out38w1>>>(((out38))) <<<Out39w1>>>(((out39))) <<<Out40w1>>>(((out40)))
+      CHARDATA_FRMT: <<<Out41w1>>>(((out41))) <<<Out42w1>>>(((out42))) <<<Out43w1>>>(((out43))) <<<Out44w1>>>(((out44))) <<<Out45w1>>>(((out45)))
+      CHARDATA_FRMT: <<<Out46w1>>>(((out46))) <<<Out47w1>>>(((out47))) <<<Out48w1>>>(((out48))) <<<Out49w1>>>(((out49))) <<<Out50w1>>>(((out50)))
+      CHARDATA_FRMT: <<<Out51w1>>>(((out51))) <<<Out52w1>>>(((out52))) <<<Out53w1>>>(((out53))) <<<Out54w1>>>(((out54))) <<<Out55w1>>>(((out55)))
+      CHARDATA_FRMT: <<<Out56w1>>>(((out56))) <<<Out57w1>>>(((out57))) <<<Out58w1>>>(((out58))) <<<Out59w1>>>(((out59))) <<<Out60w1>>>(((out60)))
+      CHARDATA_FRMT: <<<Out61w1>>>(((out61))) <<<Out62w1>>>(((out62))) <<<Out63w1>>>(((out63))) <<<Out64w1>>>(((out64))) <<<switch_P_A_RX>>>(((in1)))
+      CHARDATA_FRMT: <<<switch_A_RX>>>(((in2))) <<<cc_bits_RX>>>(((in3))) <<<ctr_RX>>>(((in4))) <<<PEBB_next_state_cmd_RX>>>(((in5))) <<<aplm_enable_RX>>>(((in6)))
+      CHARDATA_FRMT: <<<SLC_current_state_RX>>>(((in7))) <<<init_ok_RX>>>(((in8))) <<<bus_ok_RX>>>(((in9))) <<<batt_fault_RX>>>(((in10))) <<<PEBB_next_state_RX>>>(((in11)))
+      CHARDATA_FRMT: <<<PEBB_Power_RX>>>(((in12))) <<<APLM_SOC_RX>>>(((in13))) <<<BATT_SOC_RX>>>(((in14))) <<<P_llim_RX>>>(((in15))) <<<Q_ulim_RX>>>(((in16)))
+      CHARDATA_FRMT: <<<Q_llim_RX>>>(((in17))) <<<switch_P_B_RX>>>(((in18))) <<<switch_P_C_RX>>>(((in19))) <<<PEBB_current_state_RX>>>(((in20))) <<<P_ulim_RX>>>(((in21)))
+      CHARDATA_FRMT: <<<CHIL_error>>>(((in22))) <<<in23w1>>>(((in23))) <<<in24w1>>>(((in24))) <<<in25w1>>>(((in25))) <<<in26w1>>>(((in26)))
+      CHARDATA_FRMT: <<<in27w1>>>(((in27))) <<<in28w1>>>(((in28))) <<<in29w1>>>(((in29))) <<<in30w1>>>(((in30))) <<<in31w1>>>(((in31)))
+      CHARDATA_FRMT: <<<in32w1>>>(((in32))) <<<in33w1>>>(((in33))) <<<in34w1>>>(((in34))) <<<in35w1>>>(((in35))) <<<in36w1>>>(((in36)))
+      CHARDATA_FRMT: <<<in37w1>>>(((in37))) <<<in38w1>>>(((in38))) <<<in39w1>>>(((in39))) <<<in40w1>>>(((in40))) <<<in41w1>>>(((in41)))
+      CHARDATA_FRMT: <<<in42w1>>>(((in42))) <<<in43w1>>>(((in43))) <<<in44w1>>>(((in44))) <<<in45w1>>>(((in45))) <<<in46w1>>>(((in46)))
+      CHARDATA_FRMT: <<<in47w1>>>(((in47))) <<<in48w1>>>(((in48))) <<<in49w1>>>(((in49))) <<<in50w1>>>(((in50))) <<<in51w1>>>(((in51)))
+      CHARDATA_FRMT: <<<in52w1>>>(((in52))) <<<in53w1>>>(((in53))) <<<in54w1>>>(((in54))) <<<in55w1>>>(((in55))) <<<in56w1>>>(((in56)))
+      CHARDATA_FRMT: <<<in57w1>>>(((in57))) <<<in58w1>>>(((in58))) <<<in59w1>>>(((in59))) <<<in60w1>>>(((in60))) <<<in61w1>>>(((in61)))
+      CHARDATA_FRMT: <<<in62w1>>>(((in62))) <<<in63w1>>>(((in63))) <<<in64w1>>>(((in64))) <<<Out65w1>>>(((out65))) <<<Out66w1>>>(((out66)))
+      CHARDATA_FRMT: <<<Out67w1>>>(((out67))) <<<Out68w1>>>(((out68))) <<<Out69w1>>>(((out69))) <<<Out70w1>>>(((out70))) <<<Out71w1>>>(((out71)))
+      CHARDATA_FRMT: <<<Out72w1>>>(((out72))) <<<Out73w1>>>(((out73))) <<<Out74w1>>>(((out74))) <<<Out75w1>>>(((out75))) <<<Out76w1>>>(((out76)))
+      CHARDATA_FRMT: <<<Out77w1>>>(((out77))) <<<Out78w1>>>(((out78))) <<<Out79w1>>>(((out79))) <<<Out80w1>>>(((out80))) <<<Out81w1>>>(((out81)))
+      CHARDATA_FRMT: <<<Out82w1>>>(((out82))) <<<Out83w1>>>(((out83))) <<<Out84w1>>>(((out84))) <<<Out85w1>>>(((out85))) <<<Out86w1>>>(((out86)))
+      CHARDATA_FRMT: <<<Out87w1>>>(((out87))) <<<Out88w1>>>(((out88))) <<<Out89w1>>>(((out89))) <<<Out90w1>>>(((out90))) <<<Out91w1>>>(((out91)))
+      CHARDATA_FRMT: <<<Out92w1>>>(((out92))) <<<Out93w1>>>(((out93))) <<<Out94w1>>>(((out94))) <<<Out95w1>>>(((out95))) <<<Out96w1>>>(((out96)))
+      CHARDATA_FRMT: <<<Out97w1>>>(((out97))) <<<Out98w1>>>(((out98))) <<<Out99w1>>>(((out99))) <<<Out100w1>>>(((out100))) <<<Out101w1>>>(((out101)))
+      CHARDATA_FRMT: <<<Out102w1>>>(((out102))) <<<Out103w1>>>(((out103))) <<<Out104w1>>>(((out104))) <<<Out105w1>>>(((out105))) <<<Out106w1>>>(((out106)))
+      CHARDATA_FRMT: <<<Out107w1>>>(((out107))) <<<Out108w1>>>(((out108))) <<<Out109w1>>>(((out109))) <<<Out110w1>>>(((out110))) <<<Out111w1>>>(((out111)))
+      CHARDATA_FRMT: <<<Out112w1>>>(((out112))) <<<Out113w1>>>(((out113))) <<<Out114w1>>>(((out114))) <<<Out115w1>>>(((out115))) <<<Out116w1>>>(((out116)))
+      CHARDATA_FRMT: <<<Out117w1>>>(((out117))) <<<Out118w1>>>(((out118))) <<<Out119w1>>>(((out119))) <<<Out120w1>>>(((out120))) <<<Out121w1>>>(((out121)))
+      CHARDATA_FRMT: <<<Out122w1>>>(((out122))) <<<Out123w1>>>(((out123))) <<<Out124w1>>>(((out124))) <<<Out125w1>>>(((out125))) <<<Out126w1>>>(((out126)))
+      CHARDATA_FRMT: <<<Out127w1>>>(((out127))) <<<Out128w1>>>(((out128))) <<<in65w1>>>(((in65))) <<<in66w1>>>(((in66))) <<<in67w1>>>(((in67)))
+      CHARDATA_FRMT: <<<in68w1>>>(((in68))) <<<in69w1>>>(((in69))) <<<in70w1>>>(((in70))) <<<in71w1>>>(((in71))) <<<in72w1>>>(((in72)))
+      CHARDATA_FRMT: <<<in73w1>>>(((in73))) <<<in74w1>>>(((in74))) <<<in75w1>>>(((in75))) <<<in76w1>>>(((in76))) <<<in77w1>>>(((in77)))
+      CHARDATA_FRMT: <<<in78w1>>>(((in78))) <<<in79w1>>>(((in79))) <<<in80w1>>>(((in80))) <<<in81w1>>>(((in81))) <<<in82w1>>>(((in82)))
+      CHARDATA_FRMT: <<<in83w1>>>(((in83))) <<<in84w1>>>(((in84))) <<<in85w1>>>(((in85))) <<<in86w1>>>(((in86))) <<<in87w1>>>(((in87)))
+      CHARDATA_FRMT: <<<in88w1>>>(((in88))) <<<in89w1>>>(((in89))) <<<in90w1>>>(((in90))) <<<in91w1>>>(((in91))) <<<in92w1>>>(((in92)))
+      CHARDATA_FRMT: <<<in93w1>>>(((in93))) <<<in94w1>>>(((in94))) <<<in95w1>>>(((in95))) <<<in96w1>>>(((in96))) <<<in97w1>>>(((in97)))
+      CHARDATA_FRMT: <<<in98w1>>>(((in98))) <<<in99w1>>>(((in99))) <<<in100w1>>>(((in100))) <<<in101w1>>>(((in101))) <<<in102w1>>>(((in102)))
+      CHARDATA_FRMT: <<<in103w1>>>(((in103))) <<<in104w1>>>(((in104))) <<<in105w1>>>(((in105))) <<<in106w1>>>(((in106))) <<<in107w1>>>(((in107)))
+      CHARDATA_FRMT: <<<in108w1>>>(((in108))) <<<in109w1>>>(((in109))) <<<in110w1>>>(((in110))) <<<in111w1>>>(((in111))) <<<in112w1>>>(((in112)))
+      CHARDATA_FRMT: <<<in113w1>>>(((in113))) <<<in114w1>>>(((in114))) <<<in115w1>>>(((in115))) <<<in116w1>>>(((in116))) <<<in117w1>>>(((in117)))
+      CHARDATA_FRMT: <<<in118w1>>>(((in118))) <<<in119w1>>>(((in119))) <<<in120w1>>>(((in120))) <<<in121w1>>>(((in121))) <<<in122w1>>>(((in122)))
+      CHARDATA_FRMT: <<<in123w1>>>(((in123))) <<<in124w1>>>(((in124))) <<<in125w1>>>(((in125))) <<<in126w1>>>(((in126))) <<<in127w1>>>(((in127)))
+      CHARDATA_FRMT: <<<in128w1>>>(((in128))) <<<Out65w1>>>(((out65x))) <<<Out66w1>>>(((out66x))) <<<Out67w1>>>(((out67x))) <<<Out68w1>>>(((out68x)))
+      CHARDATA_FRMT: <<<Out69w1>>>(((out69x))) <<<Out70w1>>>(((out70x))) <<<Out71w1>>>(((out71x))) <<<Out72w1>>>(((out72x))) <<<Out73w1>>>(((out73x)))
+      CHARDATA_FRMT: <<<Out74w1>>>(((out74x))) <<<Out75w1>>>(((out75x))) <<<Out76w1>>>(((out76x))) <<<Out77w1>>>(((out77x))) <<<Out78w1>>>(((out78x)))
+      CHARDATA_FRMT: <<<Out79w1>>>(((out79x))) <<<Out80w1>>>(((out80x))) <<<Out81w1>>>(((out81x))) <<<Out82w1>>>(((out82x))) <<<Out83w1>>>(((out83x)))
+      CHARDATA_FRMT: <<<Out84w1>>>(((out84x))) <<<Out85w1>>>(((out85x))) <<<Out86w1>>>(((out86x))) <<<Out87w1>>>(((out87x))) <<<Out88w1>>>(((out88x)))
+      CHARDATA_FRMT: <<<Out89w1>>>(((out89x))) <<<Out90w1>>>(((out90x))) <<<Out91w1>>>(((out91x))) <<<Out92w1>>>(((out92x))) <<<Out93w1>>>(((out93x)))
+      CHARDATA_FRMT: <<<Out94w1>>>(((out94x))) <<<Out95w1>>>(((out95x))) <<<Out96w1>>>(((out96x))) <<<Out97w1>>>(((out97x))) <<<Out98w1>>>(((out98x)))
+      CHARDATA_FRMT: <<<Out99w1>>>(((out99x))) <<<Out100w1>>>(((out100x))) <<<Out101w1>>>(((out101x))) <<<Out102w1>>>(((out102x))) <<<Out103w1>>>(((out103x)))
+      CHARDATA_FRMT: <<<Out104w1>>>(((out104x))) <<<Out105w1>>>(((out105x))) <<<Out106w1>>>(((out106x))) <<<Out107w1>>>(((out107x))) <<<Out108w1>>>(((out108x)))
+      CHARDATA_FRMT: <<<Out109w1>>>(((out109x))) <<<Out110w1>>>(((out110x))) <<<Out111w1>>>(((out111x))) <<<Out112w1>>>(((out112x))) <<<Out113w1>>>(((out113x)))
+      CHARDATA_FRMT: <<<Out114w1>>>(((out114x))) <<<Out115w1>>>(((out115x))) <<<Out116w1>>>(((out116x))) <<<Out117w1>>>(((out117x))) <<<Out118w1>>>(((out118x)))
+      CHARDATA_FRMT: <<<Out119w1>>>(((out119x))) <<<Out120w1>>>(((out120x))) <<<Out121w1>>>(((out121x))) <<<Out122w1>>>(((out122x))) <<<Out123w1>>>(((out123x)))
+      CHARDATA_FRMT: <<<Out124w1>>>(((out124x))) <<<Out125w1>>>(((out125x))) <<<Out126w1>>>(((out126x))) <<<Out127w1>>>(((out127x))) <<<Out128w1>>>(((out128x)))
+      CHARDATA_FRMT: <<<in65w1>>>(((in65x))) <<<in66w1>>>(((in66x))) <<<in67w1>>>(((in67x))) <<<in68w1>>>(((in68x))) <<<in69w1>>>(((in69x)))
+      CHARDATA_FRMT: <<<in70w1>>>(((in70x))) <<<in71w1>>>(((in71x))) <<<in72w1>>>(((in72x))) <<<in73w1>>>(((in73x))) <<<in74w1>>>(((in74x)))
+      CHARDATA_FRMT: <<<in75w1>>>(((in75x))) <<<in76w1>>>(((in76x))) <<<in77w1>>>(((in77x))) <<<in78w1>>>(((in78x))) <<<in79w1>>>(((in79x)))
+      CHARDATA_FRMT: <<<in80w1>>>(((in80x))) <<<in81w1>>>(((in81x))) <<<in82w1>>>(((in82x))) <<<in83w1>>>(((in83x))) <<<in84w1>>>(((in84x)))
+      CHARDATA_FRMT: <<<in85w1>>>(((in85x))) <<<in86w1>>>(((in86x))) <<<in87w1>>>(((in87x))) <<<in88w1>>>(((in88x))) <<<in89w1>>>(((in89x)))
+      CHARDATA_FRMT: <<<in90w1>>>(((in90x))) <<<in91w1>>>(((in91x))) <<<in92w1>>>(((in92x))) <<<in93w1>>>(((in93x))) <<<in94w1>>>(((in94x)))
+      CHARDATA_FRMT: <<<in95w1>>>(((in95x))) <<<in96w1>>>(((in96x))) <<<in97w1>>>(((in97x))) <<<in98w1>>>(((in98x))) <<<in99w1>>>(((in99x)))
+      CHARDATA_FRMT: <<<in100w1>>>(((in100x))) <<<in101w1>>>(((in101x))) <<<in102w1>>>(((in102x))) <<<in103w1>>>(((in103x))) <<<in104w1>>>(((in104x)))
+      CHARDATA_FRMT: <<<in105w1>>>(((in105x))) <<<in106w1>>>(((in106x))) <<<in107w1>>>(((in107x))) <<<in108w1>>>(((in108x))) <<<in109w1>>>(((in109x)))
+      CHARDATA_FRMT: <<<in110w1>>>(((in110x))) <<<in111w1>>>(((in111x))) <<<in112w1>>>(((in112x))) <<<in113w1>>>(((in113x))) <<<in114w1>>>(((in114x)))
+      CHARDATA_FRMT: <<<in115w1>>>(((in115x))) <<<in116w1>>>(((in116x))) <<<in117w1>>>(((in117x))) <<<in118w1>>>(((in118x))) <<<in119w1>>>(((in119x)))
+      CHARDATA_FRMT: <<<in120w1>>>(((in120x))) <<<in121w1>>>(((in121x))) <<<in122w1>>>(((in122x))) <<<in123w1>>>(((in123x))) <<<in124w1>>>(((in124x)))
+      CHARDATA_FRMT: <<<in125w1>>>(((in125x))) <<<in126w1>>>(((in126x))) <<<in127w1>>>(((in127x))) <<<in128w1>>>(((in128x)))
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = AuroraChEnable SubSystem = 1 Processor = 1 Priority = 4
+      DRAFT_UNIQUEID=1011 HIERARCHY_BOXPARENT=1010 LOCATION=400 80
+    DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=4 OUTVARS=0
+    INTDATA: 1 InputSource 1 enCH1 0 enCH2 0 enCH3 0 enCH4
+    INVARS: comm_up INT CCin1 _dud_ INT CCin2 _dud_ INT CCin3 _dud_ INT CCin4
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = abc_dq0_mp_cb SubSystem = 1 Processor = 1 Priority = 2
+      DRAFT_UNIQUEID=2260 HIERARCHY_BOXPARENT=2175 LOCATION=432 400
+    DATA_SIZES: INTDATA=6 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=13 OUTVARS=12
+    INTDATA: 0 Zs 3 nphas 1 FT 0 qLd 0 pu
+    INTDATA: 1 PkorLL
+    FLOATDATA: 187.794 Sc
+    INVARS: RT_@Calculations_v IEEE PH v_grid_A IEEE IN_1 v_grid_B IEEE IN_2 v_grid_C IEEE IN_3 _dud_ IEEE IN_4
+    INVARS: _dud_ IEEE IN_5 _dud_ IEEE IN_6 _dud_ IEEE IN_7 _dud_ IEEE IN_8 _dud_ IEEE IN_9
+    INVARS: _dud_ IEEE IN_10 _dud_ IEEE IN_11 _dud_ IEEE IN_12
+    OUTVARS: RT_@Calculations_i IEEE OUT_1 RT_@Calculations_n IEEE OUT_2 v_stator_0 IEEE OUT_3 _dud_ IEEE OUT_4 _dud_ IEEE OUT_5
+    OUTVARS: _dud_ IEEE OUT_6 _dud_ IEEE OUT_7 _dud_ IEEE OUT_8 _dud_ IEEE OUT_9 _dud_ IEEE OUT_10
+    OUTVARS: _dud_ IEEE OUT_11 _dud_ IEEE OUT_12
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = abc_dq0_mp_cb SubSystem = 1 Processor = 1 Priority = 3
+      DRAFT_UNIQUEID=2232 HIERARCHY_BOXPARENT=2175 LOCATION=432 560
+    DATA_SIZES: INTDATA=6 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=13 OUTVARS=12
+    INTDATA: 0 Zs 3 nphas 1 FT 0 qLd 0 pu
+    INTDATA: 1 PkorLL
+    FLOATDATA: 187.794 Sc
+    INVARS: RT_@Calculations_u IEEE PH i_gen_A IEEE IN_1 i_gen_B IEEE IN_2 i_gen_C IEEE IN_3 _dud_ IEEE IN_4
+    INVARS: _dud_ IEEE IN_5 _dud_ IEEE IN_6 _dud_ IEEE IN_7 _dud_ IEEE IN_8 _dud_ IEEE IN_9
+    INVARS: _dud_ IEEE IN_10 _dud_ IEEE IN_11 _dud_ IEEE IN_12
+    OUTVARS: RT_@Calculations_h IEEE OUT_1 RT_@Calculations_k IEEE OUT_2 i_gen_0 IEEE OUT_3 _dud_ IEEE OUT_4 _dud_ IEEE OUT_5
+    OUTVARS: _dud_ IEEE OUT_6 _dud_ IEEE OUT_7 _dud_ IEEE OUT_8 _dud_ IEEE OUT_9 _dud_ IEEE OUT_10
+    OUTVARS: _dud_ IEEE OUT_11 _dud_ IEEE OUT_12
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = abc_dq0_mp_cb SubSystem = 1 Processor = 1 Priority = 4
+      DRAFT_UNIQUEID=2264 HIERARCHY_BOXPARENT=2175 LOCATION=656 400
+    DATA_SIZES: INTDATA=6 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=13 OUTVARS=12
+    INTDATA: 0 Zs 3 nphas 1 FT 0 qLd 0 pu
+    INTDATA: 1 PkorLL
+    FLOATDATA: 187.794 Sc
+    INVARS: RT_@Calculations_o IEEE PH switch_P_A IEEE IN_1 switch_P_B IEEE IN_2 switch_P_C IEEE IN_3 _dud_ IEEE IN_4
+    INVARS: _dud_ IEEE IN_5 _dud_ IEEE IN_6 _dud_ IEEE IN_7 _dud_ IEEE IN_8 _dud_ IEEE IN_9
+    INVARS: _dud_ IEEE IN_10 _dud_ IEEE IN_11 _dud_ IEEE IN_12
+    OUTVARS: RT_@Calculations_q IEEE OUT_1 RT_@Calculations_t IEEE OUT_2 switch_P_0 IEEE OUT_3 _dud_ IEEE OUT_4 _dud_ IEEE OUT_5
+    OUTVARS: _dud_ IEEE OUT_6 _dud_ IEEE OUT_7 _dud_ IEEE OUT_8 _dud_ IEEE OUT_9 _dud_ IEEE OUT_10
+    OUTVARS: _dud_ IEEE OUT_11 _dud_ IEEE OUT_12
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = abc_dq0_mp_cb SubSystem = 1 Processor = 1 Priority = 5
+      DRAFT_UNIQUEID=2233 HIERARCHY_BOXPARENT=2175 LOCATION=656 560
+    DATA_SIZES: INTDATA=6 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=13 OUTVARS=12
+    INTDATA: 0 Zs 3 nphas 1 FT 0 qLd 0 pu
+    INTDATA: 1 PkorLL
+    FLOATDATA: 187.794 Sc
+    INVARS: RT_@Calculations_l IEEE PH i_high_A IEEE IN_1 i_high_B IEEE IN_2 i_high_C IEEE IN_3 _dud_ IEEE IN_4
+    INVARS: _dud_ IEEE IN_5 _dud_ IEEE IN_6 _dud_ IEEE IN_7 _dud_ IEEE IN_8 _dud_ IEEE IN_9
+    INVARS: _dud_ IEEE IN_10 _dud_ IEEE IN_11 _dud_ IEEE IN_12
+    OUTVARS: RT_@Calculations_p IEEE OUT_1 RT_@Calculations_s IEEE OUT_2 i_high_0 IEEE OUT_3 _dud_ IEEE OUT_4 _dud_ IEEE OUT_5
+    OUTVARS: _dud_ IEEE OUT_6 _dud_ IEEE OUT_7 _dud_ IEEE OUT_8 _dud_ IEEE OUT_9 _dud_ IEEE OUT_10
+    OUTVARS: _dud_ IEEE OUT_11 _dud_ IEEE OUT_12
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = abc_dq0_mp_cb SubSystem = 1 Processor = 1 Priority = 6
+      DRAFT_UNIQUEID=2272 HIERARCHY_BOXPARENT=2175 LOCATION=848 400
+    DATA_SIZES: INTDATA=6 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=13 OUTVARS=12
+    INTDATA: 0 Zs 3 nphas 1 FT 0 qLd 0 pu
+    INTDATA: 1 PkorLL
+    FLOATDATA: 187.794 Sc
+    INVARS: RT_@Calculations_r IEEE PH v_high_A IEEE IN_1 v_high_B IEEE IN_2 v_high_C IEEE IN_3 _dud_ IEEE IN_4
+    INVARS: _dud_ IEEE IN_5 _dud_ IEEE IN_6 _dud_ IEEE IN_7 _dud_ IEEE IN_8 _dud_ IEEE IN_9
+    INVARS: _dud_ IEEE IN_10 _dud_ IEEE IN_11 _dud_ IEEE IN_12
+    OUTVARS: RT_@Calculations_w IEEE OUT_1 RT_@Calculations_j IEEE OUT_2 v_high_0 IEEE OUT_3 _dud_ IEEE OUT_4 _dud_ IEEE OUT_5
+    OUTVARS: _dud_ IEEE OUT_6 _dud_ IEEE OUT_7 _dud_ IEEE OUT_8 _dud_ IEEE OUT_9 _dud_ IEEE OUT_10
+    OUTVARS: _dud_ IEEE OUT_11 _dud_ IEEE OUT_12
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = nortoneq1p NameParam = INORT Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1834 HIERARCHY_BOXPARENT=1814 LOCATION=1104 432
+    DATA_SIZES: INTDATA=5 FLOATDATA=1 CHARDATA_FRMT=1 INVARS=1 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 27 NA 35 NB 0 mon 27 iA 35 iB
+    FLOATDATA: 1.0e9 Rp
+    CHARDATA_FRMT: <<<INORT>>>(((Name)))
+    INVARS: RT_@LV_Load_f IEEE CCSIG
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = nortoneq1p NameParam = INORT2 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1560 HIERARCHY_BOXPARENT=1545 LOCATION=784 176
+    DATA_SIZES: INTDATA=5 FLOATDATA=1 CHARDATA_FRMT=1 INVARS=1 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 4 NA 20 NB 0 mon 4 iA 20 iB
+    FLOATDATA: 1.0e9 Rp
+    CHARDATA_FRMT: <<<INORT2>>>(((Name)))
+    INVARS: RT_@PEBB_BOX_AC_8 IEEE CCSIG
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = nortoneq1p NameParam = INORT3 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1647 HIERARCHY_BOXPARENT=1545 LOCATION=784 560
+    DATA_SIZES: INTDATA=5 FLOATDATA=1 CHARDATA_FRMT=1 INVARS=1 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 4 NA 21 NB 0 mon 4 iA 21 iB
+    FLOATDATA: 1.0e9 Rp
+    CHARDATA_FRMT: <<<INORT3>>>(((Name)))
+    INVARS: RT_@PEBB_BOX_AC_9 IEEE CCSIG
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = nortoneq1p NameParam = INORT31 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=2197 HIERARCHY_BOXPARENT=2175 LOCATION=656 176
+    DATA_SIZES: INTDATA=5 FLOATDATA=1 CHARDATA_FRMT=1 INVARS=1 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 0 NA 16 NB 0 mon 0 iA 16 iB
+    FLOATDATA: 1.0e8 Rp
+    CHARDATA_FRMT: <<<INORT31>>>(((Name)))
+    INVARS: RT_@Calculations_m IEEE CCSIG
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = nortoneq1p NameParam = INORT4 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1699 HIERARCHY_BOXPARENT=1545 LOCATION=784 944
+    DATA_SIZES: INTDATA=5 FLOATDATA=1 CHARDATA_FRMT=1 INVARS=1 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 4 NA 22 NB 0 mon 4 iA 22 iB
+    FLOATDATA: 1.0e9 Rp
+    CHARDATA_FRMT: <<<INORT4>>>(((Name)))
+    INVARS: RT_@PEBB_BOX_AC_a IEEE CCSIG
+END
+C BEGIN user defined FDNE_INFO
+     NAME: RT_@Box_MV_AC_5IT_@Box_MV_AC_6
+     MODEL: zeroSeqNode
+     GROUP: FDNE
+     PROC:  DEFAULT
+     DSP:   FDNE_INFO hdc 1
+     SUBSYS: 1
+     PARA:
+      node 15
+      DRAFT_UNIQUEID=1983 HIERARCHY_BOXPARENT=1902 LOCATION=624 496
+C END user defined
+C BEGIN user defined FDNE_INFO
+     NAME: RT_@Box_MV_AC_7IT_@Box_MV_AC_8
+     MODEL: zeroSeqNode
+     GROUP: FDNE
+     PROC:  DEFAULT
+     DSP:   FDNE_INFO hdc 1
+     SUBSYS: 1
+     PARA:
+      node 24
+      DRAFT_UNIQUEID=1979 HIERARCHY_BOXPARENT=1902 LOCATION=848 560
+C END user defined
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = step_cntr SubSystem = 1 Processor = 1 Priority = 5
+      DRAFT_UNIQUEID=882 HIERARCHY_BOXPARENT=879 LOCATION=80 48
+    DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    CHARDATA_FRMT: <<<STEPCNT1>>>(((Name)))
+    OUTVARS: ctr INT namow1
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRK1 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1561 HIERARCHY_BOXPARENT=1545 LOCATION=240 80
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 4 TO 1 FR 0 mon 1 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E7 roff 0.5e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRK1>>>(((Name))) <<<cc_bits>>>(((swdnm))) <<<IB1>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRK5 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1587 HIERARCHY_BOXPARENT=1545 LOCATION=304 144
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 4 TO 2 FR 0 mon 0 shwr 2 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E7 roff 1e-3 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRK5>>>(((Name))) <<<cc_bits>>>(((swdnm))) <<<IB2>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRK7 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1888 HIERARCHY_BOXPARENT=1814 LOCATION=1168 336
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 27 TO 46 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E7 roff 1e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRK7>>>(((Name))) <<<load_switch>>>(((swdnm))) <<<IB3>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRK9 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1608 HIERARCHY_BOXPARENT=1545 LOCATION=432 176
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 5 TO 4 FR 0 mon 0 shwr 8 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E7 roff 1e-8 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRK9>>>(((Name))) <<<cc_bits>>>(((swdnm))) <<<IB7>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKa Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1743 HIERARCHY_BOXPARENT=1545 LOCATION=1136 80
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 41 TO 32 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 1e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKa>>>(((Name))) <<<fault_PA>>>(((swdnm))) <<<IBa>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKb Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1744 HIERARCHY_BOXPARENT=1545 LOCATION=1136 368
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 39 TO 29 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 1e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKb>>>(((Name))) <<<fault_PA>>>(((swdnm))) <<<IBb>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKc Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1745 HIERARCHY_BOXPARENT=1545 LOCATION=1136 464
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 42 TO 31 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 1e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKc>>>(((Name))) <<<fault_PB>>>(((swdnm))) <<<IBc>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKd Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1746 HIERARCHY_BOXPARENT=1545 LOCATION=1136 752
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 40 TO 28 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 1e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKd>>>(((Name))) <<<fault_PB>>>(((swdnm))) <<<IBd>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKe Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1747 HIERARCHY_BOXPARENT=1545 LOCATION=1136 848
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 45 TO 33 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.e6 roff 1e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKe>>>(((Name))) <<<fault_PC>>>(((swdnm))) <<<IBe>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKf Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1748 HIERARCHY_BOXPARENT=1545 LOCATION=1136 1136
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 44 TO 30 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 1e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKf>>>(((Name))) <<<fault_PC>>>(((swdnm))) <<<IBf>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKg Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1742 HIERARCHY_BOXPARENT=1545 LOCATION=1136 176
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 34 TO 32 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 1e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKg>>>(((Name))) <<<notfault_PA>>>(((swdnm))) <<<IBg>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKh Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1749 HIERARCHY_BOXPARENT=1545 LOCATION=1136 272
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 43 TO 29 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 1e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKh>>>(((Name))) <<<notfault_PA>>>(((swdnm))) <<<IBh>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKi Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1750 HIERARCHY_BOXPARENT=1545 LOCATION=1136 560
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 37 TO 31 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 1e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKi>>>(((Name))) <<<notfault_PB>>>(((swdnm))) <<<IBi>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKj Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1751 HIERARCHY_BOXPARENT=1545 LOCATION=1136 656
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 43 TO 28 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 1e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKj>>>(((Name))) <<<notfault_PB>>>(((swdnm))) <<<IBj>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKk Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1752 HIERARCHY_BOXPARENT=1545 LOCATION=1136 944
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 38 TO 33 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 1e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKk>>>(((Name))) <<<notfault_PC>>>(((swdnm))) <<<IBk>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKl Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1753 HIERARCHY_BOXPARENT=1545 LOCATION=1136 1040
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 43 TO 30 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 1e-6 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKl>>>(((Name))) <<<notfault_PC>>>(((swdnm))) <<<IBl>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKm Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1584 HIERARCHY_BOXPARENT=1545 LOCATION=1584 208
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 36 TO 8 FR 0 mon 1 shwr 3 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E7 roff 0.05 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKm>>>(((Name))) <<<cc_bits>>>(((swdnm))) <<<IBm>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKn Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1671 HIERARCHY_BOXPARENT=1545 LOCATION=1584 592
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 3 TO 9 FR 0 mon 1 shwr 3 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E7 roff 0.05 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKn>>>(((Name))) <<<cc_bits>>>(((swdnm))) <<<IBn>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = BRKo Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1725 HIERARCHY_BOXPARENT=1545 LOCATION=1584 976
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 47 TO 10 FR 0 mon 1 shwr 3 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E7 roff 0.05 ron 10 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<BRKo>>>(((Name))) <<<cc_bits>>>(((swdnm))) <<<IBo>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = FltBk1 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1930 HIERARCHY_BOXPARENT=1902 LOCATION=464 528
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 8 TO 6 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 0.0001 ron 0.0 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<FltBk1>>>(((Name))) <<<SymFlt>>>(((swdnm))) <<<IB4>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = FltBk2 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1931 HIERARCHY_BOXPARENT=1902 LOCATION=496 528
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 9 TO 13 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 0.0001 ron 0.0 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<FltBk2>>>(((Name))) <<<SymFlt>>>(((swdnm))) <<<IB5>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = FltBk3 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1932 HIERARCHY_BOXPARENT=1902 LOCATION=528 528
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 10 TO 14 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 0.0001 ron 0.0 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<FltBk3>>>(((Name))) <<<SymFlt>>>(((swdnm))) <<<IB6>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = FltBk4 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1989 HIERARCHY_BOXPARENT=1902 LOCATION=496 208
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 12 TO 9 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 0.0001 ron 0.0 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<FltBk4>>>(((Name))) <<<AsymFlt>>>(((swdnm))) <<<IB8>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = LoadBk1 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1981 HIERARCHY_BOXPARENT=1902 LOCATION=816 528
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 19 TO 23 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 0.0001 ron 0.0 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<LoadBk1>>>(((Name))) <<<hv_load_switch>>>(((swdnm))) <<<IB5>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = LoadBk2 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1982 HIERARCHY_BOXPARENT=1902 LOCATION=848 528
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 17 TO 25 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 0.0001 ron 0.0 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<LoadBk2>>>(((Name))) <<<hv_load_switch>>>(((swdnm))) <<<IB6>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = brk1ph NameParam = LoadBk3 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1980 HIERARCHY_BOXPARENT=1902 LOCATION=880 528
+    DATA_SIZES: INTDATA=9 FLOATDATA=5 CHARDATA_FRMT=4 INVARS=0 OUTVARS=0
+    RISC: 1 1 STACK_T0 GENERIC -1 -1 1 0 0 0 2 1 2
+    INTDATA: 18 TO 26 FR 0 mon 0 shwr 1 bitw
+    INTDATA: 0 SN 1 BN 0 logw 0 inst
+    FLOATDATA: 1.E6 roff 0.0001 ron 0.0 holdi 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<LoadBk3>>>(((Name))) <<<hv_load_switch>>>(((swdnm))) <<<IB7>>>(((crtnm))) <<<kA>>>(((niti)))
+END
+RTDS.PSYS.RISC_CMODEL
+COMP: varR VARRES1 0 0 1
+      DRAFT_UNIQUEID=1846 HIERARCHY_BOXPARENT=1814 LOCATION=1200 400
+    DATA_SIZES: INTDATA=3 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=1 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 5 0 1 2
+    INTDATA: 46 TO 35 FR 0 mon
+    FLOATDATA: 0.1 rmin 2.0 Maxi -2.0 Mini
+    CHARDATA_FRMT: <<<VARRES1>>>(((Name))) <<<I1>>>(((crtnm)))
+    INVARS: R_load IEEE CTL
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = abs_cb SubSystem = 1 Processor = 1 Priority = 6
+      DRAFT_UNIQUEID=1466 HIERARCHY_BOXPARENT=1346 LOCATION=560 112
+    DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    INVARS: i_high_A IEEE INP
+    OUTVARS: RT_@box1_1m IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = abs_cb SubSystem = 1 Processor = 1 Priority = 7
+      DRAFT_UNIQUEID=1479 HIERARCHY_BOXPARENT=1346 LOCATION=560 368
+    DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    INVARS: i_high_B IEEE INP
+    OUTVARS: RT_@box1_15 IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = abs_cb SubSystem = 1 Processor = 1 Priority = 8
+      DRAFT_UNIQUEID=1453 HIERARCHY_BOXPARENT=1346 LOCATION=560 624
+    DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    INVARS: i_high_C IEEE INP
+    OUTVARS: RT_@box1_1n IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = compareX03 SubSystem = 1 Processor = 1 Priority = 9
+      DRAFT_UNIQUEID=1158 HIERARCHY_BOXPARENT=1010 LOCATION=144 80
+        DATA_SIZES: INTDATA=5 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=4 OUTVARS=2
+        INTDATA: 0 LOGIC 1 INPT 0 OUTT 1 IOAB 0 IOBA
+        FLOATDATA: 1.0 FOAB -1.0 FOBA
+        INVARS: _dud_ INT INA_i _dud_ INT INB_i t IEEE INA_r t_aurora_start IEEE INB_r
+        OUTVARS: IT_@box4_13 INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = compareX03 SubSystem = 1 Processor = 1 Priority = 10
+      DRAFT_UNIQUEID=986 HIERARCHY_BOXPARENT=925 LOCATION=272 592
+        DATA_SIZES: INTDATA=5 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=4 OUTVARS=2
+        INTDATA: 0 LOGIC 1 INPT 0 OUTT 1 IOAB 0 IOBA
+        FLOATDATA: 1.0 FOAB -1.0 FOBA
+        INVARS: _dud_ INT INA_i _dud_ INT INB_i t IEEE INA_r RT_@box3_b IEEE INB_r
+        OUTVARS: trigger INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = compareX01 SubSystem = 1 Processor = 1 Priority = 11
+      DRAFT_UNIQUEID=1510 HIERARCHY_BOXPARENT=1490 LOCATION=368 48
+        DATA_SIZES: INTDATA=5 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=4 OUTVARS=2
+        INTDATA: 2 LOGIC 0 INPT 0 OUTT 1 IOAB 0 IOBA
+        FLOATDATA: 1.0 FOAB -1.0 FOBA
+        INVARS: Loopback_delay_S INT INA_i IT_@box6_g INT INB_i _dud_ IEEE INA_r _dud_ IEEE INB_r
+        OUTVARS: IT_@box6_l INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = compareX01 SubSystem = 1 Processor = 1 Priority = 12
+      DRAFT_UNIQUEID=1505 HIERARCHY_BOXPARENT=1490 LOCATION=368 112
+        DATA_SIZES: INTDATA=5 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=4 OUTVARS=2
+        INTDATA: 0 LOGIC 0 INPT 0 OUTT 1 IOAB 0 IOBA
+        FLOATDATA: 1.0 FOAB -1.0 FOBA
+        INVARS: IT_@box6_m INT INA_i Loopback_delay_S INT INB_i _dud_ IEEE INA_r _dud_ IEEE INB_r
+        OUTVARS: IT_@box6_f INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = compareX01 SubSystem = 1 Processor = 1 Priority = 13
+      DRAFT_UNIQUEID=1504 HIERARCHY_BOXPARENT=1490 LOCATION=368 176
+        DATA_SIZES: INTDATA=5 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=4 OUTVARS=2
+        INTDATA: 3 LOGIC 0 INPT 0 OUTT 1 IOAB 0 IOBA
+        FLOATDATA: 1.0 FOAB -1.0 FOBA
+        INVARS: ctr INT INA_i IT_@box6_p INT INB_i _dud_ IEEE INA_r _dud_ IEEE INB_r
+        OUTVARS: IT_@box6_q INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = compareX03 SubSystem = 1 Processor = 1 Priority = 14
+      DRAFT_UNIQUEID=912 HIERARCHY_BOXPARENT=879 LOCATION=400 240
+        DATA_SIZES: INTDATA=5 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=4 OUTVARS=2
+        INTDATA: 3 LOGIC 1 INPT 0 OUTT 1 IOAB 0 IOBA
+        FLOATDATA: 1.0 FOAB -1.0 FOBA
+        INVARS: _dud_ INT INA_i _dud_ INT INB_i t_precharge_end IEEE INA_r t IEEE INB_r
+        OUTVARS: IT_@Box3_8 INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = compareX03 SubSystem = 1 Processor = 1 Priority = 15
+      DRAFT_UNIQUEID=1460 HIERARCHY_BOXPARENT=1346 LOCATION=688 112
+        DATA_SIZES: INTDATA=5 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=4 OUTVARS=2
+        INTDATA: 3 LOGIC 1 INPT 0 OUTT 1 IOAB 0 IOBA
+        FLOATDATA: 1.0 FOAB -1.0 FOBA
+        INVARS: _dud_ INT INA_i _dud_ INT INB_i RT_@box1_1m IEEE INA_r RT_@box1_z IEEE INB_r
+        OUTVARS: IT_@box1_12 INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = compareX03 SubSystem = 1 Processor = 1 Priority = 16
+      DRAFT_UNIQUEID=1473 HIERARCHY_BOXPARENT=1346 LOCATION=688 368
+        DATA_SIZES: INTDATA=5 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=4 OUTVARS=2
+        INTDATA: 3 LOGIC 1 INPT 0 OUTT 1 IOAB 0 IOBA
+        FLOATDATA: 1.0 FOAB -1.0 FOBA
+        INVARS: _dud_ INT INA_i _dud_ INT INB_i RT_@box1_15 IEEE INA_r RT_@box1_1c IEEE INB_r
+        OUTVARS: IT_@box1_1i INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = compareX03 SubSystem = 1 Processor = 1 Priority = 17
+      DRAFT_UNIQUEID=1457 HIERARCHY_BOXPARENT=1346 LOCATION=688 624
+        DATA_SIZES: INTDATA=5 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=4 OUTVARS=2
+        INTDATA: 3 LOGIC 1 INPT 0 OUTT 1 IOAB 0 IOBA
+        FLOATDATA: 1.0 FOAB -1.0 FOBA
+        INVARS: _dud_ INT INA_i _dud_ INT INB_i RT_@box1_1n IEEE INA_r RT_@box1_11 IEEE INB_r
+        OUTVARS: IT_@box1_14 INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = compareX03 SubSystem = 1 Processor = 1 Priority = 28
+      DRAFT_UNIQUEID=2518 HIERARCHY_BOXPARENT=2295 LOCATION=688 1072
+        DATA_SIZES: INTDATA=5 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=4 OUTVARS=2
+        INTDATA: 0 LOGIC 1 INPT 0 OUTT 1 IOAB 0 IOBA
+        FLOATDATA: 1.0 FOAB 0 FOBA
+        INVARS: _dud_ INT INA_i _dud_ INT INB_i RT_@Src_Ctrl_3j IEEE INA_r RT_@Src_Ctrl_3u IEEE INB_r
+        OUTVARS: PwrRatLim INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2479 HIERARCHY_BOXPARENT=2295 LOCATION=48 880
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 1.0 Val
+      OUTVARS: RT_@Src_Ctrl_3b FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2162 LOCATION=80 464
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 1 Val
+      OUTVARS: AC_MODE_ENABLE FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1003 HIERARCHY_BOXPARENT=925 LOCATION=80 656
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 0.000125 Val
+      OUTVARS: RT_@box3_7 FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2508 HIERARCHY_BOXPARENT=2295 LOCATION=112 1040
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 1.0 Val
+      OUTVARS: RT_@Src_Ctrl_2j FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2341 HIERARCHY_BOXPARENT=2295 LOCATION=176 432
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 1.0 Val
+      OUTVARS: RT_@Src_Ctrl_2x FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2419 HIERARCHY_BOXPARENT=2295 LOCATION=208 304
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 0.816497 Val
+      OUTVARS: RT_@Src_Ctrl_2b FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1823 HIERARCHY_BOXPARENT=1814 LOCATION=304 272
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 0 Val
+      OUTVARS: RT_@LV_Load_g FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2149 LOCATION=304 1008
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 0.5 Val
+      OUTVARS: t_precharge_end FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2539 HIERARCHY_BOXPARENT=2295 LOCATION=368 1104
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 1.0 Val
+      OUTVARS: RT_@Src_Ctrl_38 FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2257 HIERARCHY_BOXPARENT=2175 LOCATION=400 336
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 0 Val
+      OUTVARS: RT_@Calculations_v FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2240 HIERARCHY_BOXPARENT=2175 LOCATION=400 496
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 0 Val
+      OUTVARS: RT_@Calculations_u FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1465 HIERARCHY_BOXPARENT=1346 LOCATION=592 144
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 0.32 Val
+      OUTVARS: RT_@box1_z FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2199 HIERARCHY_BOXPARENT=2175 LOCATION=592 176
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 1e-6 Val
+      OUTVARS: RT_@Calculations_m FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1478 HIERARCHY_BOXPARENT=1346 LOCATION=592 400
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 0.32 Val
+      OUTVARS: RT_@box1_1c FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1449 HIERARCHY_BOXPARENT=1346 LOCATION=592 656
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 0.32 Val
+      OUTVARS: RT_@box1_11 FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2268 HIERARCHY_BOXPARENT=2175 LOCATION=624 336
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 0 Val
+      OUTVARS: RT_@Calculations_o FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2241 HIERARCHY_BOXPARENT=2175 LOCATION=624 496
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 0 Val
+      OUTVARS: RT_@Calculations_l FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2519 HIERARCHY_BOXPARENT=2295 LOCATION=624 1104
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 1.0 Val
+      OUTVARS: RT_@Src_Ctrl_3u FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2278 HIERARCHY_BOXPARENT=2175 LOCATION=816 336
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 0 Val
+      OUTVARS: RT_@Calculations_r FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2330 HIERARCHY_BOXPARENT=2295 LOCATION=848 176
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 1.0 Val
+      OUTVARS: RT_@Src_Ctrl_2u FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2441 HIERARCHY_BOXPARENT=2295 LOCATION=848 432
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 7.0 Val
+      OUTVARS: RT_@Src_Ctrl_2g FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1341 HIERARCHY_BOXPARENT=1010 LOCATION=912 752
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 0 Val
+      OUTVARS: dummy_float_TX FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2536 HIERARCHY_BOXPARENT=2295 LOCATION=976 944
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 1.0 Val
+      OUTVARS: RT_@Src_Ctrl_3n FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2383 HIERARCHY_BOXPARENT=2295 LOCATION=1296 176
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 5.0 Val
+      OUTVARS: RT_@Src_Ctrl_3o FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2410 HIERARCHY_BOXPARENT=2295 LOCATION=1296 432
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 1.0 Val
+      OUTVARS: RT_@Src_Ctrl_31 FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1364 HIERARCHY_BOXPARENT=1346 LOCATION=1648 240
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 4 Val
+      OUTVARS: RT_@box1_1f FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1379 HIERARCHY_BOXPARENT=1346 LOCATION=1648 496
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 4 Val
+      OUTVARS: RT_@box1_w FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RCONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1403 HIERARCHY_BOXPARENT=1346 LOCATION=1648 752
+      DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA=0 INVARS=0 OUTVARS=1
+      FLOATDATA: 4 Val
+      OUTVARS: RT_@box1_1a FCONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: dial_i 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2292 LOCATION=304 1232
+        DATA_SIZES: INTDATA=13 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+        INTDATA: 0 Type 3 Pos 1 Init 1 IP1 2 IP2
+        INTDATA: 3 IP3 4 IP4 5 IP5 6 IP6 7 IP7
+        INTDATA: 8 IP8 9 IP9 10 IP10
+        CHARDATA_FRMT: <<<trig_mode>>>(((Name)))
+        OUTVARS: trig_mode INT IOUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = gain_cb SubSystem = 1 Processor = 1 Priority = 43
+      DRAFT_UNIQUEID=2481 HIERARCHY_BOXPARENT=2295 LOCATION=144 912
+    DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    FLOATDATA: 5.0 K
+    INVARS: RT_@Src_Ctrl_3l IEEE INP
+    OUTVARS: RT_@Src_Ctrl_29 IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = gain_cb SubSystem = 1 Processor = 1 Priority = 18
+      DRAFT_UNIQUEID=1886 HIERARCHY_BOXPARENT=1814 LOCATION=272 240
+    DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    FLOATDATA: 0.5 K
+    INVARS: i_sq_load IEEE INP
+    OUTVARS: RT_@LV_Load_c IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = gain_cb SubSystem = 1 Processor = 1 Priority = 19
+      DRAFT_UNIQUEID=1008 HIERARCHY_BOXPARENT=925 LOCATION=752 112
+    DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    FLOATDATA: -1.0 K
+    INVARS: RT_@box3_8 IEEE INP
+    OUTVARS: P_PEBB IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = gain_cb SubSystem = 1 Processor = 1 Priority = 60
+      DRAFT_UNIQUEID=2504 HIERARCHY_BOXPARENT=2295 LOCATION=1264 944
+    DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    FLOATDATA: -1.0 K
+    INVARS: Theta_p IEEE INP
+    OUTVARS: Theta_n IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = gain_cb SubSystem = 1 Processor = 1 Priority = 20
+      DRAFT_UNIQUEID=1879 HIERARCHY_BOXPARENT=1814 LOCATION=1328 432
+    DATA_SIZES: INTDATA=0 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    FLOATDATA: 1.0 K
+    INVARS: R_load_in IEEE INP
+    OUTVARS: R_load IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: ICONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1536 HIERARCHY_BOXPARENT=1490 LOCATION=48 112
+      DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA=0 INVARS=0 OUTVARS=1
+      INTDATA: 24 Val
+      OUTVARS: IT_@box6_g ICONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: ICONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=888 HIERARCHY_BOXPARENT=879 LOCATION=112 240
+      DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA=0 INVARS=0 OUTVARS=1
+      INTDATA: 0 Val
+      OUTVARS: IT_@Box3_c ICONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: ICONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1535 HIERARCHY_BOXPARENT=1490 LOCATION=144 144
+      DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA=0 INVARS=0 OUTVARS=1
+      INTDATA: 2147483647 Val
+      OUTVARS: IT_@box6_j ICONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: ICONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1495 HIERARCHY_BOXPARENT=1490 LOCATION=240 208
+      DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA=0 INVARS=0 OUTVARS=1
+      INTDATA: 2147483647 Val
+      OUTVARS: IT_@box6_k ICONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: ICONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=893 HIERARCHY_BOXPARENT=879 LOCATION=336 48
+      DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA=0 INVARS=0 OUTVARS=1
+      INTDATA: 1 Val
+      OUTVARS: IT_@Box3_9 ICONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: ICONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=896 HIERARCHY_BOXPARENT=879 LOCATION=336 80
+      DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA=0 INVARS=0 OUTVARS=1
+      INTDATA: 0 Val
+      OUTVARS: IT_@Box3_7 ICONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: ICONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1114 HIERARCHY_BOXPARENT=1010 LOCATION=496 80
+      DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA=0 INVARS=0 OUTVARS=1
+      INTDATA: -2023406815 Val
+      OUTVARS: IT_@box4_1c ICONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: ICONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1108 HIERARCHY_BOXPARENT=1010 LOCATION=496 112
+      DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA=0 INVARS=0 OUTVARS=1
+      INTDATA: 0 Val
+      OUTVARS: IT_@box4_1f ICONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: ICONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2517 HIERARCHY_BOXPARENT=2295 LOCATION=560 1040
+      DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA=0 INVARS=0 OUTVARS=1
+      INTDATA: 0 Val
+      OUTVARS: IT_@Src_Ctrl_39 ICONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: ICONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=922 HIERARCHY_BOXPARENT=879 LOCATION=624 48
+      DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA=0 INVARS=0 OUTVARS=1
+      INTDATA: 1 Val
+      OUTVARS: IT_@Box3_b ICONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: ICONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=913 HIERARCHY_BOXPARENT=879 LOCATION=624 80
+      DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA=0 INVARS=0 OUTVARS=1
+      INTDATA: 0 Val
+      OUTVARS: IT_@Box3_a ICONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: ICONST 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1522 HIERARCHY_BOXPARENT=1490 LOCATION=816 112
+      DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA=0 INVARS=0 OUTVARS=1
+      INTDATA: 0 Val
+      OUTVARS: IT_@box6_o ICONS OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = int2ieee_ SubSystem = 1 Processor = 1 Priority = 21
+      DRAFT_UNIQUEID=1835 HIERARCHY_BOXPARENT=1814 LOCATION=368 528
+    DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    INVARS: trigger INT INP
+    OUTVARS: RT_@LV_Load_b IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = int2ieee_ SubSystem = 1 Processor = 1 Priority = 22
+      DRAFT_UNIQUEID=1896 HIERARCHY_BOXPARENT=1814 LOCATION=976 400
+    DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    INVARS: run INT INP
+    OUTVARS: RT_@LV_Load_j IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = intgl_cb SubSystem = 1 Processor = 1 Priority = 44
+      DRAFT_UNIQUEID=2483 HIERARCHY_BOXPARENT=2295 LOCATION=272 848
+    DATA_SIZES: INTDATA=3 FLOATDATA=4 CHARDATA_FRMT=0 INVARS=6 OUTVARS=1
+    INTDATA: 0 RST 0 LIM 0 PItype
+    FLOATDATA: 250 T 0.0 Xic 0.01 Yic 1 Tic
+    INVARS: RT_@Src_Ctrl_29 IEEE I _dud_ IEEE RVAL _dud_ INT RSTSIG _dud_ IEEE MAX _dud_ IEEE MIN
+    INVARS: _dud_ IEEE TsCC
+    OUTVARS: droop_integ IEEE O
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = intgl_cb SubSystem = 1 Processor = 1 Priority = 53
+      DRAFT_UNIQUEID=2502 HIERARCHY_BOXPARENT=2295 LOCATION=1168 944
+    DATA_SIZES: INTDATA=3 FLOATDATA=4 CHARDATA_FRMT=0 INVARS=6 OUTVARS=1
+    INTDATA: 0 RST 0 LIM 0 PItype
+    FLOATDATA: 0.002652 T 0.0 Xic 0.0 Yic 1 Tic
+    INVARS: f_pu IEEE I _dud_ IEEE RVAL _dud_ INT RSTSIG _dud_ IEEE MAX _dud_ IEEE MIN
+    INVARS: _dud_ IEEE TsCC
+    OUTVARS: Theta_p IEEE O
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = logicX01 SubSystem = 1 Processor = 1 Priority = 23
+      DRAFT_UNIQUEID=1160 HIERARCHY_BOXPARENT=1010 LOCATION=272 48
+        DATA_SIZES: INTDATA=4 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=6 OUTVARS=1
+        INTDATA: 1 Type 0 Inv 0 Op 2 Ninp
+        INVARS: aurora_on INT IN1 IT_@box4_13 INT IN2 _dud_ INT IN3 _dud_ INT IN4 _dud_ INT IN5
+        INVARS: _dud_ INT IN6
+        OUTVARS: comm_up INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = logicX01 SubSystem = 1 Processor = 1 Priority = 24
+      DRAFT_UNIQUEID=1493 HIERARCHY_BOXPARENT=1490 LOCATION=464 112
+        DATA_SIZES: INTDATA=4 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=6 OUTVARS=1
+        INTDATA: 1 Type 1 Inv 0 Op 2 Ninp
+        INVARS: IT_@box6_f INT IN1 IT_@box6_q INT IN2 _dud_ INT IN3 _dud_ INT IN4 _dud_ INT IN5
+        INVARS: _dud_ INT IN6
+        OUTVARS: IT_@box6_h INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = logicX01 SubSystem = 1 Processor = 1 Priority = 25
+      DRAFT_UNIQUEID=1884 HIERARCHY_BOXPARENT=1814 LOCATION=496 80
+        DATA_SIZES: INTDATA=4 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=6 OUTVARS=1
+        INTDATA: 1 Type 0 Inv 0 Op 2 Ninp
+        INVARS: trigger INT IN1 load_switch_in INT IN2 _dud_ INT IN3 _dud_ INT IN4 _dud_ INT IN5
+        INVARS: _dud_ INT IN6
+        OUTVARS: IT_@LV_Load_d INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = logicX02 SubSystem = 1 Processor = 1 Priority = 26
+      DRAFT_UNIQUEID=900 HIERARCHY_BOXPARENT=879 LOCATION=496 272
+        DATA_SIZES: INTDATA=4 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=6 OUTVARS=1
+        INTDATA: 2 Type 0 Inv 0 Op 2 Ninp
+        INVARS: IT_@Box3_8 INT IN1 manual_precharge INT IN2 _dud_ INT IN3 _dud_ INT IN4 _dud_ INT IN5
+        INVARS: _dud_ INT IN6
+        OUTVARS: precharge INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = logicX01 SubSystem = 1 Processor = 1 Priority = 27
+      DRAFT_UNIQUEID=1515 HIERARCHY_BOXPARENT=1490 LOCATION=528 48
+        DATA_SIZES: INTDATA=4 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=6 OUTVARS=1
+        INTDATA: 1 Type 1 Inv 0 Op 2 Ninp
+        INVARS: IT_@box6_l INT IN1 IT_@box6_h INT IN2 _dud_ INT IN3 _dud_ INT IN4 _dud_ INT IN5
+        INVARS: _dud_ INT IN6
+        OUTVARS: comm_valid INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = logicX01 SubSystem = 1 Processor = 1 Priority = 28
+      DRAFT_UNIQUEID=1525 HIERARCHY_BOXPARENT=1490 LOCATION=720 48
+        DATA_SIZES: INTDATA=4 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=6 OUTVARS=1
+        INTDATA: 1 Type 0 Inv 0 Op 2 Ninp
+        INVARS: IT_@box6_i INT IN1 IT_@box6_n INT IN2 _dud_ INT IN3 _dud_ INT IN4 _dud_ INT IN5
+        INVARS: _dud_ INT IN6
+        OUTVARS: IT_@box6_r INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = logicX01 SubSystem = 1 Processor = 1 Priority = 29
+      DRAFT_UNIQUEID=1411 HIERARCHY_BOXPARENT=1346 LOCATION=1232 912
+        DATA_SIZES: INTDATA=4 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=6 OUTVARS=1
+        INTDATA: 1 Type 0 Inv 0 Op 2 Ninp
+        INVARS: IT_@box1_17 INT IN1 comm_valid INT IN2 _dud_ INT IN3 _dud_ INT IN4 _dud_ INT IN5
+        INVARS: _dud_ INT IN6
+        OUTVARS: IT_@box1_1e INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = logicX02 SubSystem = 1 Processor = 1 Priority = 30
+      DRAFT_UNIQUEID=1412 HIERARCHY_BOXPARENT=1346 LOCATION=1456 912
+        DATA_SIZES: INTDATA=4 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=6 OUTVARS=1
+        INTDATA: 2 Type 0 Inv 0 Op 2 Ninp
+        INVARS: IT_@box1_1e INT IN1 HW_OC_A INT IN2 _dud_ INT IN3 _dud_ INT IN4 _dud_ INT IN5
+        INVARS: _dud_ INT IN6
+        OUTVARS: fault_PA INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = logicX02 SubSystem = 1 Processor = 1 Priority = 31
+      DRAFT_UNIQUEID=1413 HIERARCHY_BOXPARENT=1346 LOCATION=1456 976
+        DATA_SIZES: INTDATA=4 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=6 OUTVARS=1
+        INTDATA: 2 Type 0 Inv 0 Op 2 Ninp
+        INVARS: IT_@box1_1e INT IN1 HW_OC_B INT IN2 _dud_ INT IN3 _dud_ INT IN4 _dud_ INT IN5
+        INVARS: _dud_ INT IN6
+        OUTVARS: fault_PB INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = logicX02 SubSystem = 1 Processor = 1 Priority = 32
+      DRAFT_UNIQUEID=1414 HIERARCHY_BOXPARENT=1346 LOCATION=1456 1040
+        DATA_SIZES: INTDATA=4 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=6 OUTVARS=1
+        INTDATA: 2 Type 0 Inv 0 Op 2 Ninp
+        INVARS: IT_@box1_1e INT IN1 HW_OC_C INT IN2 _dud_ INT IN3 _dud_ INT IN4 _dud_ INT IN5
+        INVARS: _dud_ INT IN6
+        OUTVARS: fault_PC INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: mavgR 1 1 33 0
+      DRAFT_UNIQUEID=1209 HIERARCHY_BOXPARENT=1010 LOCATION=752 240
+      DATA_SIZES: INTDATA=3 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=2 OUTVARS=1
+      INTDATA: 1 IorF 0 Trig 24 Pnts
+      FLOATDATA: 0.0 Init
+      INVARS: v_high_B IEEE INP _dud_ INT TRIGSIG
+      OUTVARS: RT_@box4_16 IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: mavgR 1 1 34 0
+      DRAFT_UNIQUEID=1211 HIERARCHY_BOXPARENT=1010 LOCATION=752 368
+      DATA_SIZES: INTDATA=3 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=2 OUTVARS=1
+      INTDATA: 1 IorF 0 Trig 24 Pnts
+      FLOATDATA: 0.0 Init
+      INVARS: v_high_A IEEE INP _dud_ INT TRIGSIG
+      OUTVARS: RT_@box4_1h IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = monoX01 SubSystem = 1 Processor = 1 Priority = 35
+      DRAFT_UNIQUEID=1001 HIERARCHY_BOXPARENT=925 LOCATION=496 592
+      DATA_SIZES: INTDATA=4 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=2 OUTVARS=1
+      INTDATA: 0 PN 0 TM 1 OT 0 OR
+      FLOATDATA: 0.01 LOT
+      INVARS: trigger INT Inp _dud_ IEEE Td
+      OUTVARS: IT_@box3_a INT Out
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 29
+      DRAFT_UNIQUEID=2075 HIERARCHY_BOXPARENT=2040 LOCATION=80 112
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@box7_e IEEE INP1_r NOISE_ON IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: i_high_n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 30
+      DRAFT_UNIQUEID=2073 HIERARCHY_BOXPARENT=2040 LOCATION=80 240
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@box7_k IEEE INP1_r NOISE_ON IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: v_highpebb_n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 31
+      DRAFT_UNIQUEID=2053 HIERARCHY_BOXPARENT=2040 LOCATION=80 368
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@box7_f IEEE INP1_r NOISE_ON IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: v_highbus_n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 32
+      DRAFT_UNIQUEID=2059 HIERARCHY_BOXPARENT=2040 LOCATION=80 496
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@box7_l IEEE INP1_r NOISE_ON IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: v_dcc_n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 33
+      DRAFT_UNIQUEID=2070 HIERARCHY_BOXPARENT=2040 LOCATION=80 624
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@box7_h IEEE INP1_r NOISE_ON IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: i_low_n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 7
+      DRAFT_UNIQUEID=2335 HIERARCHY_BOXPARENT=2295 LOCATION=240 272
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@Src_Ctrl_2b IEEE INP1_r RT_@Src_Ctrl_22 IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: Vm IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 61
+      DRAFT_UNIQUEID=2396 HIERARCHY_BOXPARENT=2295 LOCATION=240 432
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: Theta_n IEEE INP1_r RT_@Src_Ctrl_2x IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_36 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 69
+      DRAFT_UNIQUEID=2356 HIERARCHY_BOXPARENT=2295 LOCATION=336 272
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 1 Num 1 IorF
+      INVARS: Vpu IEEE INP1_r Vm IEEE INP2_r RT_@Src_Ctrl_23 IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_2e IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 62
+      DRAFT_UNIQUEID=2511 HIERARCHY_BOXPARENT=2295 LOCATION=336 1072
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@Src_Ctrl_2s IEEE INP1_r f_pu IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_2w IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 70
+      DRAFT_UNIQUEID=2400 HIERARCHY_BOXPARENT=2295 LOCATION=368 560
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 1 Num 1 IorF
+      INVARS: Vpu IEEE INP1_r Vm IEEE INP2_r RT_@Src_Ctrl_3t IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_28 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 34
+      DRAFT_UNIQUEID=2057 HIERARCHY_BOXPARENT=2040 LOCATION=432 80
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@box7_g IEEE INP1_r NOISE_ON IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: v_bus_n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 35
+      DRAFT_UNIQUEID=2043 HIERARCHY_BOXPARENT=2040 LOCATION=432 208
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@box7_m IEEE INP1_r NOISE_ON IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: i_load_n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 36
+      DRAFT_UNIQUEID=1842 HIERARCHY_BOXPARENT=1814 LOCATION=464 528
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@LV_Load_i IEEE INP1_r RT_@LV_Load_b IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: i_lv_load IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 37
+      DRAFT_UNIQUEID=970 HIERARCHY_BOXPARENT=925 LOCATION=656 112
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: i_low IEEE INP1_r v_dcc IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box3_8 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 38
+      DRAFT_UNIQUEID=978 HIERARCHY_BOXPARENT=925 LOCATION=656 400
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: i_load IEEE INP1_r v_bus IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: P_LOAD IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 36
+      DRAFT_UNIQUEID=2091 HIERARCHY_BOXPARENT=2040 LOCATION=688 112
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@box7_j IEEE INP1_r NOISE_ON IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: i_high_B_n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 37
+      DRAFT_UNIQUEID=2097 HIERARCHY_BOXPARENT=2040 LOCATION=688 208
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@box7_n IEEE INP1_r NOISE_ON IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: i_high_C_n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 38
+      DRAFT_UNIQUEID=2100 HIERARCHY_BOXPARENT=2040 LOCATION=688 304
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@box7_o IEEE INP1_r NOISE_ON IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: v_high_C_n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 39
+      DRAFT_UNIQUEID=2106 HIERARCHY_BOXPARENT=2040 LOCATION=688 400
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@box7_p IEEE INP1_r NOISE_ON IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: v_grid_A_n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 40
+      DRAFT_UNIQUEID=2113 HIERARCHY_BOXPARENT=2040 LOCATION=688 496
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@box7_q IEEE INP1_r NOISE_ON IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: v_grid_B_n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 41
+      DRAFT_UNIQUEID=2123 HIERARCHY_BOXPARENT=2040 LOCATION=688 592
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@box7_i IEEE INP1_r NOISE_ON IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: v_grid_C_n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 39
+      DRAFT_UNIQUEID=1607 HIERARCHY_BOXPARENT=1545 LOCATION=848 176
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: switch_P_A IEEE INP1_r i_high_A IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@PEBB_BOX_AC_8 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 40
+      DRAFT_UNIQUEID=1667 HIERARCHY_BOXPARENT=1545 LOCATION=848 560
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: switch_P_B IEEE INP1_r i_high_B IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@PEBB_BOX_AC_9 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 41
+      DRAFT_UNIQUEID=1720 HIERARCHY_BOXPARENT=1545 LOCATION=848 944
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: switch_P_C IEEE INP1_r i_high_C IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@PEBB_BOX_AC_a IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 54
+      DRAFT_UNIQUEID=2317 HIERARCHY_BOXPARENT=2295 LOCATION=912 176
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: Theta_p IEEE INP1_r RT_@Src_Ctrl_2u IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_2z IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 55
+      DRAFT_UNIQUEID=2458 HIERARCHY_BOXPARENT=2295 LOCATION=912 432
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: Theta_p IEEE INP1_r RT_@Src_Ctrl_2g IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_2n IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 42
+      DRAFT_UNIQUEID=1582 HIERARCHY_BOXPARENT=1545 LOCATION=976 272
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: switch_P_A IEEE INP1_r v_dcc IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@PEBB_BOX_AC_b IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 43
+      DRAFT_UNIQUEID=1638 HIERARCHY_BOXPARENT=1545 LOCATION=976 656
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: switch_P_B IEEE INP1_r v_dcc IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@PEBB_BOX_AC_c IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 44
+      DRAFT_UNIQUEID=1690 HIERARCHY_BOXPARENT=1545 LOCATION=976 1040
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: switch_P_C IEEE INP1_r v_dcc IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@PEBB_BOX_AC_7 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 45
+      DRAFT_UNIQUEID=1892 HIERARCHY_BOXPARENT=1814 LOCATION=1008 432
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: RT_@LV_Load_j IEEE INP1_r i_lv_load IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@LV_Load_f IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 71
+      DRAFT_UNIQUEID=2296 HIERARCHY_BOXPARENT=2295 LOCATION=1040 304
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 1 Num 1 IorF
+      INVARS: Vpu IEEE INP1_r Vm IEEE INP2_r RT_@Src_Ctrl_3q IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3z IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 72
+      DRAFT_UNIQUEID=2431 HIERARCHY_BOXPARENT=2295 LOCATION=1040 560
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 1 Num 1 IorF
+      INVARS: Vpu IEEE INP1_r Vm IEEE INP2_r RT_@Src_Ctrl_35 IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3d IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 63
+      DRAFT_UNIQUEID=2425 HIERARCHY_BOXPARENT=2295 LOCATION=1360 176
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: Theta_n IEEE INP1_r RT_@Src_Ctrl_3o IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3y IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 64
+      DRAFT_UNIQUEID=2471 HIERARCHY_BOXPARENT=2295 LOCATION=1360 432
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF
+      INVARS: Theta_n IEEE INP1_r RT_@Src_Ctrl_31 IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3f IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 73
+      DRAFT_UNIQUEID=2466 HIERARCHY_BOXPARENT=2295 LOCATION=1488 304
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 1 Num 1 IorF
+      INVARS: Vpu IEEE INP1_r Vm IEEE INP2_r RT_@Src_Ctrl_2o IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_2r IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = mul_B SubSystem = 1 Processor = 1 Priority = 74
+      DRAFT_UNIQUEID=2365 HIERARCHY_BOXPARENT=2295 LOCATION=1488 560
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 1 Num 1 IorF
+      INVARS: Vpu IEEE INP1_r Vm IEEE INP2_r RT_@Src_Ctrl_26 IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_2l IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = not_cb SubSystem = 1 Processor = 1 Priority = 46
+      DRAFT_UNIQUEID=1524 HIERARCHY_BOXPARENT=1490 LOCATION=624 48
+    DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    INTDATA: 0 Op
+    INVARS: comm_valid INT IN
+    OUTVARS: IT_@box6_i INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = not_cb SubSystem = 1 Processor = 1 Priority = 47
+      DRAFT_UNIQUEID=1409 HIERARCHY_BOXPARENT=1346 LOCATION=1168 912
+    DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    INTDATA: 0 Op
+    INVARS: notfault_P INT IN
+    OUTVARS: IT_@box1_17 INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = not_cb SubSystem = 1 Processor = 1 Priority = 48
+      DRAFT_UNIQUEID=1435 HIERARCHY_BOXPARENT=1346 LOCATION=1520 912
+    DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    INTDATA: 0 Op
+    INVARS: fault_PA INT IN
+    OUTVARS: notfault_PA INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = not_cb SubSystem = 1 Processor = 1 Priority = 49
+      DRAFT_UNIQUEID=1434 HIERARCHY_BOXPARENT=1346 LOCATION=1520 976
+    DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    INTDATA: 0 Op
+    INVARS: fault_PB INT IN
+    OUTVARS: notfault_PB INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = not_cb SubSystem = 1 Processor = 1 Priority = 50
+      DRAFT_UNIQUEID=1436 HIERARCHY_BOXPARENT=1346 LOCATION=1520 1040
+    DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    INTDATA: 0 Op
+    INVARS: fault_PC INT IN
+    OUTVARS: notfault_PC INT OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: pushb_i 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2039 LOCATION=272 656
+        DATA_SIZES: INTDATA=1 FLOATDATA=2 CHARDATA_FRMT=1 INVARS=0 OUTVARS=2
+        INTDATA: 0 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<manual_precharge>>>(((Name)))
+        OUTVARS: _dud_ IEEE FOUT manual_precharge INT IOUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = PlotUpdate SubSystem = 1 Processor = 1 Priority = 51
+      DRAFT_UNIQUEID=993 HIERARCHY_BOXPARENT=925 LOCATION=592 592
+    DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=1 OUTVARS=0
+    CHARDATA_FRMT: <<<RT_@box3_c>>>(((sigName)))
+    INVARS: IT_@box3_a INT I
+END
+RTDS.CTL.RISC_CMODEL
+COMP: pqmetX01 1 1 52 0
+      DRAFT_UNIQUEID=2013 HIERARCHY_BOXPARENT=1902 LOCATION=1040 144
+      DATA_SIZES: INTDATA=2 FLOATDATA=1 CHARDATA=0 INVARS=6 OUTVARS=2
+      INTDATA: 1 pu 0 adv
+      FLOATDATA: 4.5 MVA
+      INVARS: VGridA IEEE IN1 VGridB IEEE IN2 VGridC IEEE IN3 i_gen_A IEEE IN4 i_gen_B IEEE IN5
+      INVARS: i_gen_C IEEE IN6
+      OUTVARS: GmP IEEE OUT1 GmQ IEEE OUT2
+END
+RTDS.CTL.RISC_CMODEL
+COMP: pqmetX01 1 1 53 0
+      DRAFT_UNIQUEID=1960 HIERARCHY_BOXPARENT=1902 LOCATION=1040 368
+      DATA_SIZES: INTDATA=2 FLOATDATA=1 CHARDATA=0 INVARS=6 OUTVARS=2
+      INTDATA: 0 pu 0 adv
+      FLOATDATA: 4.5 MVA
+      INVARS: v_grid_A IEEE IN1 v_grid_B IEEE IN2 v_grid_C IEEE IN3 i_gen_A IEEE IN4 i_gen_B IEEE IN5
+      INVARS: i_gen_C IEEE IN6
+      OUTVARS: P_tg IEEE OUT1 Q_tg IEEE OUT2
+END
+RTDS.CTL.RISC_CMODEL
+COMP: pqmetX01 1 1 54 0
+      DRAFT_UNIQUEID=2005 HIERARCHY_BOXPARENT=1902 LOCATION=1040 592
+      DATA_SIZES: INTDATA=2 FLOATDATA=1 CHARDATA=0 INVARS=6 OUTVARS=2
+      INTDATA: 0 pu 0 adv
+      FLOATDATA: 4.5 MVA
+      INVARS: v_grid_A IEEE IN1 v_grid_B IEEE IN2 v_grid_C IEEE IN3 i_load_A IEEE IN4 i_load_B IEEE IN5
+      INVARS: i_load_C IEEE IN6
+      OUTVARS: P_hv_load IEEE OUT1 Q_hv_load IEEE OUT2
+END
+RTDS.CTL.RISC_CMODEL
+COMP: pqmetX01 1 1 55 0
+      DRAFT_UNIQUEID=1765 HIERARCHY_BOXPARENT=1545 LOCATION=1872 176
+      DATA_SIZES: INTDATA=2 FLOATDATA=1 CHARDATA=0 INVARS=6 OUTVARS=2
+      INTDATA: 0 pu 0 adv
+      FLOATDATA: 1 MVA
+      INVARS: v_grid_A IEEE IN1 v_grid_B IEEE IN2 v_grid_C IEEE IN3 i_high_A IEEE IN4 i_high_B IEEE IN5
+      INVARS: i_high_C IEEE IN6
+      OUTVARS: P_PEBB_H IEEE OUT1 Q_PEBB_H IEEE OUT2
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RANDOM 1 1 8 0
+      DRAFT_UNIQUEID=2061 HIERARCHY_BOXPARENT=2040 LOCATION=400 112
+    DATA_SIZES: INTDATA=2 FLOATDATA=3 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    INTDATA: 13 Seed 1 Type
+    FLOATDATA: 0.0 Mean 0.00173611 SD 1.0 Gain
+    CHARDATA_FRMT: <<<RAND10>>>(((random)))
+    OUTVARS: RT_@box7_g IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RANDOM 1 1 9 0
+      DRAFT_UNIQUEID=2050 HIERARCHY_BOXPARENT=2040 LOCATION=400 240
+    DATA_SIZES: INTDATA=2 FLOATDATA=3 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    INTDATA: 2840 Seed 1 Type
+    FLOATDATA: 0.0 Mean 0.00208333 SD 1.0 Gain
+    CHARDATA_FRMT: <<<RAND11>>>(((random)))
+    OUTVARS: RT_@box7_m IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RANDOM 1 1 10 0
+      DRAFT_UNIQUEID=2074 HIERARCHY_BOXPARENT=2040 LOCATION=48 144
+    DATA_SIZES: INTDATA=2 FLOATDATA=3 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    INTDATA: 83 Seed 1 Type
+    FLOATDATA: 0.0 Mean 0.0000833333 SD 1.0 Gain
+    CHARDATA_FRMT: <<<RAND2>>>(((random)))
+    OUTVARS: RT_@box7_e IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RANDOM 1 1 11 0
+      DRAFT_UNIQUEID=2092 HIERARCHY_BOXPARENT=2040 LOCATION=656 144
+    DATA_SIZES: INTDATA=2 FLOATDATA=3 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    INTDATA: 61 Seed 1 Type
+    FLOATDATA: 0.0 Mean 0.0000833333 SD 1.0 Gain
+    CHARDATA_FRMT: <<<RAND3>>>(((random)))
+    OUTVARS: RT_@box7_j IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RANDOM 1 1 12 0
+      DRAFT_UNIQUEID=2042 HIERARCHY_BOXPARENT=2040 LOCATION=48 272
+    DATA_SIZES: INTDATA=2 FLOATDATA=3 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    INTDATA: 4029 Seed 1 Type
+    FLOATDATA: 0.0 Mean 0.025 SD 1.0 Gain
+    CHARDATA_FRMT: <<<RAND4>>>(((random)))
+    OUTVARS: RT_@box7_k IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RANDOM 1 1 13 0
+      DRAFT_UNIQUEID=2098 HIERARCHY_BOXPARENT=2040 LOCATION=656 240
+    DATA_SIZES: INTDATA=2 FLOATDATA=3 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    INTDATA: 491 Seed 1 Type
+    FLOATDATA: 0.0 Mean 0.0000833333 SD 1.0 Gain
+    CHARDATA_FRMT: <<<RAND4>>>(((random)))
+    OUTVARS: RT_@box7_n IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RANDOM 1 1 14 0
+      DRAFT_UNIQUEID=2068 HIERARCHY_BOXPARENT=2040 LOCATION=48 400
+    DATA_SIZES: INTDATA=2 FLOATDATA=3 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    INTDATA: 3498 Seed 1 Type
+    FLOATDATA: 0.0 Mean 0.025 SD 1.0 Gain
+    CHARDATA_FRMT: <<<RAND5>>>(((random)))
+    OUTVARS: RT_@box7_f IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RANDOM 1 1 15 0
+      DRAFT_UNIQUEID=2105 HIERARCHY_BOXPARENT=2040 LOCATION=656 336
+    DATA_SIZES: INTDATA=2 FLOATDATA=3 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    INTDATA: 833 Seed 1 Type
+    FLOATDATA: 0.0 Mean 0.0000833333 SD 1.0 Gain
+    CHARDATA_FRMT: <<<RAND5>>>(((random)))
+    OUTVARS: RT_@box7_o IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RANDOM 1 1 16 0
+      DRAFT_UNIQUEID=2062 HIERARCHY_BOXPARENT=2040 LOCATION=48 528
+    DATA_SIZES: INTDATA=2 FLOATDATA=3 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    INTDATA: 375 Seed 1 Type
+    FLOATDATA: 0.0 Mean 0.002333333 SD 1.0 Gain
+    CHARDATA_FRMT: <<<RAND6>>>(((random)))
+    OUTVARS: RT_@box7_l IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RANDOM 1 1 17 0
+      DRAFT_UNIQUEID=2109 HIERARCHY_BOXPARENT=2040 LOCATION=656 432
+    DATA_SIZES: INTDATA=2 FLOATDATA=3 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    INTDATA: 278 Seed 1 Type
+    FLOATDATA: 0.0 Mean 0.0000833333 SD 1.0 Gain
+    CHARDATA_FRMT: <<<RAND6>>>(((random)))
+    OUTVARS: RT_@box7_p IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RANDOM 1 1 18 0
+      DRAFT_UNIQUEID=2064 HIERARCHY_BOXPARENT=2040 LOCATION=48 656
+    DATA_SIZES: INTDATA=2 FLOATDATA=3 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    INTDATA: 839 Seed 1 Type
+    FLOATDATA: 0.0 Mean 0.0058333333 SD 1.0 Gain
+    CHARDATA_FRMT: <<<RAND7>>>(((random)))
+    OUTVARS: RT_@box7_h IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RANDOM 1 1 19 0
+      DRAFT_UNIQUEID=2117 HIERARCHY_BOXPARENT=2040 LOCATION=656 528
+    DATA_SIZES: INTDATA=2 FLOATDATA=3 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    INTDATA: 42 Seed 1 Type
+    FLOATDATA: 0.0 Mean 0.0000833333 SD 1.0 Gain
+    CHARDATA_FRMT: <<<RAND7>>>(((random)))
+    OUTVARS: RT_@box7_q IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: RANDOM 1 1 20 0
+      DRAFT_UNIQUEID=2120 HIERARCHY_BOXPARENT=2040 LOCATION=656 624
+    DATA_SIZES: INTDATA=2 FLOATDATA=3 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    INTDATA: 993 Seed 1 Type
+    FLOATDATA: 0.0 Mean 0.0000833333 SD 1.0 Gain
+    CHARDATA_FRMT: <<<RAND8>>>(((random)))
+    OUTVARS: RT_@box7_i IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = ratelim_cb SubSystem = 1 Processor = 1 Priority = 47
+      DRAFT_UNIQUEID=2516 HIERARCHY_BOXPARENT=2295 LOCATION=592 816
+    DATA_SIZES: INTDATA=0 FLOATDATA=4 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    FLOATDATA: 0.07407 ULim -0.07407 LLIm 0.5 Xic 0.5 Yic
+    INVARS: RT_@Src_Ctrl_3w IEEE Inp
+    OUTVARS: RT_@Src_Ctrl_2k IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = realpl_cb SubSystem = 1 Processor = 1 Priority = 56
+      DRAFT_UNIQUEID=2509 HIERARCHY_BOXPARENT=2295 LOCATION=208 1040
+    DATA_SIZES: INTDATA=4 FLOATDATA=6 CHARDATA_FRMT=0 INVARS=7 OUTVARS=1
+    INTDATA: 0 RST 0 LIM 1 TGD 0 PItype
+    FLOATDATA: 0.02652 T 1.0 G 1 Xic 1 Yic 1.0 Tic
+    FLOATDATA: 1.0 Gic
+    INVARS: RT_@Src_Ctrl_2m IEEE I _dud_ IEEE RVAL _dud_ INT RSTSIG _dud_ IEEE MAX _dud_ IEEE MIN
+    INVARS: _dud_ IEEE GCC _dud_ IEEE TCC
+    OUTVARS: RT_@Src_Ctrl_2s IEEE O
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = realpl_cb SubSystem = 1 Processor = 1 Priority = 21
+      DRAFT_UNIQUEID=2478 HIERARCHY_BOXPARENT=2295 LOCATION=272 784
+    DATA_SIZES: INTDATA=4 FLOATDATA=6 CHARDATA_FRMT=0 INVARS=7 OUTVARS=1
+    INTDATA: 0 RST 0 LIM 1 TGD 0 PItype
+    FLOATDATA: 0.0159155 T 1.0 G 0.0 Xic 0.0 Yic 1.0 Tic
+    FLOATDATA: 1.0 Gic
+    INVARS: GmP IEEE I _dud_ IEEE RVAL _dud_ INT RSTSIG _dud_ IEEE MAX _dud_ IEEE MIN
+    INVARS: _dud_ IEEE GCC _dud_ IEEE TCC
+    OUTVARS: RT_@Src_Ctrl_25 IEEE O
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = realpl_cb SubSystem = 1 Processor = 1 Priority = 50
+      DRAFT_UNIQUEID=2495 HIERARCHY_BOXPARENT=2295 LOCATION=784 912
+    DATA_SIZES: INTDATA=4 FLOATDATA=6 CHARDATA_FRMT=0 INVARS=7 OUTVARS=1
+    INTDATA: 0 RST 0 LIM 1 TGD 0 PItype
+    FLOATDATA: 600 T 100 G 0.0 Xic 1.0 Yic 1.0 Tic
+    FLOATDATA: 1.0 Gic
+    INVARS: RT_@Src_Ctrl_2q IEEE I _dud_ IEEE RVAL _dud_ INT RSTSIG _dud_ IEEE MAX _dud_ IEEE MIN
+    INVARS: _dud_ IEEE GCC _dud_ IEEE TCC
+    OUTVARS: RT_@Src_Ctrl_37 IEEE O
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = realpl_cb SubSystem = 1 Processor = 1 Priority = 56
+      DRAFT_UNIQUEID=1207 HIERARCHY_BOXPARENT=1010 LOCATION=816 496
+    DATA_SIZES: INTDATA=4 FLOATDATA=6 CHARDATA_FRMT=0 INVARS=7 OUTVARS=1
+    INTDATA: 0 RST 0 LIM 1 TGD 0 PItype
+    FLOATDATA: 0.0002 T 1.0 G 0.0 Xic 0.0 Yic 1.0 Tic
+    FLOATDATA: 1.0 Gic
+    INVARS: RT_@box4_y IEEE I _dud_ IEEE RVAL _dud_ INT RSTSIG _dud_ IEEE MAX _dud_ IEEE MIN
+    INVARS: _dud_ IEEE GCC _dud_ IEEE TCC
+    OUTVARS: RT_@box4_z IEEE O
+END
+RTDS.CTL.RISC_CMODEL
+COMP: rms_meter 1 1 22 0
+      DRAFT_UNIQUEID=2176 HIERARCHY_BOXPARENT=2175 LOCATION=208 112
+    DATA_SIZES: INTDATA=4 FLOATDATA=1 CHARDATA=0 INVARS=4 OUTVARS=1
+    INTDATA: 0 Mode 0 pu 1 LL 1 unit
+    FLOATDATA: 4.160 Sc
+    INVARS: v_grid_A IEEE NA v_grid_B IEEE NB v_grid_C IEEE NC _dud_ IEEE N1
+    OUTVARS: V_stator_RMS IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: rms_meter 1 1 23 0
+      DRAFT_UNIQUEID=2183 HIERARCHY_BOXPARENT=2175 LOCATION=208 240
+    DATA_SIZES: INTDATA=4 FLOATDATA=1 CHARDATA=0 INVARS=4 OUTVARS=1
+    INTDATA: 0 Mode 0 pu 0 LL 2 unit
+    FLOATDATA: 0.62454 Sc
+    INVARS: i_high_A IEEE NA i_high_B IEEE NB i_high_C IEEE NC _dud_ IEEE N1
+    OUTVARS: i_high_RMS IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: rms_meter 1 1 24 0
+      DRAFT_UNIQUEID=2210 HIERARCHY_BOXPARENT=2175 LOCATION=208 368
+    DATA_SIZES: INTDATA=4 FLOATDATA=1 CHARDATA=0 INVARS=4 OUTVARS=1
+    INTDATA: 0 Mode 0 pu 0 LL 2 unit
+    FLOATDATA: 0.62454 Sc
+    INVARS: i_load_A IEEE NA i_load_B IEEE NB i_load_C IEEE NC _dud_ IEEE N1
+    OUTVARS: i_hv_load_RMS IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: rms_meter 1 1 25 0
+      DRAFT_UNIQUEID=2222 HIERARCHY_BOXPARENT=2175 LOCATION=208 496
+    DATA_SIZES: INTDATA=4 FLOATDATA=1 CHARDATA=0 INVARS=4 OUTVARS=1
+    INTDATA: 0 Mode 0 pu 0 LL 2 unit
+    FLOATDATA: 0.62454 Sc
+    INVARS: i_gen_A IEEE NA i_gen_B IEEE NB i_gen_C IEEE NC _dud_ IEEE N1
+    OUTVARS: i_gen_RMS IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: rms_meter 1 1 96 0
+      DRAFT_UNIQUEID=2230 HIERARCHY_BOXPARENT=2175 LOCATION=208 592
+    DATA_SIZES: INTDATA=4 FLOATDATA=1 CHARDATA=0 INVARS=4 OUTVARS=1
+    INTDATA: 0 Mode 0 pu 1 LL 1 unit
+    FLOATDATA: 4.16 Sc
+    INVARS: VGridA IEEE NA VGridB IEEE NB VGridC IEEE NC _dud_ IEEE N1
+    OUTVARS: VGridRMS IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: rms_meter 1 1 26 0
+      DRAFT_UNIQUEID=2285 HIERARCHY_BOXPARENT=2175 LOCATION=432 112
+    DATA_SIZES: INTDATA=4 FLOATDATA=1 CHARDATA=0 INVARS=4 OUTVARS=1
+    INTDATA: 0 Mode 0 pu 1 LL 1 unit
+    FLOATDATA: 4.160 Sc
+    INVARS: v_high_A IEEE NA v_high_B IEEE NB v_high_C IEEE NC _dud_ IEEE N1
+    OUTVARS: v_high_RMS IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sdelay SubSystem = 1 Processor = 1 Priority = 57
+      DRAFT_UNIQUEID=1532 HIERARCHY_BOXPARENT=1490 LOCATION=656 80
+    DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+    INTDATA: 1 IorF -1 NS
+    FLOATDATA: 625e-6 DEL 0 INIT
+    INVARS: comm_up INT iInp _dud_ IEEE fInp
+    OUTVARS: IT_@box6_n INT iOut _dud_ IEEE fOut
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sdelay SubSystem = 1 Processor = 1 Priority = 58
+      DRAFT_UNIQUEID=1350 HIERARCHY_BOXPARENT=1346 LOCATION=1104 144
+    DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+    INTDATA: 0 IorF -1 NS
+    FLOATDATA: 31.25e-6 DEL 0.0 INIT
+    INVARS: _dud_ INT iInp switch_P_A_S IEEE fInp
+    OUTVARS: _dud_ INT iOut RT_@box1_1g IEEE fOut
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sdelay SubSystem = 1 Processor = 1 Priority = 59
+      DRAFT_UNIQUEID=1371 HIERARCHY_BOXPARENT=1346 LOCATION=1104 400
+    DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+    INTDATA: 0 IorF -1 NS
+    FLOATDATA: 31.25e-6 DEL 0.0 INIT
+    INVARS: _dud_ INT iInp switch_P_B_S IEEE fInp
+    OUTVARS: _dud_ INT iOut RT_@box1_1k IEEE fOut
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sdelay SubSystem = 1 Processor = 1 Priority = 60
+      DRAFT_UNIQUEID=1408 HIERARCHY_BOXPARENT=1346 LOCATION=1104 656
+    DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+    INTDATA: 0 IorF -1 NS
+    FLOATDATA: 31.25e-6 DEL 0.0 INIT
+    INVARS: _dud_ INT iInp switch_P_C_S IEEE fInp
+    OUTVARS: _dud_ INT iOut RT_@box1_16 IEEE fOut
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sdelay SubSystem = 1 Processor = 1 Priority = 61
+      DRAFT_UNIQUEID=1349 HIERARCHY_BOXPARENT=1346 LOCATION=1168 176
+    DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+    INTDATA: 0 IorF -1 NS
+    FLOATDATA: 31.25e-6 DEL 0.0 INIT
+    INVARS: _dud_ INT iInp RT_@box1_1g IEEE fInp
+    OUTVARS: _dud_ INT iOut RT_@box1_1j IEEE fOut
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sdelay SubSystem = 1 Processor = 1 Priority = 62
+      DRAFT_UNIQUEID=1380 HIERARCHY_BOXPARENT=1346 LOCATION=1168 432
+    DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+    INTDATA: 0 IorF -1 NS
+    FLOATDATA: 31.25e-6 DEL 0.0 INIT
+    INVARS: _dud_ INT iInp RT_@box1_1k IEEE fInp
+    OUTVARS: _dud_ INT iOut RT_@box1_u IEEE fOut
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sdelay SubSystem = 1 Processor = 1 Priority = 63
+      DRAFT_UNIQUEID=1402 HIERARCHY_BOXPARENT=1346 LOCATION=1168 688
+    DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+    INTDATA: 0 IorF -1 NS
+    FLOATDATA: 31.25e-6 DEL 0.0 INIT
+    INVARS: _dud_ INT iInp RT_@box1_16 IEEE fInp
+    OUTVARS: _dud_ INT iOut RT_@box1_1l IEEE fOut
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sdelay SubSystem = 1 Processor = 1 Priority = 64
+      DRAFT_UNIQUEID=1351 HIERARCHY_BOXPARENT=1346 LOCATION=1232 208
+    DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+    INTDATA: 0 IorF -1 NS
+    FLOATDATA: 31.25e-6 DEL 0.0 INIT
+    INVARS: _dud_ INT iInp RT_@box1_1j IEEE fInp
+    OUTVARS: _dud_ INT iOut RT_@box1_v IEEE fOut
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sdelay SubSystem = 1 Processor = 1 Priority = 65
+      DRAFT_UNIQUEID=1373 HIERARCHY_BOXPARENT=1346 LOCATION=1232 464
+    DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+    INTDATA: 0 IorF -1 NS
+    FLOATDATA: 31.25e-6 DEL 0.0 INIT
+    INVARS: _dud_ INT iInp RT_@box1_u IEEE fInp
+    OUTVARS: _dud_ INT iOut RT_@box1_19 IEEE fOut
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sdelay SubSystem = 1 Processor = 1 Priority = 66
+      DRAFT_UNIQUEID=1399 HIERARCHY_BOXPARENT=1346 LOCATION=1232 720
+    DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+    INTDATA: 0 IorF -1 NS
+    FLOATDATA: 31.25e-6 DEL 0.0 INIT
+    INVARS: _dud_ INT iInp RT_@box1_1l IEEE fInp
+    OUTVARS: _dud_ INT iOut RT_@box1_y IEEE fOut
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sdelay SubSystem = 1 Processor = 1 Priority = 67
+      DRAFT_UNIQUEID=1251 HIERARCHY_BOXPARENT=1010 LOCATION=1616 496
+    DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+    INTDATA: 1 IorF -1 NS
+    FLOATDATA: 0.025 DEL 0.0 INIT
+    INVARS: IT_@box4_s INT iInp _dud_ IEEE fInp
+    OUTVARS: precharge_contact INT iOut _dud_ IEEE fOut
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sdelay SubSystem = 1 Processor = 1 Priority = 68
+      DRAFT_UNIQUEID=1093 HIERARCHY_BOXPARENT=1010 LOCATION=1648 272
+    DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+    INTDATA: 1 IorF -1 NS
+    FLOATDATA: 0.025 DEL 0.0 INIT
+    INVARS: IT_@box4_12 INT iInp _dud_ IEEE fInp
+    OUTVARS: lowside_contact INT iOut _dud_ IEEE fOut
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sdelay SubSystem = 1 Processor = 1 Priority = 69
+      DRAFT_UNIQUEID=1105 HIERARCHY_BOXPARENT=1010 LOCATION=1648 336
+    DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+    INTDATA: 1 IorF -1 NS
+    FLOATDATA: 0.025 DEL 0.0 INIT
+    INVARS: IT_@box4_19 INT iInp _dud_ IEEE fInp
+    OUTVARS: highside_contact INT iOut _dud_ IEEE fOut
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_A SubSystem = 1 Processor = 1 Priority = 70
+      DRAFT_UNIQUEID=1022 HIERARCHY_BOXPARENT=1010 LOCATION=208 272
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 0 IorF 1 SH
+      INVARS: Loopback_delay INT INP1_i _dud_ IEEE INP1_r En INT INP2
+      OUTVARS: Loopback_delay_S INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 71
+      DRAFT_UNIQUEID=1253 HIERARCHY_BOXPARENT=1010 LOCATION=464 368
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i RT_@box4_15 IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i v_high_C_TX IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 72
+      DRAFT_UNIQUEID=1261 HIERARCHY_BOXPARENT=1010 LOCATION=464 464
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i RT_@box4_1e IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i i_high_B_TX IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 73
+      DRAFT_UNIQUEID=1262 HIERARCHY_BOXPARENT=1010 LOCATION=464 560
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i RT_@box4_v IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i i_high_C_TX IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 74
+      DRAFT_UNIQUEID=1289 HIERARCHY_BOXPARENT=1010 LOCATION=464 656
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i RT_@box4_11 IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i v_stator_A_TX IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 75
+      DRAFT_UNIQUEID=1298 HIERARCHY_BOXPARENT=1010 LOCATION=464 752
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i RT_@box4_1a IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i v_stator_B_TX IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 76
+      DRAFT_UNIQUEID=1309 HIERARCHY_BOXPARENT=1010 LOCATION=464 848
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i RT_@box4_1i IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i v_stator_C_TX IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_A SubSystem = 1 Processor = 1 Priority = 77
+      DRAFT_UNIQUEID=1865 HIERARCHY_BOXPARENT=1814 LOCATION=592 80
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 0 IorF 1 SH
+      INVARS: IT_@LV_Load_d INT INP1_i _dud_ IEEE INP1_r SmpInputs INT INP2
+      OUTVARS: load_switch INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 78
+      DRAFT_UNIQUEID=1048 HIERARCHY_BOXPARENT=1010 LOCATION=912 112
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i RT_@box4_x IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i i_high_A_TX IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 79
+      DRAFT_UNIQUEID=1036 HIERARCHY_BOXPARENT=1010 LOCATION=912 240
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i RT_@box4_17 IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i v_high_B_TX IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 80
+      DRAFT_UNIQUEID=1068 HIERARCHY_BOXPARENT=1010 LOCATION=912 368
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i RT_@box4_1j IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i v_high_A_TX IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 81
+      DRAFT_UNIQUEID=1071 HIERARCHY_BOXPARENT=1010 LOCATION=912 496
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i RT_@box4_z IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i v_dcc_TX IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 82
+      DRAFT_UNIQUEID=1049 HIERARCHY_BOXPARENT=1010 LOCATION=912 624
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i RT_@box4_1b IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i i_low_TX IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 83
+      DRAFT_UNIQUEID=1047 HIERARCHY_BOXPARENT=1010 LOCATION=1264 80
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i RT_@box4_14 IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i v_bus_TX IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 84
+      DRAFT_UNIQUEID=1044 HIERARCHY_BOXPARENT=1010 LOCATION=1264 208
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i RT_@box4_1d IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i i_load_TX IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_A SubSystem = 1 Processor = 1 Priority = 85
+      DRAFT_UNIQUEID=1101 HIERARCHY_BOXPARENT=1010 LOCATION=1456 368
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 0 IorF 1 SH
+      INVARS: cc_bits_RX INT INP1_i _dud_ IEEE INP1_r En INT INP2
+      OUTVARS: IT_@box4_18 INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 86
+      DRAFT_UNIQUEID=1333 HIERARCHY_BOXPARENT=1010 LOCATION=1808 80
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i PEBB_next_state_cmd_RX IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i PEBB_next_state_cmd IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_A SubSystem = 1 Processor = 1 Priority = 87
+      DRAFT_UNIQUEID=1151 HIERARCHY_BOXPARENT=1010 LOCATION=1808 656
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 0 IorF 1 SH
+      INVARS: PEBB_current_state_RX INT INP1_i _dud_ IEEE INP1_r En INT INP2
+      OUTVARS: PEBB_current_state INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 88
+      DRAFT_UNIQUEID=1338 HIERARCHY_BOXPARENT=1010 LOCATION=1808 752
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i PEBB_Power_RX IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i RT_@box4_t IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_A SubSystem = 1 Processor = 1 Priority = 89
+      DRAFT_UNIQUEID=1122 HIERARCHY_BOXPARENT=1010 LOCATION=2064 80
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 0 IorF 1 SH
+      INVARS: PEBB_next_state_RX INT INP1_i _dud_ IEEE INP1_r En INT INP2
+      OUTVARS: PEBB_next_state INT OUT_i _dud_ IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 90
+      DRAFT_UNIQUEID=1127 HIERARCHY_BOXPARENT=1010 LOCATION=2064 272
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i SLC_current_state_RX IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i SLC_current_state IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 91
+      DRAFT_UNIQUEID=1133 HIERARCHY_BOXPARENT=1010 LOCATION=2064 368
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i init_ok_RX IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i init_ok IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 92
+      DRAFT_UNIQUEID=1199 HIERARCHY_BOXPARENT=1010 LOCATION=2064 464
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i bus_ok_RX IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i bus_ok IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 93
+      DRAFT_UNIQUEID=1142 HIERARCHY_BOXPARENT=1010 LOCATION=2064 560
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i P_ulim_RX IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i P_ulim IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 94
+      DRAFT_UNIQUEID=1324 HIERARCHY_BOXPARENT=1010 LOCATION=2288 80
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i switch_P_A_RX IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i switch_P_A_S IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 95
+      DRAFT_UNIQUEID=1215 HIERARCHY_BOXPARENT=1010 LOCATION=2352 560
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i P_llim_RX IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i P_llim IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 96
+      DRAFT_UNIQUEID=1222 HIERARCHY_BOXPARENT=1010 LOCATION=2352 656
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i Q_ulim_RX IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i Q_ulim IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 97
+      DRAFT_UNIQUEID=1229 HIERARCHY_BOXPARENT=1010 LOCATION=2352 752
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i Q_llim_RX IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i Q_llim IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 98
+      DRAFT_UNIQUEID=1243 HIERARCHY_BOXPARENT=1010 LOCATION=2352 848
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i switch_P_B_RX IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i switch_P_B_S IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sh_B SubSystem = 1 Processor = 1 Priority = 99
+      DRAFT_UNIQUEID=1241 HIERARCHY_BOXPARENT=1010 LOCATION=2352 944
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=2
+      INTDATA: 1 IorF 1 SH
+      INVARS: _dud_ INT INP1_i switch_P_C_RX IEEE INP1_r En INT INP2
+      OUTVARS: _dud_ INT OUT_i switch_P_C_S IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sigsw_cb SubSystem = 1 Processor = 1 Priority = 100
+      DRAFT_UNIQUEID=897 HIERARCHY_BOXPARENT=879 LOCATION=432 80
+    DATA_SIZES: INTDATA=3 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=5 OUTVARS=2
+    INTDATA: 1 A 0 DPath 0 Pos
+    INVARS: substep INT Ctrl _dud_ IEEE InA_r _dud_ IEEE InB_r IT_@Box3_9 INT InA_i IT_@Box3_7 INT InB_i
+    OUTVARS: _dud_ IEEE Out_r En INT Out_i
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sigsw_cb SubSystem = 1 Processor = 1 Priority = 65
+      DRAFT_UNIQUEID=2540 HIERARCHY_BOXPARENT=2295 LOCATION=432 1104
+    DATA_SIZES: INTDATA=3 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=5 OUTVARS=2
+    INTDATA: 1 A 1 DPath 0 Pos
+    INVARS: droopableSource INT Ctrl RT_@Src_Ctrl_2w IEEE InA_r RT_@Src_Ctrl_38 IEEE InB_r _dud_ INT InA_i _dud_ INT InB_i
+    OUTVARS: Vpu IEEE Out_r _dud_ INT Out_i
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sigsw_cb SubSystem = 1 Processor = 1 Priority = 101
+      DRAFT_UNIQUEID=1115 HIERARCHY_BOXPARENT=1010 LOCATION=592 112
+    DATA_SIZES: INTDATA=3 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=5 OUTVARS=2
+    INTDATA: 1 A 0 DPath 0 Pos
+    INVARS: En INT Ctrl _dud_ IEEE InA_r _dud_ IEEE InB_r IT_@box4_1c INT InA_i IT_@box4_1f INT InB_i
+    OUTVARS: _dud_ IEEE Out_r packet_key INT Out_i
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sigsw_cb SubSystem = 1 Processor = 1 Priority = 48
+      DRAFT_UNIQUEID=2514 HIERARCHY_BOXPARENT=2295 LOCATION=656 912
+    DATA_SIZES: INTDATA=3 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=5 OUTVARS=2
+    INTDATA: 1 A 1 DPath 0 Pos
+    INVARS: PwrRatLim INT Ctrl RT_@Src_Ctrl_2k IEEE InA_r RT_@Src_Ctrl_3w IEEE InB_r _dud_ INT InA_i _dud_ INT InB_i
+    OUTVARS: RT_@Src_Ctrl_2t IEEE Out_r _dud_ INT Out_i
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sigsw_cb SubSystem = 1 Processor = 1 Priority = 102
+      DRAFT_UNIQUEID=920 HIERARCHY_BOXPARENT=879 LOCATION=720 80
+    DATA_SIZES: INTDATA=3 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=5 OUTVARS=2
+    INTDATA: 1 A 0 DPath 0 Pos
+    INVARS: substep INT Ctrl _dud_ IEEE InA_r _dud_ IEEE InB_r IT_@Box3_b INT InA_i IT_@Box3_a INT InB_i
+    OUTVARS: _dud_ IEEE Out_r SmpInputs INT Out_i
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sigsw_cb SubSystem = 1 Processor = 1 Priority = 51
+      DRAFT_UNIQUEID=2531 HIERARCHY_BOXPARENT=2295 LOCATION=1040 944
+    DATA_SIZES: INTDATA=3 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=5 OUTVARS=2
+    INTDATA: 1 A 1 DPath 0 Pos
+    INVARS: droopableSource INT Ctrl RT_@Src_Ctrl_37 IEEE InA_r RT_@Src_Ctrl_3n IEEE InB_r _dud_ INT InA_i _dud_ INT InB_i
+    OUTVARS: f_pu IEEE Out_r _dud_ INT Out_i
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sigsw_cb SubSystem = 1 Processor = 1 Priority = 103
+      DRAFT_UNIQUEID=1367 HIERARCHY_BOXPARENT=1346 LOCATION=1712 240
+    DATA_SIZES: INTDATA=3 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=5 OUTVARS=2
+    INTDATA: 1 A 1 DPath 0 Pos
+    INVARS: notfault_PA INT Ctrl RT_@box1_18 IEEE InA_r RT_@box1_1f IEEE InB_r _dud_ INT InA_i _dud_ INT InB_i
+    OUTVARS: switch_P_A IEEE Out_r _dud_ INT Out_i
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sigsw_cb SubSystem = 1 Processor = 1 Priority = 104
+      DRAFT_UNIQUEID=1378 HIERARCHY_BOXPARENT=1346 LOCATION=1712 496
+    DATA_SIZES: INTDATA=3 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=5 OUTVARS=2
+    INTDATA: 1 A 1 DPath 0 Pos
+    INVARS: notfault_PB INT Ctrl RT_@box1_x IEEE InA_r RT_@box1_w IEEE InB_r _dud_ INT InA_i _dud_ INT InB_i
+    OUTVARS: switch_P_B IEEE Out_r _dud_ INT Out_i
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sigsw_cb SubSystem = 1 Processor = 1 Priority = 105
+      DRAFT_UNIQUEID=1387 HIERARCHY_BOXPARENT=1346 LOCATION=1712 752
+    DATA_SIZES: INTDATA=3 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=5 OUTVARS=2
+    INTDATA: 1 A 1 DPath 0 Pos
+    INVARS: notfault_PC INT Ctrl RT_@box1_1d IEEE InA_r RT_@box1_1a IEEE InB_r _dud_ INT InA_i _dud_ INT InB_i
+    OUTVARS: switch_P_C IEEE Out_r _dud_ INT Out_i
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sine3_cb SubSystem = 1 Processor = 1 Priority = 75
+      DRAFT_UNIQUEID=2459 HIERARCHY_BOXPARENT=2295 LOCATION=368 144
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=2 OUTVARS=3
+      INTDATA: 0 Mode 1 Gain
+      INVARS: RT_@Src_Ctrl_3g IEEE INP RT_@Src_Ctrl_2e IEEE G
+      OUTVARS: RT_@Src_Ctrl_3i IEEE OUTA RT_@Src_Ctrl_3r IEEE OUTB RT_@Src_Ctrl_27 IEEE OUTC
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sine3_cb SubSystem = 1 Processor = 1 Priority = 76
+      DRAFT_UNIQUEID=2450 HIERARCHY_BOXPARENT=2295 LOCATION=432 432
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=2 OUTVARS=3
+      INTDATA: 0 Mode 1 Gain
+      INVARS: RT_@Src_Ctrl_3a IEEE INP RT_@Src_Ctrl_28 IEEE G
+      OUTVARS: VGridAN_1 IEEE OUTA VGridCN_1 IEEE OUTB VGridBN_1 IEEE OUTC
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sine3_cb SubSystem = 1 Processor = 1 Priority = 77
+      DRAFT_UNIQUEID=2318 HIERARCHY_BOXPARENT=2295 LOCATION=1104 176
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=2 OUTVARS=3
+      INTDATA: 0 Mode 1 Gain
+      INVARS: RT_@Src_Ctrl_33 IEEE INP RT_@Src_Ctrl_3z IEEE G
+      OUTVARS: VGridAP_5 IEEE OUTA VGridBP_5 IEEE OUTB VGridCP_5 IEEE OUTC
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sine3_cb SubSystem = 1 Processor = 1 Priority = 78
+      DRAFT_UNIQUEID=2416 HIERARCHY_BOXPARENT=2295 LOCATION=1104 432
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=2 OUTVARS=3
+      INTDATA: 0 Mode 1 Gain
+      INVARS: RT_@Src_Ctrl_2p IEEE INP RT_@Src_Ctrl_3d IEEE G
+      OUTVARS: VGridAP_7 IEEE OUTA VGridBP_7 IEEE OUTB VGridCP_7 IEEE OUTC
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sine3_cb SubSystem = 1 Processor = 1 Priority = 79
+      DRAFT_UNIQUEID=2435 HIERARCHY_BOXPARENT=2295 LOCATION=1552 176
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=2 OUTVARS=3
+      INTDATA: 0 Mode 1 Gain
+      INVARS: RT_@Src_Ctrl_24 IEEE INP RT_@Src_Ctrl_2r IEEE G
+      OUTVARS: VGridAN_5 IEEE OUTA VGridCN_5 IEEE OUTB VGridBN_5 IEEE OUTC
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sine3_cb SubSystem = 1 Processor = 1 Priority = 80
+      DRAFT_UNIQUEID=2423 HIERARCHY_BOXPARENT=2295 LOCATION=1552 432
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=2 OUTVARS=3
+      INTDATA: 0 Mode 1 Gain
+      INVARS: RT_@Src_Ctrl_3m IEEE INP RT_@Src_Ctrl_2l IEEE G
+      OUTVARS: VGridAN_7 IEEE OUTA VGridCN_7 IEEE OUTB VGridBN_7 IEEE OUTC
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2128 LOCATION=560 848
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 1 Init 10000 Max 0 Min
+    OUTVARS: ac_load_freq IEEE OUT
+    CHARDATA_FRMT: <<<ac_load_freq>>>(((Name))) <<<Hz>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2154 LOCATION=560 912
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 6.29 Max -6.29 Min
+    OUTVARS: ac_load_phs IEEE OUT
+    CHARDATA_FRMT: <<<ac_load_phs>>>(((Name))) <<<rad>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1924 HIERARCHY_BOXPARENT=1902 LOCATION=208 912
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0.001 Init 1.0 Max 0.0 Min
+    OUTVARS: LLoadrmtshrt IEEE OUT
+    CHARDATA_FRMT: <<<fltload_L1>>>(((Name))) <<<H>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1925 HIERARCHY_BOXPARENT=1902 LOCATION=208 976
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0.001 Init 1.0 Max 0.0 Min
+    OUTVARS: LLLrmtshrt IEEE OUT
+    CHARDATA_FRMT: <<<fltload_L2>>>(((Name))) <<<H>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1922 HIERARCHY_BOXPARENT=1902 LOCATION=208 784
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 1.0 Init 1.0 Max 0.0 Min
+    OUTVARS: RLoadrmtshrt IEEE OUT
+    CHARDATA_FRMT: <<<fltload_R1>>>(((Name))) <<<ohms>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1923 HIERARCHY_BOXPARENT=1902 LOCATION=208 848
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 1.0 Init 1.0 Max 0.0 Min
+    OUTVARS: RLLrmtshrt IEEE OUT
+    CHARDATA_FRMT: <<<fltload_R2>>>(((Name))) <<<ohms>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2037 LOCATION=560 784
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 2 Max 0.0 Min
+    OUTVARS: i_ac_load IEEE OUT
+    CHARDATA_FRMT: <<<i_ac_load>>>(((Name))) <<<kA>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2035 LOCATION=272 528
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0.2941 Init 1.5 Max -1.5 Min
+    OUTVARS: i_lv_dc_load IEEE OUT
+    CHARDATA_FRMT: <<<i_lv_dc_load>>>(((Name))) <<<kA>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2137 LOCATION=560 976
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 2 Max 0.0 Min
+    OUTVARS: i_sq_load IEEE OUT
+    CHARDATA_FRMT: <<<i_sq_load>>>(((Name))) <<<kA>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2555 LOCATION=816 912
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 5 Max -5 Min
+    OUTVARS: P_cmd IEEE OUT
+    CHARDATA_FRMT: <<<P_cmd>>>(((Name))) <<<MW>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2563 LOCATION=816 1040
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: -1.5e6 Init 1.5e6 Max -1.5e6 Min
+    OUTVARS: P_ll IEEE OUT
+    CHARDATA_FRMT: <<<P_ll>>>(((Name))) <<<MW>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2558 LOCATION=816 976
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 1.5e6 Init 1.5e6 Max -1.5e6 Min
+    OUTVARS: P_ul IEEE OUT
+    CHARDATA_FRMT: <<<P_ul>>>(((Name))) <<<MW>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2565 LOCATION=816 1104
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 64 Init 200 Max 0 Min
+    OUTVARS: pebb_state_cmd IEEE OUT
+    CHARDATA_FRMT: <<<pebb_state_cmd>>>(((Name))) <<<>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2134 LOCATION=48 976
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0.85 Init 1.0032 Max 0.66 Min
+    OUTVARS: PEBB_Vbus_Setp IEEE OUT
+    CHARDATA_FRMT: <<<PEBB_Vbus_Setp>>>(((Name))) <<<kV>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2171 LOCATION=816 784
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 1.5 Max -1.5 Min
+    OUTVARS: Q_cmd IEEE OUT
+    CHARDATA_FRMT: <<<Q_cmd>>>(((Name))) <<<MVAR>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2174 LOCATION=816 848
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: -0.6 Init 0 Max -1.5 Min
+    OUTVARS: Q_limit IEEE OUT
+    CHARDATA_FRMT: <<<Q_limit>>>(((Name))) <<<MVAR>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2027 LOCATION=272 592
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 5 Init 5000 Max 0.001 Min
+    OUTVARS: R_load_in IEEE OUT
+    CHARDATA_FRMT: <<<R_load>>>(((Name))) <<<Ohm>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2139 LOCATION=560 1040
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 1 Init 10000 Max 0 Min
+    OUTVARS: sq_load_freq IEEE OUT
+    CHARDATA_FRMT: <<<sq_load_freq>>>(((Name))) <<<Hz>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2157 LOCATION=560 1104
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 6.29 Max -6.29 Min
+    OUTVARS: sq_load_phs IEEE OUT
+    CHARDATA_FRMT: <<<sq_load_phs>>>(((Name))) <<<rad>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2440 HIERARCHY_BOXPARENT=2295 LOCATION=144 272
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 4.16 Init 50 Max 0.0 Min
+    OUTVARS: RT_@Src_Ctrl_22 IEEE OUT
+    CHARDATA_FRMT: <<<SYSV4>>>(((Name))) <<<KV>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2146 LOCATION=304 1136
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 2 Init 20 Max 0.5 Min
+    OUTVARS: t_aurora_start IEEE OUT
+    CHARDATA_FRMT: <<<t_aurora_start>>>(((Name))) <<<s>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2366 HIERARCHY_BOXPARENT=2295 LOCATION=304 400
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 6.28 Max 0.0 Min
+    OUTVARS: RT_@Src_Ctrl_2y IEEE OUT
+    CHARDATA_FRMT: <<<Th1_ns>>>(((Name))) <<<rad>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2324 HIERARCHY_BOXPARENT=2295 LOCATION=240 112
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 6.28 Max 0.0 Min
+    OUTVARS: RT_@Src_Ctrl_34 IEEE OUT
+    CHARDATA_FRMT: <<<Th1_ps>>>(((Name))) <<<rad>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2452 HIERARCHY_BOXPARENT=2295 LOCATION=1424 144
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 6.28 Max 0.0 Min
+    OUTVARS: RT_@Src_Ctrl_3p IEEE OUT
+    CHARDATA_FRMT: <<<Th5_ns>>>(((Name))) <<<rad>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2397 HIERARCHY_BOXPARENT=2295 LOCATION=976 144
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 6.28 Max 0.0 Min
+    OUTVARS: RT_@Src_Ctrl_2v IEEE OUT
+    CHARDATA_FRMT: <<<Th5_ps>>>(((Name))) <<<rad>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2407 HIERARCHY_BOXPARENT=2295 LOCATION=1424 400
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 6.28 Max 0.0 Min
+    OUTVARS: RT_@Src_Ctrl_32 IEEE OUT
+    CHARDATA_FRMT: <<<Th7_ns>>>(((Name))) <<<rad>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2304 HIERARCHY_BOXPARENT=2295 LOCATION=976 400
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 6.28 Max 0.0 Min
+    OUTVARS: RT_@Src_Ctrl_2h IEEE OUT
+    CHARDATA_FRMT: <<<Th7_ps>>>(((Name))) <<<rad>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2153 LOCATION=48 1040
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 2.0 Init 200.0 Max 0.0 Min
+    OUTVARS: trigger_delay IEEE OUT
+    CHARDATA_FRMT: <<<trigger_delay>>>(((Name))) <<<s>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2412 HIERARCHY_BOXPARENT=2295 LOCATION=336 528
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 1 Max 0.0 Min
+    OUTVARS: RT_@Src_Ctrl_3t IEEE OUT
+    CHARDATA_FRMT: <<<V1_ns>>>(((Name))) <<<pu>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2394 HIERARCHY_BOXPARENT=2295 LOCATION=304 240
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 1.0 Init 1 Max 0.0 Min
+    OUTVARS: RT_@Src_Ctrl_23 IEEE OUT
+    CHARDATA_FRMT: <<<V1_ps>>>(((Name))) <<<pu>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2553 LOCATION=272 720
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 1 Init 6 Max 0 Min
+    OUTVARS: v_low IEEE OUT
+    CHARDATA_FRMT: <<<v_low>>>(((Name))) <<<kV>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2305 HIERARCHY_BOXPARENT=2295 LOCATION=1456 272
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 1 Max 0.0 Min
+    OUTVARS: RT_@Src_Ctrl_2o IEEE OUT
+    CHARDATA_FRMT: <<<Vns_5>>>(((Name))) <<<pu>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2319 HIERARCHY_BOXPARENT=2295 LOCATION=1456 528
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 1 Max 0.0 Min
+    OUTVARS: RT_@Src_Ctrl_26 IEEE OUT
+    CHARDATA_FRMT: <<<Vns_7>>>(((Name))) <<<pu>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2321 HIERARCHY_BOXPARENT=2295 LOCATION=1008 272
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 1 Max 0.0 Min
+    OUTVARS: RT_@Src_Ctrl_3q IEEE OUT
+    CHARDATA_FRMT: <<<Vps_5>>>(((Name))) <<<pu>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: slider_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2323 HIERARCHY_BOXPARENT=2295 LOCATION=1008 528
+    DATA_SIZES: INTDATA=0 FLOATDATA=3 CHARDATA_FRMT=2 INVARS=0 OUTVARS=1
+    FLOATDATA: 0 Init 1 Max 0.0 Min
+    OUTVARS: RT_@Src_Ctrl_35 IEEE OUT
+    CHARDATA_FRMT: <<<Vps_7>>>(((Name))) <<<pu>>>(((Units)))
+END
+RTDS.CTL.RISC_CMODEL
+COMP: FGENsqr2 1 1 106 0
+      DRAFT_UNIQUEID=1871 HIERARCHY_BOXPARENT=1814 LOCATION=208 304
+      DATA_SIZES: INTDATA=5 FLOATDATA=1 CHARDATA=0 INVARS=3 OUTVARS=1
+      INTDATA: 3 WType 0 A 0 B 0 C 44 D
+      FLOATDATA: 50 Duty
+      INVARS: i_sq_load IEEE Mag sq_load_freq IEEE Freq sq_load_phs IEEE Phase
+      OUTVARS: RT_@LV_Load_k IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+COMP: FGENsin2 1 1 107 0
+      DRAFT_UNIQUEID=1853 HIERARCHY_BOXPARENT=1814 LOCATION=208 432
+      DATA_SIZES: INTDATA=5 FLOATDATA=1 CHARDATA=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 WType 231 A 0 B 0 C 0 D
+      FLOATDATA: 50 Duty
+      INVARS: i_ac_load IEEE Mag ac_load_freq IEEE Freq ac_load_phs IEEE Phase
+      OUTVARS: RT_@LV_Load_h IEEE Out
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = srff_A SubSystem = 1 Processor = 1 Priority = 108
+      DRAFT_UNIQUEID=1463 HIERARCHY_BOXPARENT=1346 LOCATION=816 144
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+      INTDATA: 0 ISTA 0 INV
+      INVARS: IT_@box1_12 INT S En INT R
+      OUTVARS: HW_OC_A INT Q IT_@box1_1h INT QB
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = srff_A SubSystem = 1 Processor = 1 Priority = 109
+      DRAFT_UNIQUEID=1476 HIERARCHY_BOXPARENT=1346 LOCATION=816 400
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+      INTDATA: 0 ISTA 0 INV
+      INVARS: IT_@box1_1i INT S En INT R
+      OUTVARS: HW_OC_B INT Q IT_@box1_13 INT QB
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = srff_A SubSystem = 1 Processor = 1 Priority = 110
+      DRAFT_UNIQUEID=1454 HIERARCHY_BOXPARENT=1346 LOCATION=816 656
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+      INTDATA: 0 ISTA 0 INV
+      INVARS: IT_@box1_14 INT S En INT R
+      OUTVARS: HW_OC_C INT Q IT_@box1_1b INT QB
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = srff_A SubSystem = 1 Processor = 1 Priority = 111
+      DRAFT_UNIQUEID=1521 HIERARCHY_BOXPARENT=1490 LOCATION=880 80
+      DATA_SIZES: INTDATA=2 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=2 OUTVARS=2
+      INTDATA: 0 ISTA 0 INV
+      INVARS: IT_@box6_r INT S IT_@box6_o INT R
+      OUTVARS: comm_error INT Q IT_@box6_s INT QB
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 81
+      DRAFT_UNIQUEID=2329 HIERARCHY_BOXPARENT=2295 LOCATION=464 208
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridCN_1 IEEE INP1_r RT_@Src_Ctrl_27 IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_2a IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 82
+      DRAFT_UNIQUEID=2405 HIERARCHY_BOXPARENT=2295 LOCATION=432 80
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridAN_1 IEEE INP1_r RT_@Src_Ctrl_3i IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3c IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 83
+      DRAFT_UNIQUEID=2438 HIERARCHY_BOXPARENT=2295 LOCATION=464 144
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridBN_1 IEEE INP1_r RT_@Src_Ctrl_3r IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3s IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 112
+      DRAFT_UNIQUEID=1000 HIERARCHY_BOXPARENT=925 LOCATION=112 624
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: RT_@box3_7 IEEE INP1_r t_aurora_start IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box3_9 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 84
+      DRAFT_UNIQUEID=2328 HIERARCHY_BOXPARENT=2295 LOCATION=496 208
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridCP_5 IEEE INP1_r RT_@Src_Ctrl_2a IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_2c IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 85
+      DRAFT_UNIQUEID=2404 HIERARCHY_BOXPARENT=2295 LOCATION=464 80
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridAP_5 IEEE INP1_r RT_@Src_Ctrl_3c IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3e IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 86
+      DRAFT_UNIQUEID=2437 HIERARCHY_BOXPARENT=2295 LOCATION=496 144
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridBP_5 IEEE INP1_r RT_@Src_Ctrl_3s IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3v IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_A SubSystem = 1 Processor = 1 Priority = 113
+      DRAFT_UNIQUEID=1020 HIERARCHY_BOXPARENT=1010 LOCATION=80 272
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 0 IorF 1 IN1 0 IN2 0 IN3
+      INVARS: ctr_RX INT INP1_i ctr INT INP2_i _dud_ INT INP3_i
+      OUTVARS: Loopback_delay INT OUT_i
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 42
+      DRAFT_UNIQUEID=2480 HIERARCHY_BOXPARENT=2295 LOCATION=80 912
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 1 IN2 0 IN3
+      INVARS: RT_@Src_Ctrl_3b IEEE INP1_r f_pu IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3l IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_A SubSystem = 1 Processor = 1 Priority = 114
+      DRAFT_UNIQUEID=1494 HIERARCHY_BOXPARENT=1490 LOCATION=176 112
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 0 IorF 1 IN1 0 IN2 0 IN3
+      INVARS: IT_@box6_j INT INP1_i IT_@box6_g INT INP2_i _dud_ INT INP3_i
+      OUTVARS: IT_@box6_m INT OUT_i
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 115
+      DRAFT_UNIQUEID=1794 HIERARCHY_BOXPARENT=1545 LOCATION=176 592
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 1 IN1 0 IN2 0 IN3
+      INVARS: v_n IEEE INP1_r v_busp IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: v_bus IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 116
+      DRAFT_UNIQUEID=1799 HIERARCHY_BOXPARENT=1545 LOCATION=176 688
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 1 IN1 0 IN2 0 IN3
+      INVARS: v_n IEEE INP1_r v_dccp IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: v_dcc IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 117
+      DRAFT_UNIQUEID=984 HIERARCHY_BOXPARENT=925 LOCATION=208 624
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: trigger_delay IEEE INP1_r RT_@box3_9 IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box3_b IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 57
+      DRAFT_UNIQUEID=2372 HIERARCHY_BOXPARENT=2295 LOCATION=272 144
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: RT_@Src_Ctrl_34 IEEE INP1_r Theta_p IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3g IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_A SubSystem = 1 Processor = 1 Priority = 118
+      DRAFT_UNIQUEID=1499 HIERARCHY_BOXPARENT=1490 LOCATION=272 208
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 0 IorF 1 IN1 0 IN2 0 IN3
+      INVARS: IT_@box6_g INT INP1_i IT_@box6_k INT INP2_i _dud_ INT INP3_i
+      OUTVARS: IT_@box6_p INT OUT_i
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 119
+      DRAFT_UNIQUEID=1844 HIERARCHY_BOXPARENT=1814 LOCATION=336 304
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 1 IN1 0 IN2 0 IN3
+      INVARS: RT_@LV_Load_g IEEE INP1_r RT_@LV_Load_k IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@LV_Load_e IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 66
+      DRAFT_UNIQUEID=2337 HIERARCHY_BOXPARENT=2295 LOCATION=336 432
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: RT_@Src_Ctrl_2y IEEE INP1_r RT_@Src_Ctrl_36 IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3a IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 120
+      DRAFT_UNIQUEID=1278 HIERARCHY_BOXPARENT=1010 LOCATION=400 368
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: v_high_C_n IEEE INP1_r v_high_C IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box4_15 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 121
+      DRAFT_UNIQUEID=1856 HIERARCHY_BOXPARENT=1814 LOCATION=400 432
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 1 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: RT_@LV_Load_e IEEE INP1_r RT_@LV_Load_h IEEE INP2_r i_lv_dc_load IEEE INP3_r
+      OUTVARS: RT_@LV_Load_i IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 122
+      DRAFT_UNIQUEID=1279 HIERARCHY_BOXPARENT=1010 LOCATION=400 464
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: i_high_B_n IEEE INP1_r i_high_B IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box4_1e IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 123
+      DRAFT_UNIQUEID=1270 HIERARCHY_BOXPARENT=1010 LOCATION=400 560
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: i_high_C_n IEEE INP1_r i_high_C IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box4_v IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 124
+      DRAFT_UNIQUEID=1291 HIERARCHY_BOXPARENT=1010 LOCATION=400 656
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: v_grid_A_n IEEE INP1_r v_grid_A IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box4_11 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 125
+      DRAFT_UNIQUEID=1306 HIERARCHY_BOXPARENT=1010 LOCATION=400 752
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: v_grid_B_n IEEE INP1_r v_grid_B IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box4_1a IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 126
+      DRAFT_UNIQUEID=1317 HIERARCHY_BOXPARENT=1010 LOCATION=400 848
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: v_grid_C_n IEEE INP1_r v_grid_C IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box4_1i IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 45
+      DRAFT_UNIQUEID=2485 HIERARCHY_BOXPARENT=2295 LOCATION=400 912
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: droop_integ IEEE INP1_r RT_@Src_Ctrl_29 IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_2d IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 46
+      DRAFT_UNIQUEID=2490 HIERARCHY_BOXPARENT=2295 LOCATION=464 912
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: RT_@Src_Ctrl_25 IEEE INP1_r RT_@Src_Ctrl_2d IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3w IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 87
+      DRAFT_UNIQUEID=2309 HIERARCHY_BOXPARENT=2295 LOCATION=496 80
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridAN_5 IEEE INP1_r RT_@Src_Ctrl_3e IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3h IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 88
+      DRAFT_UNIQUEID=2301 HIERARCHY_BOXPARENT=2295 LOCATION=528 80
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridAP_7 IEEE INP1_r RT_@Src_Ctrl_3h IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3k IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 89
+      DRAFT_UNIQUEID=2420 HIERARCHY_BOXPARENT=2295 LOCATION=528 144
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridBN_5 IEEE INP1_r RT_@Src_Ctrl_3v IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3x IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 90
+      DRAFT_UNIQUEID=2433 HIERARCHY_BOXPARENT=2295 LOCATION=528 208
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridCN_5 IEEE INP1_r RT_@Src_Ctrl_2c IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_2f IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 91
+      DRAFT_UNIQUEID=2463 HIERARCHY_BOXPARENT=2295 LOCATION=560 80
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridAN_7 IEEE INP1_r RT_@Src_Ctrl_3k IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: VGridA IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 92
+      DRAFT_UNIQUEID=2430 HIERARCHY_BOXPARENT=2295 LOCATION=560 144
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridCP_7 IEEE INP1_r RT_@Src_Ctrl_3x IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_21 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 93
+      DRAFT_UNIQUEID=2392 HIERARCHY_BOXPARENT=2295 LOCATION=560 208
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridCP_7 IEEE INP1_r RT_@Src_Ctrl_2f IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_2i IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 94
+      DRAFT_UNIQUEID=2334 HIERARCHY_BOXPARENT=2295 LOCATION=592 144
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridCN_7 IEEE INP1_r RT_@Src_Ctrl_21 IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: VGridB IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 95
+      DRAFT_UNIQUEID=2370 HIERARCHY_BOXPARENT=2295 LOCATION=592 208
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: VGridCN_7 IEEE INP1_r RT_@Src_Ctrl_2i IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: VGridC IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 127
+      DRAFT_UNIQUEID=1170 HIERARCHY_BOXPARENT=1010 LOCATION=720 496
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: v_dcc_n IEEE INP1_r v_dcc IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box4_y IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 49
+      DRAFT_UNIQUEID=2492 HIERARCHY_BOXPARENT=2295 LOCATION=720 912
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 1 IN1 0 IN2 0 IN3
+      INVARS: GmP IEEE INP1_r RT_@Src_Ctrl_2t IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_2q IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 128
+      DRAFT_UNIQUEID=1165 HIERARCHY_BOXPARENT=1010 LOCATION=848 112
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: i_high_n IEEE INP1_r i_high_A IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box4_x IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 129
+      DRAFT_UNIQUEID=1167 HIERARCHY_BOXPARENT=1010 LOCATION=848 240
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: v_highpebb_n IEEE INP1_r RT_@box4_16 IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box4_17 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 130
+      DRAFT_UNIQUEID=1169 HIERARCHY_BOXPARENT=1010 LOCATION=848 368
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: v_highbus_n IEEE INP1_r RT_@box4_1h IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box4_1j IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 131
+      DRAFT_UNIQUEID=1172 HIERARCHY_BOXPARENT=1010 LOCATION=848 624
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: i_low_n IEEE INP1_r i_low IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box4_1b IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 58
+      DRAFT_UNIQUEID=2415 HIERARCHY_BOXPARENT=2295 LOCATION=1008 176
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: RT_@Src_Ctrl_2v IEEE INP1_r RT_@Src_Ctrl_2z IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_33 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 59
+      DRAFT_UNIQUEID=2369 HIERARCHY_BOXPARENT=2295 LOCATION=1008 432
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: RT_@Src_Ctrl_2h IEEE INP1_r RT_@Src_Ctrl_2n IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_2p IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 132
+      DRAFT_UNIQUEID=1174 HIERARCHY_BOXPARENT=1010 LOCATION=1200 80
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: v_bus_n IEEE INP1_r v_bus IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box4_14 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 133
+      DRAFT_UNIQUEID=1176 HIERARCHY_BOXPARENT=1010 LOCATION=1200 208
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: i_load_n IEEE INP1_r i_load IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@box4_1d IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 67
+      DRAFT_UNIQUEID=2454 HIERARCHY_BOXPARENT=2295 LOCATION=1456 176
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: RT_@Src_Ctrl_3p IEEE INP1_r RT_@Src_Ctrl_3y IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_24 IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = sum3_B SubSystem = 1 Processor = 1 Priority = 68
+      DRAFT_UNIQUEID=2422 HIERARCHY_BOXPARENT=2295 LOCATION=1456 432
+      DATA_SIZES: INTDATA=5 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=3 OUTVARS=1
+      INTDATA: 0 Num 1 IorF 0 IN1 0 IN2 0 IN3
+      INVARS: RT_@Src_Ctrl_32 IEEE INP1_r RT_@Src_Ctrl_3f IEEE INP2_r _dud_ IEEE INP3_r
+      OUTVARS: RT_@Src_Ctrl_3m IEEE OUT_r
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = SUM9RC SubSystem = 1 Processor = 1 Priority = 134
+      DRAFT_UNIQUEID=1355 HIERARCHY_BOXPARENT=1346 LOCATION=1456 80
+      DATA_SIZES: INTDATA=11 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=9 OUTVARS=1
+      INTDATA: 1 IorF 4 Num 0 s1 0 s2 0 s3
+      INTDATA: 0 s4 0 s5 0 s6 0 s7 0 s8
+      INTDATA: 0 s9
+      INVARS: RT_@box1_v IEEE IN1 RT_@box1_1j IEEE IN2 RT_@box1_1g IEEE IN3 switch_P_A_S IEEE IN4 _dud_ IEEE IN5
+      INVARS: _dud_ IEEE IN6 _dud_ IEEE IN7 _dud_ IEEE IN8 _dud_ IEEE IN9
+      OUTVARS: RT_@box1_18 IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = SUM9RC SubSystem = 1 Processor = 1 Priority = 135
+      DRAFT_UNIQUEID=1370 HIERARCHY_BOXPARENT=1346 LOCATION=1456 336
+      DATA_SIZES: INTDATA=11 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=9 OUTVARS=1
+      INTDATA: 1 IorF 4 Num 0 s1 0 s2 0 s3
+      INTDATA: 0 s4 0 s5 0 s6 0 s7 0 s8
+      INTDATA: 0 s9
+      INVARS: RT_@box1_19 IEEE IN1 RT_@box1_u IEEE IN2 RT_@box1_1k IEEE IN3 switch_P_B_S IEEE IN4 _dud_ IEEE IN5
+      INVARS: _dud_ IEEE IN6 _dud_ IEEE IN7 _dud_ IEEE IN8 _dud_ IEEE IN9
+      OUTVARS: RT_@box1_x IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = SUM9RC SubSystem = 1 Processor = 1 Priority = 136
+      DRAFT_UNIQUEID=1392 HIERARCHY_BOXPARENT=1346 LOCATION=1456 592
+      DATA_SIZES: INTDATA=11 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=9 OUTVARS=1
+      INTDATA: 1 IorF 4 Num 0 s1 0 s2 0 s3
+      INTDATA: 0 s4 0 s5 0 s6 0 s7 0 s8
+      INTDATA: 0 s9
+      INVARS: RT_@box1_y IEEE IN1 RT_@box1_1l IEEE IN2 RT_@box1_16 IEEE IN3 switch_P_C_S IEEE IN4 _dud_ IEEE IN5
+      INVARS: _dud_ IEEE IN6 _dud_ IEEE IN7 _dud_ IEEE IN8 _dud_ IEEE IN9
+      OUTVARS: RT_@box1_1d IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: switch_i 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1919 HIERARCHY_BOXPARENT=1902 LOCATION=208 720
+        DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=1
+        INTDATA: 0 Init 0 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<AsymFlt>>>(((Name))) <<<ON>>>(((Ton))) <<<OFF>>>(((Toff)))
+        OUTVARS: AsymFlt INT IOUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: switch_i 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2024 LOCATION=272 464
+        DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=1
+        INTDATA: 1 Init 0 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<Aurora_On>>>(((Name))) <<<ON>>>(((Ton))) <<<OFF>>>(((Toff)))
+        OUTVARS: aurora_on INT IOUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: switch_i 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2529 HIERARCHY_BOXPARENT=2295 LOCATION=944 1040
+        DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=1
+        INTDATA: 0 Init 0 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<droopable_source>>>(((Name))) <<<ON>>>(((Ton))) <<<OFF>>>(((Toff)))
+        OUTVARS: droopableSource INT IOUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: switch_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2166 LOCATION=816 720
+        DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=1
+        INTDATA: 0 Init 1 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<en_gridsupport>>>(((Name))) <<<ON>>>(((Ton))) <<<OFF>>>(((Toff)))
+        OUTVARS: en_gridsupport IEEE FOUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: switch_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2131 LOCATION=48 528
+        DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=1
+        INTDATA: 0 Init 1 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<forceFault_PEBB>>>(((Name))) <<<ON>>>(((Ton))) <<<OFF>>>(((Toff)))
+        OUTVARS: forceFault_PEBB IEEE FOUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: switch_i 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1975 HIERARCHY_BOXPARENT=1902 LOCATION=720 688
+        DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=1
+        INTDATA: 0 Init 0 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<hv_load_switch>>>(((Name))) <<<ON>>>(((Ton))) <<<OFF>>>(((Toff)))
+        OUTVARS: hv_load_switch INT IOUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: switch_i 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2031 LOCATION=560 720
+        DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=1
+        INTDATA: 0 Init 0 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<load_switch_in>>>(((Name))) <<<ON>>>(((Ton))) <<<OFF>>>(((Toff)))
+        OUTVARS: load_switch_in INT IOUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: switch_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2569 LOCATION=816 1168
+        DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=1
+        INTDATA: 1 Init 1 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<low_contact_cmd>>>(((Name))) <<<ON>>>(((Ton))) <<<OFF>>>(((Toff)))
+        OUTVARS: low_contact_cmd IEEE FOUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: switch_f 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2126 LOCATION=272 400
+        DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=1
+        INTDATA: 0 Init 1 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<noise_on>>>(((Name))) <<<ON>>>(((Ton))) <<<OFF>>>(((Toff)))
+        OUTVARS: NOISE_ON IEEE FOUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: switch_i 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2546 LOCATION=48 400
+        DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=1
+        INTDATA: 0 Init 0 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<run>>>(((Name))) <<<ON>>>(((Ton))) <<<OFF>>>(((Toff)))
+        OUTVARS: run INT IOUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: switch_i 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=2549 LOCATION=272 336
+        DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=1
+        INTDATA: 0 Init 0 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<RXI_chil>>>(((Name))) <<<ON>>>(((Ton))) <<<OFF>>>(((Toff)))
+        OUTVARS: RXI_chil INT IOUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: switch_i 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1917 HIERARCHY_BOXPARENT=1902 LOCATION=208 688
+        DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=1
+        INTDATA: 0 Init 0 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<SymFlt>>>(((Name))) <<<ON>>>(((Ton))) <<<OFF>>>(((Toff)))
+        OUTVARS: SymFlt INT IOUT
+END
+RTDS.CTL.RISC_CMODEL
+COMP: switch_i 1 -1 1 0 2 0
+      DRAFT_UNIQUEID=1946 HIERARCHY_BOXPARENT=1902 LOCATION=432 688
+        DATA_SIZES: INTDATA=2 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=1
+        INTDATA: 0 Init 0 Type
+        FLOATDATA: 1 VOn 0 VOff
+        CHARDATA_FRMT: <<<temp_load>>>(((Name))) <<<ON>>>(((Ton))) <<<OFF>>>(((Toff)))
+        OUTVARS: Load INT IOUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = time_cb SubSystem = 1 Processor = 1 Priority = 137
+      DRAFT_UNIQUEID=881 HIERARCHY_BOXPARENT=879 LOCATION=176 272
+    DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    INTDATA: 0 Mode
+    INVARS: IT_@Box3_c INT RST
+    OUTVARS: t IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = time_cb SubSystem = 1 Processor = 1 Priority = 27
+      DRAFT_UNIQUEID=2515 HIERARCHY_BOXPARENT=2295 LOCATION=624 1072
+    DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=1 OUTVARS=1
+    INTDATA: 0 Mode
+    INVARS: IT_@Src_Ctrl_39 INT RST
+    OUTVARS: RT_@Src_Ctrl_3j IEEE OUT
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = word2bit_ SubSystem = 1 Processor = 1 Priority = 138
+      DRAFT_UNIQUEID=1100 HIERARCHY_BOXPARENT=1010 LOCATION=1552 368
+    DATA_SIZES: INTDATA=1 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=1 OUTVARS=16
+    INTDATA: 8 Ninp
+    INVARS: IT_@box4_18 INT INP
+    OUTVARS: IT_@box4_12 INT OUT1 enable_P INT OUT2 IT_@box4_19 INT OUT3 notfault_P INT OUT4 IT_@box4_1g INT OUT5
+    OUTVARS: IT_@box4_u INT OUT6 IT_@box4_w INT OUT7 IT_@box4_s INT OUT8 _dud_ INT OUT9 _dud_ INT OUT10
+    OUTVARS: _dud_ INT OUT11 _dud_ INT OUT12 _dud_ INT OUT13 _dud_ INT OUT14 _dud_ INT OUT15
+    OUTVARS: _dud_ INT OUT16
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = xdivy_cb SubSystem = 1 Processor = 1 Priority = 52
+      DRAFT_UNIQUEID=2507 HIERARCHY_BOXPARENT=2295 LOCATION=144 1040
+    DATA_SIZES: INTDATA=1 FLOATDATA=1 CHARDATA_FRMT=0 INVARS=2 OUTVARS=1
+    INTDATA: 0 DBZ
+    FLOATDATA: 1e8 Val
+    INVARS: RT_@Src_Ctrl_2j IEEE INPX f_pu IEEE INPY
+    OUTVARS: RT_@Src_Ctrl_2m IEEE OUT
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = src1p_ss NameParam = SRC4 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1583 HIERARCHY_BOXPARENT=1545 LOCATION=400 272
+      DATA_SIZES: INTDATA=19 FLOATDATA=47 CHARDATA_FRMT=13 INVARS=4 OUTVARS=0
+      RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+      INTDATA: 5 A 35 N 1 Type 0 Imp 1 WvType
+      INTDATA: 0 Sctrl 0 SMod 0 AFmod 1 NHarm 2 HN1
+      INTDATA: 2 HN2 2 HN3 2 HN4 0 Imon 0 DynmImp
+      INTDATA: 0 ImpCtlSrc 0 IMPmon 5 InjA 35 InjN
+      FLOATDATA: 0 Tc 230.0 Es 60.0 F0 0.0 Ph 0.1 Esm
+      FLOATDATA: 1.0 F0m 0.0 Phm 0.05 Mag1 0.0 Ph1 0.05 Mag2
+      FLOATDATA: 0.0 Ph2 0.05 Mag3 0.0 Ph3 0.05 Mag4 0.0 Ph4
+      FLOATDATA: 1e-5 R1s 1.0 R1p 0.1 L1p 1 Esd 60.0 F
+      FLOATDATA: 1.0 Z1 80.0 Phi1 2.0 RN 0.10 Tf 0.50 Rf
+      FLOATDATA: 376.99111843077515 w 460.0 ESMAX 70.0 F0MAX 0.1 Tcc 0.0 R1
+      FLOATDATA: 0.0 L1 1.0E-5 R2 0.0 Phi1R 0.0 ISn0R 0.0 ICs0R
+      FLOATDATA: 0.0 S 0.0 Ff 0.0 G 0.0 H 0.0 D
+      FLOATDATA: 0.0 XL1 0.0 J 0.0 O 2.0 R1PMAX 2.0E-5 R1SMAX
+      FLOATDATA: 0.2 L1PMAX 1.0 ES_
+      CHARDATA_FRMT: <<<SRC4>>>(((Name))) <<<Fmod4>>>(((IMod))) <<<Amod4>>>(((AMmod))) <<<ISRC4>>>(((Inam))) <<<R1s4>>>(((R2signalCC)))
+      CHARDATA_FRMT: <<<R1p4>>>(((R1signalCC))) <<<L1p4>>>(((L1signalCC))) <<<ISRC4>>>(((IAnam))) <<<R1Smon4>>>(((R1Snam))) <<<R1Pmon4>>>(((R1Pnam)))
+      CHARDATA_FRMT: <<<L1Pmon4>>>(((L1Pnam))) <<<Converged4>>>(((CNVGnam))) <<<ImpTrig>>>(((TrigSigCC)))
+      INVARS: _dud_ IEEE CCA _dud_ IEEE FreqCC _dud_ IEEE PhaseCC _dud_ IEEE MagCC
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = src1p_ss NameParam = SRC6 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1898 HIERARCHY_BOXPARENT=1814 LOCATION=880 432
+      DATA_SIZES: INTDATA=19 FLOATDATA=47 CHARDATA_FRMT=13 INVARS=4 OUTVARS=0
+      RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+      INTDATA: 7 A 35 N 1 Type 0 Imp 1 WvType
+      INTDATA: 1 Sctrl 0 SMod 0 AFmod 1 NHarm 2 HN1
+      INTDATA: 2 HN2 2 HN3 2 HN4 0 Imon 1 DynmImp
+      INTDATA: 0 ImpCtlSrc 0 IMPmon 7 InjA 35 InjN
+      FLOATDATA: 0 Tc 230.0 Es 60.0 F0 0.0 Ph 0.1 Esm
+      FLOATDATA: 1.0 F0m 0.0 Phm 0.05 Mag1 0.0 Ph1 0.05 Mag2
+      FLOATDATA: 0.0 Ph2 0.05 Mag3 0.0 Ph3 0.05 Mag4 0.0 Ph4
+      FLOATDATA: 1e-3 R1s 1.0 R1p 0.1 L1p 1 Esd 60.0 F
+      FLOATDATA: 1.0 Z1 80.0 Phi1 2.0 RN 0.10 Tf 0.50 Rf
+      FLOATDATA: 376.99111843077515 w 460.0 ESMAX 70.0 F0MAX 0.1 Tcc 0.0 R1
+      FLOATDATA: 0.0 L1 0.001 R2 0.0 Phi1R 0.0 ISn0R 0.0 ICs0R
+      FLOATDATA: 0.0 S 0.0 Ff 0.0 G 0.0 H 0.0 D
+      FLOATDATA: 0.0 XL1 0.0 J 0.0 O 2.0 R1PMAX 0.002 R1SMAX
+      FLOATDATA: 0.2 L1PMAX 1.0 ES_
+      CHARDATA_FRMT: <<<SRC6>>>(((Name))) <<<Fmod6>>>(((IMod))) <<<Amod6>>>(((AMmod))) <<<ISRC6>>>(((Inam))) <<<R1s6>>>(((R2signalCC)))
+      CHARDATA_FRMT: <<<R1p6>>>(((R1signalCC))) <<<L1p6>>>(((L1signalCC))) <<<ISRC6>>>(((IAnam))) <<<R1Smon6>>>(((R1Snam))) <<<R1Pmon6>>>(((R1Pnam)))
+      CHARDATA_FRMT: <<<L1Pmon6>>>(((L1Pnam))) <<<Converged6>>>(((CNVGnam))) <<<ImpTrig>>>(((TrigSigCC)))
+      INVARS: _dud_ IEEE CCA _dud_ IEEE FreqCC _dud_ IEEE PhaseCC v_low IEEE MagCC
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = src1p_ss NameParam = SRCa Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1593 HIERARCHY_BOXPARENT=1545 LOCATION=1072 240
+      DATA_SIZES: INTDATA=19 FLOATDATA=47 CHARDATA_FRMT=13 INVARS=4 OUTVARS=0
+      RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+      INTDATA: 32 A 29 N 1 Type 0 Imp 1 WvType
+      INTDATA: 1 Sctrl 0 SMod 0 AFmod 1 NHarm 2 HN1
+      INTDATA: 2 HN2 2 HN3 2 HN4 0 Imon 0 DynmImp
+      INTDATA: 0 ImpCtlSrc 0 IMPmon 32 InjA 29 InjN
+      FLOATDATA: 0 Tc 230.0 Es 60.0 F0 0.0 Ph 0.1 Esm
+      FLOATDATA: 1.0 F0m 0.0 Phm 0.05 Mag1 0.0 Ph1 0.05 Mag2
+      FLOATDATA: 0.0 Ph2 0.05 Mag3 0.0 Ph3 0.05 Mag4 0.0 Ph4
+      FLOATDATA: 1e-6 R1s 1.0 R1p 0.1 L1p 6 Esd 60.0 F
+      FLOATDATA: 1.0 Z1 80.0 Phi1 2.0 RN 0.10 Tf 0.50 Rf
+      FLOATDATA: 376.99111843077515 w 460.0 ESMAX 70.0 F0MAX 0.1 Tcc 0.0 R1
+      FLOATDATA: 0.0 L1 1.0E-6 R2 0.0 Phi1R 0.0 ISn0R 0.0 ICs0R
+      FLOATDATA: 0.0 S 0.0 Ff 0.0 G 0.0 H 0.0 D
+      FLOATDATA: 0.0 XL1 0.0 J 0.0 O 2.0 R1PMAX 2.0E-6 R1SMAX
+      FLOATDATA: 0.2 L1PMAX 6.0 ES_
+      CHARDATA_FRMT: <<<SRCa>>>(((Name))) <<<Fmoda>>>(((IMod))) <<<Amoda>>>(((AMmod))) <<<ISRCa>>>(((Inam))) <<<R1sa>>>(((R2signalCC)))
+      CHARDATA_FRMT: <<<R1pa>>>(((R1signalCC))) <<<L1pa>>>(((L1signalCC))) <<<ISRCa>>>(((IAnam))) <<<R1Smona>>>(((R1Snam))) <<<R1Pmona>>>(((R1Pnam)))
+      CHARDATA_FRMT: <<<L1Pmona>>>(((L1Pnam))) <<<Convergeda>>>(((CNVGnam))) <<<ImpTrig>>>(((TrigSigCC)))
+      INVARS: _dud_ IEEE CCA _dud_ IEEE FreqCC _dud_ IEEE PhaseCC RT_@PEBB_BOX_AC_b IEEE MagCC
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = src1p_ss NameParam = SRCb Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1644 HIERARCHY_BOXPARENT=1545 LOCATION=1072 624
+      DATA_SIZES: INTDATA=19 FLOATDATA=47 CHARDATA_FRMT=13 INVARS=4 OUTVARS=0
+      RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+      INTDATA: 31 A 28 N 1 Type 0 Imp 1 WvType
+      INTDATA: 1 Sctrl 0 SMod 0 AFmod 1 NHarm 2 HN1
+      INTDATA: 2 HN2 2 HN3 2 HN4 0 Imon 0 DynmImp
+      INTDATA: 0 ImpCtlSrc 0 IMPmon 31 InjA 28 InjN
+      FLOATDATA: 0 Tc 230.0 Es 60.0 F0 0.0 Ph 0.1 Esm
+      FLOATDATA: 1.0 F0m 0.0 Phm 0.05 Mag1 0.0 Ph1 0.05 Mag2
+      FLOATDATA: 0.0 Ph2 0.05 Mag3 0.0 Ph3 0.05 Mag4 0.0 Ph4
+      FLOATDATA: 1e-6 R1s 1.0 R1p 0.1 L1p 6 Esd 60.0 F
+      FLOATDATA: 1.0 Z1 80.0 Phi1 2.0 RN 0.10 Tf 0.50 Rf
+      FLOATDATA: 376.99111843077515 w 460.0 ESMAX 70.0 F0MAX 0.1 Tcc 0.0 R1
+      FLOATDATA: 0.0 L1 1.0E-6 R2 0.0 Phi1R 0.0 ISn0R 0.0 ICs0R
+      FLOATDATA: 0.0 S 0.0 Ff 0.0 G 0.0 H 0.0 D
+      FLOATDATA: 0.0 XL1 0.0 J 0.0 O 2.0 R1PMAX 2.0E-6 R1SMAX
+      FLOATDATA: 0.2 L1PMAX 6.0 ES_
+      CHARDATA_FRMT: <<<SRCb>>>(((Name))) <<<Fmodb>>>(((IMod))) <<<Amodb>>>(((AMmod))) <<<ISRCb>>>(((Inam))) <<<R1sb>>>(((R2signalCC)))
+      CHARDATA_FRMT: <<<R1pb>>>(((R1signalCC))) <<<L1pb>>>(((L1signalCC))) <<<ISRCb>>>(((IAnam))) <<<R1Smonb>>>(((R1Snam))) <<<R1Pmonb>>>(((R1Pnam)))
+      CHARDATA_FRMT: <<<L1Pmonb>>>(((L1Pnam))) <<<Convergedb>>>(((CNVGnam))) <<<ImpTrig>>>(((TrigSigCC)))
+      INVARS: _dud_ IEEE CCA _dud_ IEEE FreqCC _dud_ IEEE PhaseCC RT_@PEBB_BOX_AC_c IEEE MagCC
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = src1p_ss NameParam = SRCc Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1696 HIERARCHY_BOXPARENT=1545 LOCATION=1072 1008
+      DATA_SIZES: INTDATA=19 FLOATDATA=47 CHARDATA_FRMT=13 INVARS=4 OUTVARS=0
+      RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+      INTDATA: 33 A 30 N 1 Type 0 Imp 1 WvType
+      INTDATA: 1 Sctrl 0 SMod 0 AFmod 1 NHarm 2 HN1
+      INTDATA: 2 HN2 2 HN3 2 HN4 0 Imon 0 DynmImp
+      INTDATA: 0 ImpCtlSrc 0 IMPmon 33 InjA 30 InjN
+      FLOATDATA: 0 Tc 230.0 Es 60.0 F0 0.0 Ph 0.1 Esm
+      FLOATDATA: 1.0 F0m 0.0 Phm 0.05 Mag1 0.0 Ph1 0.05 Mag2
+      FLOATDATA: 0.0 Ph2 0.05 Mag3 0.0 Ph3 0.05 Mag4 0.0 Ph4
+      FLOATDATA: 1e-6 R1s 1.0 R1p 0.1 L1p 6 Esd 60.0 F
+      FLOATDATA: 1.0 Z1 80.0 Phi1 2.0 RN 0.10 Tf 0.50 Rf
+      FLOATDATA: 376.99111843077515 w 460.0 ESMAX 70.0 F0MAX 0.1 Tcc 0.0 R1
+      FLOATDATA: 0.0 L1 1.0E-6 R2 0.0 Phi1R 0.0 ISn0R 0.0 ICs0R
+      FLOATDATA: 0.0 S 0.0 Ff 0.0 G 0.0 H 0.0 D
+      FLOATDATA: 0.0 XL1 0.0 J 0.0 O 2.0 R1PMAX 2.0E-6 R1SMAX
+      FLOATDATA: 0.2 L1PMAX 6.0 ES_
+      CHARDATA_FRMT: <<<SRCc>>>(((Name))) <<<Fmodc>>>(((IMod))) <<<Amodc>>>(((AMmod))) <<<ISRCc>>>(((Inam))) <<<R1sc>>>(((R2signalCC)))
+      CHARDATA_FRMT: <<<R1pc>>>(((R1signalCC))) <<<L1pc>>>(((L1signalCC))) <<<ISRCc>>>(((IAnam))) <<<R1Smonc>>>(((R1Snam))) <<<R1Pmonc>>>(((R1Pnam)))
+      CHARDATA_FRMT: <<<L1Pmonc>>>(((L1Pnam))) <<<Convergedc>>>(((CNVGnam))) <<<ImpTrig>>>(((TrigSigCC)))
+      INVARS: _dud_ IEEE CCA _dud_ IEEE FreqCC _dud_ IEEE PhaseCC RT_@PEBB_BOX_AC_7 IEEE MagCC
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = ss_brc3 NameParam = BR4 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1907 HIERARCHY_BOXPARENT=1902 LOCATION=240 336
+    DATA_SIZES: INTDATA=50 FLOATDATA=15 CHARDATA_FRMT=19 INVARS=0 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 0 N1 8 N2 0 N3 9 N4 0 N5
+    INTDATA: 10 N6 7 bty 1 vsrc 3 nmbr 0 posi
+    INTDATA: 0 sepr 1 pmsr 1 mon1 1 mon2 1 mon3
+    INTDATA: 1 mon4 1 mon5 1 mon6 1 mon7 6 numnods
+    INTDATA: 1 actv1 1 actv2 1 actv3 1 actv4 1 actv5
+    INTDATA: 1 actv6 1 actv7 0 tmpr 0 tmpl 0 tmprl
+    INTDATA: 1 tmprrl 1 tmpsum 1 tmpvs1 1 tmpvs2 1 tmpvcc
+    INTDATA: 1 temp1 1 temp2 1 temp3 1 actvr1 1 actvr2
+    INTDATA: 1 actvr3 0 DynmImp 0 ImpCtlSrc 0 IMPmon 0 N1_inj
+    INTDATA: 8 N2_inj 0 N3_inj 9 N4_inj 0 N5_inj 10 N6_inj
+    FLOATDATA: 50.e-6 pmst 0.030766 R 0.0008161 L 1.0 CMF 30.766 RP
+    FLOATDATA: 1.0E-6 CF 1 Tcc 0.0 RMAX 0.0 LMAX 0.0 CMFMAX
+    FLOATDATA: 0.0 RPMAX 0.0 R_ 0.0 L_ 0.0 CMF_ 0.0 RP_
+    CHARDATA_FRMT: <<<BR4>>>(((Name))) <<<VGridA>>>(((vnam1))) <<<VGridB>>>(((vnam2))) <<<VGridC>>>(((vnam3))) <<<i_gen_A>>>(((nam1)))
+    CHARDATA_FRMT: <<<i_gen_B>>>(((nam2))) <<<i_gen_C>>>(((nam3))) <<<VgridA>>>(((nam4))) <<<VgridB>>>(((nam5))) <<<VgridC>>>(((nam6)))
+    CHARDATA_FRMT: <<<Pwr_s>>>(((nam7))) <<<R4>>>(((RsignalCC))) <<<L4>>>(((LsignalCC))) <<<CMF4>>>(((CMFsignalCC))) <<<RP4>>>(((RPsignalCC)))
+    CHARDATA_FRMT: <<<R4>>>(((Rnam))) <<<L4>>>(((Lnam))) <<<CMF4>>>(((CMFnam))) <<<RP4>>>(((RPnam)))
+END
+RTDS.CTL.RISC_CMODEL
+V4COMP: ModelName = ss_substep_num SubSystem = 1 Processor = 1 Priority = 139
+      DRAFT_UNIQUEID=887 HIERARCHY_BOXPARENT=879 LOCATION=80 144
+    DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=1 INVARS=0 OUTVARS=1
+    CHARDATA_FRMT: <<<SSNUM1>>>(((Name)))
+    OUTVARS: substep INT namow1
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = diode NameParam = Da Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1557 HIERARCHY_BOXPARENT=1545 LOCATION=1200 144
+    DATA_SIZES: INTDATA=4 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 34 A 41 B 0 pId 0 pVd
+    FLOATDATA: 0.5 Ron 1.e8 Roff
+    CHARDATA_FRMT: <<<Da>>>(((Name))) <<<Ida>>>(((nId))) <<<Vda>>>(((nVd)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = diode NameParam = Db Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1754 HIERARCHY_BOXPARENT=1545 LOCATION=1328 144
+    DATA_SIZES: INTDATA=4 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 43 A 41 B 0 pId 0 pVd
+    FLOATDATA: 0.5 Ron 1.e8 Roff
+    CHARDATA_FRMT: <<<Db>>>(((Name))) <<<Idb>>>(((nId))) <<<Vdb>>>(((nVd)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = diode NameParam = Dc Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1755 HIERARCHY_BOXPARENT=1545 LOCATION=1200 304
+    DATA_SIZES: INTDATA=4 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 39 A 34 B 0 pId 0 pVd
+    FLOATDATA: 0.5 Ron 1.e8 Roff
+    CHARDATA_FRMT: <<<Dc>>>(((Name))) <<<Idc>>>(((nId))) <<<Vdc>>>(((nVd)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = diode NameParam = Dd Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1756 HIERARCHY_BOXPARENT=1545 LOCATION=1328 304
+    DATA_SIZES: INTDATA=4 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 39 A 43 B 0 pId 0 pVd
+    FLOATDATA: 0.5 Ron 1.e8 Roff
+    CHARDATA_FRMT: <<<Dd>>>(((Name))) <<<Idd>>>(((nId))) <<<Vdd>>>(((nVd)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = diode NameParam = De Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1757 HIERARCHY_BOXPARENT=1545 LOCATION=1200 528
+    DATA_SIZES: INTDATA=4 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 37 A 42 B 0 pId 0 pVd
+    FLOATDATA: 0.5 Ron 1.e8 Roff
+    CHARDATA_FRMT: <<<De>>>(((Name))) <<<Ide>>>(((nId))) <<<Vde>>>(((nVd)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = diode NameParam = Df Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1758 HIERARCHY_BOXPARENT=1545 LOCATION=1328 528
+    DATA_SIZES: INTDATA=4 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 43 A 42 B 0 pId 0 pVd
+    FLOATDATA: 0.5 Ron 1.e8 Roff
+    CHARDATA_FRMT: <<<Df>>>(((Name))) <<<Idf>>>(((nId))) <<<Vdf>>>(((nVd)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = diode NameParam = Dg Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1759 HIERARCHY_BOXPARENT=1545 LOCATION=1200 688
+    DATA_SIZES: INTDATA=4 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 40 A 37 B 0 pId 0 pVd
+    FLOATDATA: 0.5 Ron 1.e8 Roff
+    CHARDATA_FRMT: <<<Dg>>>(((Name))) <<<Idg>>>(((nId))) <<<Vdg>>>(((nVd)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = diode NameParam = Dh Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1760 HIERARCHY_BOXPARENT=1545 LOCATION=1328 688
+    DATA_SIZES: INTDATA=4 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 40 A 43 B 0 pId 0 pVd
+    FLOATDATA: 0.5 Ron 1.e8 Roff
+    CHARDATA_FRMT: <<<Dh>>>(((Name))) <<<Idh>>>(((nId))) <<<Vdh>>>(((nVd)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = diode NameParam = Di Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1761 HIERARCHY_BOXPARENT=1545 LOCATION=1200 912
+    DATA_SIZES: INTDATA=4 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 38 A 45 B 0 pId 0 pVd
+    FLOATDATA: 0.5 Ron 1.e8 Roff
+    CHARDATA_FRMT: <<<Di>>>(((Name))) <<<Idi>>>(((nId))) <<<Vdi>>>(((nVd)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = diode NameParam = Dj Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1762 HIERARCHY_BOXPARENT=1545 LOCATION=1328 912
+    DATA_SIZES: INTDATA=4 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 43 A 45 B 0 pId 0 pVd
+    FLOATDATA: 0.5 Ron 1.e8 Roff
+    CHARDATA_FRMT: <<<Dj>>>(((Name))) <<<Idj>>>(((nId))) <<<Vdj>>>(((nVd)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = diode NameParam = Dk Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1763 HIERARCHY_BOXPARENT=1545 LOCATION=1200 1072
+    DATA_SIZES: INTDATA=4 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 44 A 38 B 0 pId 0 pVd
+    FLOATDATA: 0.5 Ron 1.e8 Roff
+    CHARDATA_FRMT: <<<Dk>>>(((Name))) <<<Idk>>>(((nId))) <<<Vdk>>>(((nVd)))
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = diode NameParam = Dl Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=1764 HIERARCHY_BOXPARENT=1545 LOCATION=1328 1072
+    DATA_SIZES: INTDATA=4 FLOATDATA=2 CHARDATA_FRMT=3 INVARS=0 OUTVARS=0
+    RISC: 0 1 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+    INTDATA: 44 A 43 B 0 pId 0 pVd
+    FLOATDATA: 0.5 Ron 1.e8 Roff
+    CHARDATA_FRMT: <<<Dl>>>(((Name))) <<<Idl>>>(((nId))) <<<Vdl>>>(((nVd)))
+END
+RTDS.RISC.
+COMP: risc_net rnet_ssxx 0 0 1
+      DRAFT_UNIQUEID=2665 LOCATION=0 0
+      RISC: 0 0 STACK_T0 GENERIC 1 0 1 0 0 40 1 1 1
+      IDATA: 0        0       0        0         0
+       IDATA: 7   2     7   3     7
+       IDATA: 4   7     5   7     6
+      IDATA: 7   0     7   0     7
+      IDATA: 0 0 1 1 0 0
+      IDATA: 0  0    0  0
+      IDATA: 4     0 0  0
+END
+RTDS.PSYS.RISC_CMODEL
+V4COMP: ModelName = netsolCB NameParam = 1::_1 Board = 0 ABC = 0 SubSystem = 1
+      DRAFT_UNIQUEID=2665 LOCATION=0 0
+        DATA_SIZES: INTDATA=0 FLOATDATA=0 CHARDATA_FRMT=0 INVARS=0 OUTVARS=0
+        RISC: 0 0 STACK_T0 GENERIC 1 0 1 0 0 0 0 1 2
+END
+END_SECTION
+
+END_FILE

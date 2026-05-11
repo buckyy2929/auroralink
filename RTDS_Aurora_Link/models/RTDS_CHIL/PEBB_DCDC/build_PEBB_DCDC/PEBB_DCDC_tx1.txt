@@ -1,0 +1,157 @@
+
+  Subsystem Number 1 
+  ********************
+  ********************
+
+       Flag T0
+       *******
+
+       Flag T1
+       *******
+           1  XXX    Local     SS1      node_voltage  "v_dcc" from core  1  for node = 4     
+           2  XXX    Local     SS1      node_voltage  "    6" from core  1  for node = 6     
+           3  XXX    Local     SS1      node_voltage  "    8" from core  1  for node = 8     
+           4  XXX    Local     SS1      node_voltage  "    9" from core  1  for node = 9     
+           5  XXX    Local     SS1      node_voltage  "   10" from core  1  for node = 10    
+           6  XXX    Local     SS1      node_voltage  "   11" from core  1  for node = 11    
+           7  XXX    Local     SS1      node_voltage  "   12" from core  1  for node = 12    
+           8  XXX    Local     SS1      node_voltage  "   17" from core  1  for node = 17    
+           9  XXX    Local     SS1      node_voltage  "   18" from core  1  for node = 18    
+          10  XXX    Local     SS1      node_voltage  "   19" from core  1  for node = 19    
+          11  XXX    Local     SS1      node_voltage  "   20" from core  1  for node = 20    
+          12  XXX    Local     SS1      node_voltage  "   21" from core  2  for node = 21    
+
+       Flag T2
+       *******
+           1  XXX    Local     SS1  named_signal_prc  "               cc_bits" from core  1  
+           2  XXX    Local     SS1  named_signal_prc  "           switch_P_RX" from core  1  
+           3  XXX    Local     SS1  named_signal_prc  "           switch_A_RX" from core  1  
+           4  XXX    Local     SS1  named_signal_prc  "            cc_bits_RX" from core  1  
+           5  XXX    Local     SS1  named_signal_prc  "                ctr_RX" from core  1  
+           6  XXX    Local     SS1  named_signal_prc  "PEBB_next_state_cmd_RX" from core  1  
+           7  XXX    Local     SS1  named_signal_prc  "        aplm_enable_RX" from core  1  
+           8  XXX    Local     SS1  named_signal_prc  "  SLC_current_state_RX" from core  1  
+           9  XXX    Local     SS1  named_signal_prc  "            init_ok_RX" from core  1  
+          10  XXX    Local     SS1  named_signal_prc  "             bus_ok_RX" from core  1  
+          11  XXX    Local     SS1  named_signal_prc  "         batt_fault_RX" from core  1  
+          12  XXX    Local     SS1  named_signal_prc  "    PEBB_next_state_RX" from core  1  
+          13  XXX    Local     SS1  named_signal_prc  "         PEBB_Power_RX" from core  1  
+          14  XXX    Local     SS1  named_signal_prc  "           APLM_SOC_RX" from core  1  
+          15  XXX    Local     SS1  named_signal_prc  "           BATT_SOC_RX" from core  1  
+          16  XXX    Local     SS1  named_signal_prc  "             P_llim_RX" from core  1  
+          17  XXX    Local     SS1  named_signal_prc  "             Q_ulim_RX" from core  1  
+          18  XXX    Local     SS1  named_signal_prc  "             Q_llim_RX" from core  1  
+          19  XXX    Local     SS1  named_signal_prc  "         switch_P_B_RX" from core  1  
+          20  XXX    Local     SS1  named_signal_prc  "         switch_P_C_RX" from core  1  
+          21  XXX    Local     SS1  named_signal_prc  " PEBB_current_state_RX" from core  1  
+          22  XXX    Local     SS1  named_signal_prc  "             P_ulim_RX" from core  1  
+          23  XXX    Local     SS1  named_signal_prc  "            CHIL_error" from core  1  
+          24  XXX    Local     SS1  named_signal_prc  "             i_lv_load" from core  1  
+          25  XXX    Local     SS1  named_signal_prc  "               P_MVGEN" from core  1  
+          26  XXX    Local     SS1  named_signal_prc  "                   ctr" from core  1  
+          27  XXX    Local     SS1  named_signal_prc  "               trigger" from core  1  
+          28  XXX    Local     SS1  named_signal_prc  "                P_PEBB" from core  1  
+          29  XXX    Local     SS1  named_signal_prc  "                R_load" from core  1  
+          30  XXX    Local     SS1  named_signal_prc  "             precharge" from core  1  
+          31  XXX    Local     SS1  named_signal_prc  "               comm_up" from core  1  
+          32  XXX    Local     SS1  named_signal_prc  "            comm_valid" from core  1  
+          33  XXX    Local     SS1  named_signal_prc  "                P_LOAD" from core  1  
+          34  XXX    Local     SS1  named_signal_prc  "                lpf_in" from core  1  
+          35  XXX    Local     SS1  named_signal_prc  "      manual_precharge" from core  1  
+          36  XXX    Local     SS1  named_signal_prc  "     pltsigRT_@box3_11" from core  1  
+          37  XXX    Local     SS1  named_signal_prc  "               contact" from core  1  
+          38  XXX    Local     SS1  named_signal_prc  "       lowside_contact" from core  1  
+          39  XXX    Local     SS1  named_signal_prc  "            notfault_A" from core  1  
+          40  XXX    Local     SS1  named_signal_prc  "      highside_contact" from core  1  
+          41  XXX    Local     SS1  named_signal_prc  "          batt_contact" from core  1  
+          42  XXX    Local     SS1  named_signal_prc  "     precharge_contact" from core  1  
+          43  XXX    Local     SS1  named_signal_prc  "      Loopback_delay_S" from core  1  
+          44  XXX    Local     SS1  named_signal_prc  "            switch_P_S" from core  1  
+          45  XXX    Local     SS1  named_signal_prc  "         v_highpebb_TX" from core  1  
+          46  XXX    Local     SS1  named_signal_prc  "             i_load_TX" from core  1  
+          47  XXX    Local     SS1  named_signal_prc  "              v_bus_TX" from core  1  
+          48  XXX    Local     SS1  named_signal_prc  "             i_high_TX" from core  1  
+          49  XXX    Local     SS1  named_signal_prc  "              i_low_TX" from core  1  
+          50  XXX    Local     SS1  named_signal_prc  "          v_highbus_TX" from core  1  
+          51  XXX    Local     SS1  named_signal_prc  "              v_dcc_TX" from core  1  
+          52  XXX    Local     SS1  named_signal_prc  "       PEBB_next_state" from core  1  
+          53  XXX    Local     SS1  named_signal_prc  "     SLC_current_state" from core  1  
+          54  XXX    Local     SS1  named_signal_prc  "               init_ok" from core  1  
+          55  XXX    Local     SS1  named_signal_prc  "                P_ulim" from core  1  
+          56  XXX    Local     SS1  named_signal_prc  "    PEBB_current_state" from core  1  
+          57  XXX    Local     SS1  named_signal_prc  "                bus_ok" from core  1  
+          58  XXX    Local     SS1  named_signal_prc  "                P_llim" from core  1  
+          59  XXX    Local     SS1  named_signal_prc  "                Q_ulim" from core  1  
+          60  XXX    Local     SS1  named_signal_prc  "                Q_llim" from core  1  
+          61  XXX    Local     SS1  named_signal_prc  "            switch_P_C" from core  1  
+          62  XXX    Local     SS1  named_signal_prc  "            switch_P_B" from core  1  
+          63  XXX    Local     SS1  named_signal_prc  "   PEBB_next_state_cmd" from core  1  
+          64  XXX    Local     SS1  named_signal_prc  "            PEBB_Power" from core  1  
+          65  XXX    Local     SS1  named_signal_prc  "           load_switch" from core  1  
+          66  XXX    Local     SS1  named_signal_prc  "                    En" from core  1  
+          67  XXX    Local     SS1  named_signal_prc  "            packet_key" from core  1  
+          68  XXX    Local     SS1  named_signal_prc  "              switch_A" from core  1  
+          69  XXX    Local     SS1  named_signal_prc  "             SmpInputs" from core  1  
+          70  XXX    Local     SS1  named_signal_prc  "              switch_P" from core  1  
+          71  XXX    Local     SS1  named_signal_prc  "          ac_load_freq" from core  1  
+          72  XXX    Local     SS1  named_signal_prc  "           ac_load_phs" from core  1  
+          73  XXX    Local     SS1  named_signal_prc  "             i_ac_load" from core  1  
+          74  XXX    Local     SS1  named_signal_prc  "             i_hv_load" from core  1  
+          75  XXX    Local     SS1  named_signal_prc  "          i_lv_dc_load" from core  1  
+          76  XXX    Local     SS1  named_signal_prc  "             i_sq_load" from core  1  
+          77  XXX    Local     SS1  named_signal_prc  "            pebb_P_lim" from core  1  
+          78  XXX    Local     SS1  named_signal_prc  "        PEBB_Vbus_Setp" from core  1  
+          79  XXX    Local     SS1  named_signal_prc  "             R_load_in" from core  1  
+          80  XXX    Local     SS1  named_signal_prc  "          sq_load_freq" from core  1  
+          81  XXX    Local     SS1  named_signal_prc  "           sq_load_phs" from core  1  
+          82  XXX    Local     SS1  named_signal_prc  "        t_aurora_start" from core  1  
+          83  XXX    Local     SS1  named_signal_prc  "         trigger_delay" from core  1  
+          84  XXX    Local     SS1  named_signal_prc  "                 HW_OC" from core  1  
+          85  XXX    Local     SS1  named_signal_prc  "            comm_error" from core  1  
+          86  XXX    Local     SS1  named_signal_prc  "        Loopback_delay" from core  1  
+          87  XXX    Local     SS1  named_signal_prc  "             aurora_on" from core  1  
+          88  XXX    Local     SS1  named_signal_prc  "       forceFault_PEBB" from core  1  
+          89  XXX    Local     SS1  named_signal_prc  "        load_switch_in" from core  1  
+          90  XXX    Local     SS1  named_signal_prc  "                   run" from core  1  
+          91  XXX    Local     SS1  named_signal_prc  "              RXI_chil" from core  1  
+          92  XXX    Local     SS1  named_signal_prc  "                     t" from core  1  
+          93  XXX    Local     SS1  named_signal_prc  "   lowside_contact_cmd" from core  1  
+          94  XXX    Local     SS1  named_signal_prc  "              enable_P" from core  1  
+          95  XXX    Local     SS1  named_signal_prc  "  highside_contact_cmd" from core  1  
+          96  XXX    Local     SS1  named_signal_prc  "            notfault_P" from core  1  
+          97  XXX    Local     SS1  named_signal_prc  "           contact_cmd" from core  1  
+          98  XXX    Local     SS1  named_signal_prc  "      batt_contact_cmd" from core  1  
+          99  XXX    Local     SS1  named_signal_prc  " precharge_contact_cmd" from core  1  
+         100  XXX    Local     SS1  named_signal_prc  "               substep" from core  1  
+         101  XXX    Local     SS1  named_signal_prc  "                 i_low" from core  1  
+         102  XXX    Local     SS1  named_signal_prc  "                i_high" from core  1  
+         103  XXX    Local     SS1  named_signal_prc  "                i_load" from core  1  
+         104  XXX    Local     SS1      node_voltage  "             v_highbus" from core  1  for node = 1     
+         105  XXX    Local     SS1      node_voltage  "                   v_h" from core  1  for node = 2     
+         106  XXX    Local     SS1      node_voltage  "            v_highpebb" from core  1  for node = 3     
+         107  XXX    Local     SS1      node_voltage  "                 v_dcc" from core  1  for node = 4     
+         108  XXX    Local     SS1      node_voltage  "                v_bus2" from core  1  for node = 5     
+         109  XXX    Local     SS1      node_voltage  "                     6" from core  1  for node = 6     
+         110  XXX    Local     SS1      node_voltage  "                 v_bus" from core  1  for node = 7     
+         111  XXX    Local     SS1      node_voltage  "                     8" from core  1  for node = 8     
+         112  XXX    Local     SS1      node_voltage  "                     9" from core  1  for node = 9     
+         113  XXX    Local     SS1      node_voltage  "                    10" from core  1  for node = 10    
+         114  XXX    Local     SS1      node_voltage  "                    11" from core  1  for node = 11    
+         115  XXX    Local     SS1      node_voltage  "                    12" from core  1  for node = 12    
+         116  XXX    Local     SS1      node_voltage  "                    13" from core  1  for node = 13    
+         117  XXX    Local     SS1      node_voltage  "                    14" from core  1  for node = 14    
+         118  XXX    Local     SS1      node_voltage  "                    15" from core  1  for node = 15    
+         119  XXX    Local     SS1      node_voltage  "                    16" from core  1  for node = 16    
+         120  XXX    Local     SS1      node_voltage  "                    17" from core  1  for node = 17    
+         121  XXX    Local     SS1      node_voltage  "                    18" from core  1  for node = 18    
+         122  XXX    Local     SS1      node_voltage  "                    19" from core  1  for node = 19    
+         123  XXX    Local     SS1      node_voltage  "                    20" from core  1  for node = 20    
+         124  XXX    Local     SS1      node_voltage  "                    21" from core  2  for node = 21    
+         125  XXX    Local     SS1  named_signal_prc  "              i_load_n" from core  3  
+         126  XXX    Local     SS1  named_signal_prc  "           v_highbus_n" from core  3  
+         127  XXX    Local     SS1  named_signal_prc  "               v_bus_n" from core  3  
+         128  XXX    Local     SS1  named_signal_prc  "               v_dcc_n" from core  3  
+         129  XXX    Local     SS1  named_signal_prc  "               i_low_n" from core  3  
+         130  XXX    Local     SS1  named_signal_prc  "          v_highpebb_n" from core  3  
+         131  XXX    Local     SS1  named_signal_prc  "              i_high_n" from core  3  
+         132  XXX    Local     SS1  named_signal_prc  "              NOISE_ON" from core  3  

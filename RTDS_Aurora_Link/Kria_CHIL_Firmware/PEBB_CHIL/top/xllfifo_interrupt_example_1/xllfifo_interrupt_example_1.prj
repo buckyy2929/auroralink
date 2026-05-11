@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="xllfifo_interrupt_example_1" location="C:/projects/Chil/kria/top/xllfifo_interrupt_example_1" platform="C:/projects/Chil/kria/top/top/export/top/top.xpfm" platformUID="xilinx:kr260_som:kria_fsu:0.0(custom)" systemProject="xllfifo_interrupt_example_1_system" sysConfig="top" runtime="C/C++" cpu="standalone_psu_cortexa53_0" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="543f9d1d31ae26f65089105c32f97f51">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.752508423">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.1017177583" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

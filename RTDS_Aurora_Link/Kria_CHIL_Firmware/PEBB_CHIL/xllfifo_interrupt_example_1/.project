@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>xllfifo_interrupt_example_1</name>
+	<comment>Created by Vitis v2022.1</comment>
+	<projects>
+		<project>top</project>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.ScannerConfigBuilder</name>
+			<triggers>full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.xilinx.sdx.sdk.core.SdkProjectNature</nature>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>multiport_baseline_codegen</name>
+			<type>2</type>
+			<location>C:/projects/Multiport/multiport_git/models/plecs/baseline_model/multiport_baseline_codegen</location>
+		</link>
+		<link>
+			<name>multiport_p80i_libs</name>
+			<type>2</type>
+			<location>C:/projects/Multiport/multiport_git/multiport_p80i_libs</location>
+		</link>
+	</linkedResources>
+</projectDescription>

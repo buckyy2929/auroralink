@@ -1,0 +1,13 @@
+MESSAGES:
+
+Compiling C:\projects\Multiport\multiport_git\models\RTDS_CHIL\PEBB_DCAC\PEBB_DCAC for RTDS rack 6...
+Nodes and Wires...
+
+RTDSPC version = 1.2
+=======================
+
+Using configuration file: C:\Users\lg138523sd\Documents\RSCAD\HDWR\config_file_03.txt
+Substep box "Ckt1": mainstep: 125000ns, Substep Divisor: 24, substep: 5208ns
+End of process. Peak memory usage = 11182080 bytes
+
+Compile completed successfully.

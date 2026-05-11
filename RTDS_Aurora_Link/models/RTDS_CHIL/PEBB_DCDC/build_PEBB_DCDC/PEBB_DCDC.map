@@ -1,0 +1,261 @@
+
+
+  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+     Substep box component ordering 
+  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    Box  Ckt1, processor No. 0
+      comp type:        _hierarchy_cb,  comp name: Ckt1
+      comp type:             netsolCB,  comp name: Ckt1T1
+      comp type:           nortoneq1p,  comp name: INORT1
+      comp type:             src3P_ss,  comp name: SRC0
+      comp type:            step_cntr,  comp name: (null)
+      comp type:               brk1ph,  comp name: BRK1
+      comp type:               brk1ph,  comp name: BRK11
+      comp type:               brk1ph,  comp name: BRK2
+      comp type:               brk1ph,  comp name: BRK3
+      comp type:               brk1ph,  comp name: BRK5
+      comp type:               brk1ph,  comp name: BRK7
+      comp type:               brk1ph,  comp name: BRK9
+      comp type:               abs_cb,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:               RCONST,  comp name: (null)
+      comp type:              gain_cb,  comp name: (null)
+      comp type:              gain_cb,  comp name: (null)
+      comp type:               ICONST,  comp name: (null)
+      comp type:               ICONST,  comp name: (null)
+      comp type:               ICONST,  comp name: (null)
+      comp type:               ICONST,  comp name: (null)
+      comp type:               ICONST,  comp name: (null)
+      comp type:               ICONST,  comp name: (null)
+      comp type:               ICONST,  comp name: (null)
+      comp type:               ICONST,  comp name: (null)
+      comp type:               ICONST,  comp name: (null)
+      comp type:               ICONST,  comp name: (null)
+      comp type:               ICONST,  comp name: (null)
+      comp type:            int2ieee_,  comp name: (null)
+      comp type:                mavgR,  comp name: (null)
+      comp type:                mavgR,  comp name: (null)
+      comp type:                mul_B,  comp name: (null)
+      comp type:                mul_B,  comp name: (null)
+      comp type:              pushb_i,  comp name: (null)
+      comp type:             slider_f,  comp name: (null)
+      comp type:             slider_f,  comp name: (null)
+      comp type:             slider_f,  comp name: (null)
+      comp type:             slider_f,  comp name: (null)
+      comp type:             slider_f,  comp name: (null)
+      comp type:             slider_f,  comp name: (null)
+      comp type:             slider_f,  comp name: (null)
+      comp type:             slider_f,  comp name: (null)
+      comp type:             slider_f,  comp name: (null)
+      comp type:             slider_f,  comp name: (null)
+      comp type:             slider_f,  comp name: (null)
+      comp type:             slider_f,  comp name: (null)
+      comp type:             slider_f,  comp name: (null)
+      comp type:             FGENsin2,  comp name: (null)
+      comp type:             FGENsqr2,  comp name: (null)
+      comp type:               sum3_B,  comp name: (null)
+      comp type:               sum3_B,  comp name: (null)
+      comp type:               sum3_B,  comp name: (null)
+      comp type:               sum3_B,  comp name: (null)
+      comp type:               sum3_B,  comp name: (null)
+      comp type:               sum3_B,  comp name: (null)
+      comp type:               sum3_B,  comp name: (null)
+      comp type:               sum3_B,  comp name: (null)
+      comp type:               sum3_A,  comp name: (null)
+      comp type:               sum3_A,  comp name: (null)
+      comp type:               sum3_B,  comp name: (null)
+      comp type:               sum3_B,  comp name: (null)
+      comp type:             switch_i,  comp name: (null)
+      comp type:             switch_f,  comp name: (null)
+      comp type:             switch_i,  comp name: (null)
+      comp type:             switch_i,  comp name: (null)
+      comp type:             switch_i,  comp name: (null)
+      comp type:              time_cb,  comp name: (null)
+      comp type:             src1p_ss,  comp name: SRC4
+      comp type:             src1p_ss,  comp name: SRC6
+      comp type:       ss_substep_num,  comp name: (null)
+      comp type:                diode,  comp name: D1
+      comp type:                diode,  comp name: D12
+      comp type:                diode,  comp name: D16
+      comp type:                diode,  comp name: D2
+      comp type:                diode,  comp name: D3
+      comp type:                diode,  comp name: D4
+      comp type:                diode,  comp name: D5
+      comp type:                diode,  comp name: D6
+      comp type:                diode,  comp name: D7
+      comp type:                diode,  comp name: D8
+      comp type:      timestepPolling,  comp name: (null)_0_0
+      comp type:          t2semaphore,  comp name: t2semaphore_1
+      comp type:                 varR,  comp name: VARRES1
+      comp type:           compareX03,  comp name: (null)
+      comp type:           compareX03,  comp name: (null)
+      comp type:           compareX03,  comp name: (null)
+      comp type:           compareX01,  comp name: (null)
+      comp type:              gain_cb,  comp name: (null)
+      comp type:             logicX02,  comp name: (null)
+      comp type:             logicX01,  comp name: (null)
+      comp type:            realpl_cb,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:             sigsw_cb,  comp name: (null)
+      comp type:             sigsw_cb,  comp name: (null)
+      comp type:             sigsw_cb,  comp name: (null)
+      comp type:               srff_A,  comp name: (null)
+      comp type:               sum3_B,  comp name: (null)
+      comp type:       AuroraChEnable,  comp name: (null)
+      comp type:           compareX03,  comp name: (null)
+      comp type:            int2ieee_,  comp name: (null)
+      comp type:             logicX01,  comp name: (null)
+      comp type:              monoX01,  comp name: (null)
+      comp type:                mul_B,  comp name: (null)
+      comp type:           PlotUpdate,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_A,  comp name: (null)
+      comp type:             AuroraNC,  comp name: (null)
+      comp type:             transfcn,  comp name: (null)
+      comp type:                mul_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_A,  comp name: (null)
+      comp type:                 sh_A,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_A,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:                 sh_B,  comp name: (null)
+      comp type:               sum3_A,  comp name: (null)
+      comp type:            word2bit_,  comp name: (null)
+      comp type:           nortoneq1p,  comp name: INORT4
+      comp type:               not_cb,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:                 sh_A,  comp name: (null)
+      comp type:            _16b2Word,  comp name: (null)
+      comp type:           compareX01,  comp name: (null)
+      comp type:           compareX01,  comp name: (null)
+      comp type:             logicX02,  comp name: (null)
+      comp type:             logicX01,  comp name: (null)
+      comp type:             logicX01,  comp name: (null)
+      comp type:               not_cb,  comp name: (null)
+      comp type:               not_cb,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               SUM9RC,  comp name: (null)
+      comp type:             logicX01,  comp name: (null)
+      comp type:             logicX01,  comp name: (null)
+      comp type:             logicX01,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:             sigsw_cb,  comp name: (null)
+      comp type:               srff_A,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               sdelay,  comp name: (null)
+      comp type:               SUM9RC,  comp name: (null)
+      comp type:             sigsw_cb,  comp name: (null)
+      comp type:                mul_B,  comp name: (null)
+      comp type:                mul_B,  comp name: (null)
+      comp type:             src1p_ss,  comp name: SRC2
+      comp type:           nortoneq1p,  comp name: INORT2
+
+  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+
+RISC CONTROLS COMPONENTS(proc 0) --> NovaCor Core #1 
+numberOfModels = 201
+Substep box "Ckt1": mainstep: 125000ns, Substep Divisor: 36, substep: 3472ns
+
+Subsystem 1, Network Solution for box named Ckt1 on core 1 Statistics:
+Number of nodes: 20
+Number of passed G values: 11
+Number of switched G overlays: 0
+Number of columns dynamically decomposed: 16
+Advanced optimizations turned ON/OFF : ON
+
+
+RISC-based CModel Component: src3p named "SRC0"
+	Initial Inductance (parallel) =   0.000459 H
+	Initial Resistance (parallel) =  27.689000 Ohm
+	Initial Resistance (series)   =   0.017300 Ohm
+
+RISC-based CModel Component: src1p named "SRC4"
+	Initial Inductance (parallel) =   0.000000 H
+	Initial Resistance (parallel) =   0.000000 Ohm
+	Initial Resistance (series)   =   0.100000 Ohm
+
+RISC-based CModel Component: src1p named "SRC6"
+	Initial Inductance (parallel) =   0.000000 H
+	Initial Resistance (parallel) =   0.000000 Ohm
+	Initial Resistance (series)   =   0.001000 Ohm
+
+RISC-based CModel Component: src1p named "SRC2"
+	Initial Inductance (parallel) =   0.000000 H
+	Initial Resistance (parallel) =   0.000000 Ohm
+	Initial Resistance (series)   =   0.000001 Ohm
+
+
+RISC CONTROLS COMPONENTS(proc 1) --> NovaCor Core #2 
+numberOfModels = 3
+
+Subsystem 1, Network Solution on core 2 Statistics:
+Number of nodes: 1
+Number of passed G values: 0
+Number of switched G overlays: 0
+Number of columns dynamically decomposed: 0
+
+
+
+RISC CONTROLS COMPONENTS(proc 2) --> NovaCor Core #3 
+numberOfModels = 17
+
+
+RISC CONTROLS COMPONENTS(proc 3) --> NovaCor Core #4 
+numberOfModels = 4

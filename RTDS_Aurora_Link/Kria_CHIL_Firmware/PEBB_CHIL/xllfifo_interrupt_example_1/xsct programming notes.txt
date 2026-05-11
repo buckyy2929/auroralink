@@ -1,0 +1,2 @@
+cd C:/projects/Chil/MFESM_Chil/xllfifo_interrupt_example_1
+source jtag_boot.tcl
