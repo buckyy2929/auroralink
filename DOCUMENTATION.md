@@ -4,6 +4,8 @@ Technical documentation for a **bidirectional mediator** running on AMD Xilinx *
 
 For the EMS-oriented design intent (layers, producer/consumer model, buffer states, success criteria), see **[DESIGN_INTENT.md](DESIGN_INTENT.md)**.
 
+For **Kria + AuroraLink (PL) ↔ libEGD**, mediation layer boundaries, and the **push vs pull** investigation frame, see **[docs/BRIDGE_SOFTWARE_DESIGN.md](docs/BRIDGE_SOFTWARE_DESIGN.md)**.
+
 ---
 
 ## 1. Problem space
