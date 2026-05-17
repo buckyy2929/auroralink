@@ -6,7 +6,14 @@
 
 **Related docs:** [DESIGN_INTENT.md](../DESIGN_INTENT.md) · [DOCUMENTATION.md](../DOCUMENTATION.md) · [BRIDGE_SOFTWARE_DESIGN.md](BRIDGE_SOFTWARE_DESIGN.md)
 
-**Deliverable location:** Short findings and design notes go under `docs/milestone2/` (one file per task, cited sources required).
+**Task tracking:** File-based tasks under [`docs/milestone2/`](milestone2/README.md) — one spec file per task, one findings file when complete.
+
+| Task | Spec file |
+| ---- | --------- |
+| M2-A | [milestone2/M2-A_TASK.md](milestone2/M2-A_TASK.md) |
+| M2-B | [milestone2/M2-B_TASK.md](milestone2/M2-B_TASK.md) |
+| M2-C | [milestone2/M2-C_TASK.md](milestone2/M2-C_TASK.md) |
+| M2-D | [milestone2/M2-D_TASK.md](milestone2/M2-D_TASK.md) |
 
 ---
 
@@ -141,25 +148,6 @@ Design the **mediator application** that reads Aurora-side data (AXI/FIFO path),
 - [ ] Data-transfer table per boundary (mechanism, buffer, sync).
 - [ ] Open risks and M3 implementation tasks listed.
 - [ ] Cross-references M2-A/B/C findings (no contradictions).
-
----
-
-## Suggested GitHub tracking
-
-| Issue title | Label suggestions |
-| ----------- | ----------------- |
-| M2-A: AuroraLink protocol & IP-core investigation | `milestone-2`, `aurora`, `documentation` |
-| M2-B: libEGD deep dive & API map | `milestone-2`, `egd`, `documentation` |
-| M2-C: Cross-compile libEGD for Kria A53 | `milestone-2`, `build`, `kria` |
-| M2-D: Bridge application architecture design | `milestone-2`, `design` |
-
-Create issues from repo root:
-
-```bash
-./scripts/create_milestone_2_issues.sh
-```
-
-Requires: `gh auth login` and push access to `IOTSecurityHQ/protocol_translator`.
 
 ---
 
