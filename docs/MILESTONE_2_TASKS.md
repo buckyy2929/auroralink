@@ -1,21 +1,7 @@
 # Milestone 2 — Protocol Deep-Dive & Bridge Application Design
 
-**Repository:** [IOTSecurityHQ/protocol_translator](https://github.com/IOTSecurityHQ/protocol_translator)
 
-**Objective:** Build enough understanding of **AuroraLink (PL → PS path)** and **libEGD (UDP/EGD)** to cross-compile for **Kria Cortex-A53**, then define how the **bidirectional bridge application** will run on Ubuntu in the PS.
 
-**Related docs:** [DESIGN_INTENT.md](../DESIGN_INTENT.md) · [DOCUMENTATION.md](../DOCUMENTATION.md) · [BRIDGE_SOFTWARE_DESIGN.md](BRIDGE_SOFTWARE_DESIGN.md)
-
-**Task tracking:** File-based tasks under [`docs/milestone2/`](milestone2/README.md) — one spec file per task, one findings file when complete.
-
-| Task | Spec file |
-| ---- | --------- |
-| M2-A | [milestone2/M2-A_TASK.md](milestone2/M2-A_TASK.md) |
-| M2-B | [milestone2/M2-B_TASK.md](milestone2/M2-B_TASK.md) |
-| M2-C | [milestone2/M2-C_TASK.md](milestone2/M2-C_TASK.md) |
-| M2-D | [milestone2/M2-D_TASK.md](milestone2/M2-D_TASK.md) |
-
----
 
 ## Task M2-A — AuroraLink protocol & IP-core behavior
 
