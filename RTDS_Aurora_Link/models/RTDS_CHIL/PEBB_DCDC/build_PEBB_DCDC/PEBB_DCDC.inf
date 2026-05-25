@@ -1,0 +1,206 @@
+CASE: C:\projects\Multiport\multiport_git\models\RTDS_CHIL\PEBB_DCDC\PEBB_DCDC 
+Delt: 125.000000 us
+Rack: 11 NoRealTime: 0 
+Distribution_mode: 0
+RTDSPC_VERSION:  6.7.1
+SERIAL_INPUT_OVERFLOW_ADDRESS:  54005FF0
+Slider Desc="HW_PAUSE_OC" Group="DraftVariables"   Max=10 Min=0 InitValue=0.32 Units="kA"
+String Desc="HW_PAUSE_OC" Group="DraftVariables|Annotation" InitValue="kA"
+Slider Desc="SQ_LOAD_DUTY" Group="DraftVariables"   Max=100 Min=0 InitValue=66.666666 Units="%"
+String Desc="SQ_LOAD_DUTY" Group="DraftVariables|Annotation" InitValue="%"
+Slider Desc="SUBSTEP_CNT" Group="DraftVariables"   Max=60 Min=12 InitValue=36.0 Units=""
+String Desc="SUBSTEP_CNT" Group="DraftVariables|Annotation" InitValue=""
+String Desc="CircuitTitle Annotation" Group="Annotation" InitValue="Test Circuit"
+Output Desc="cc_bits" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020058 ComponentUUID=231
+Output Desc="switch_P_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020060 ComponentUUID=143
+Output Desc="switch_A_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020068 ComponentUUID=143
+Output Desc="cc_bits_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=INT Min=0 Max=1 Rack=11 Adr=51020070 ComponentUUID=143
+Output Desc="ctr_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=INT Min=0 Max=1 Rack=11 Adr=51020074 ComponentUUID=143
+Output Desc="PEBB_next_state_cmd_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020078 ComponentUUID=143
+Output Desc="aplm_enable_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020080 ComponentUUID=143
+Output Desc="SLC_current_state_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020088 ComponentUUID=143
+Output Desc="init_ok_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020090 ComponentUUID=143
+Output Desc="bus_ok_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020098 ComponentUUID=143
+Output Desc="batt_fault_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510200A0 ComponentUUID=143
+Output Desc="PEBB_next_state_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=INT Min=0 Max=1 Rack=11 Adr=510200A8 ComponentUUID=143
+Output Desc="PEBB_Power_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510200B0 ComponentUUID=143
+Output Desc="APLM_SOC_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510200B8 ComponentUUID=143
+Output Desc="BATT_SOC_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510200C0 ComponentUUID=143
+Output Desc="P_llim_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510200C8 ComponentUUID=143
+Output Desc="Q_ulim_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510200D0 ComponentUUID=143
+Output Desc="Q_llim_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510200D8 ComponentUUID=143
+Output Desc="switch_P_B_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510200E0 ComponentUUID=143
+Output Desc="switch_P_C_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510200E8 ComponentUUID=143
+Output Desc="PEBB_current_state_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=INT Min=0 Max=1 Rack=11 Adr=510200F0 ComponentUUID=143
+Output Desc="P_ulim_RX" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510200F8 ComponentUUID=143
+Output Desc="CHIL_error" Group="Subsystem #1|Substep|Ckt1|Aurora" Units="units" Type=INT Min=0 Max=1 Rack=11 Adr=51020100 ComponentUUID=143
+Output Desc="i_lv_load" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020108 ComponentUUID=809
+Output Desc="P_MVGEN" Group="Subsystem #1|Substep|Ckt1|Sources|SRC0" Units="MW" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020110 ComponentUUID=726
+Output Desc="ctr" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020118 ComponentUUID=6
+Output Desc="trigger" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=5102011C ComponentUUID=89
+Output Desc="P_PEBB" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020120 ComponentUUID=118
+Output Desc="R_load" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020128 ComponentUUID=808
+Output Desc="precharge" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020130 ComponentUUID=24
+Output Desc="comm_up" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020134 ComponentUUID=309
+Output Desc="comm_valid" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020138 ComponentUUID=570
+Output Desc="P_LOAD" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020140 ComponentUUID=111
+Output Desc="lpf_in" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020148 ComponentUUID=769
+Output Desc="i_load_n" Group="Subsystem #1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020500 ComponentUUID=847
+Output Desc="v_highbus_n" Group="Subsystem #1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020508 ComponentUUID=856
+Output Desc="v_bus_n" Group="Subsystem #1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020510 ComponentUUID=860
+Output Desc="v_dcc_n" Group="Subsystem #1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020518 ComponentUUID=862
+Output Desc="i_low_n" Group="Subsystem #1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020520 ComponentUUID=872
+Output Desc="v_highpebb_n" Group="Subsystem #1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020528 ComponentUUID=875
+Output Desc="i_high_n" Group="Subsystem #1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020530 ComponentUUID=877
+Output Desc="manual_precharge" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020150 ComponentUUID=844
+Output Desc="contact" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020158 ComponentUUID=237
+Output Desc="lowside_contact" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=5102015C ComponentUUID=238
+Output Desc="notfault_A" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020160 ComponentUUID=243
+Output Desc="highside_contact" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020164 ComponentUUID=253
+Output Desc="batt_contact" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020168 ComponentUUID=341
+Output Desc="precharge_contact" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=5102016C ComponentUUID=410
+Output Desc="Loopback_delay_S" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020170 ComponentUUID=140
+Output Desc="switch_P_S" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020178 ComponentUUID=144
+Output Desc="v_highpebb_TX" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020180 ComponentUUID=171
+Output Desc="i_load_TX" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020188 ComponentUUID=180
+Output Desc="v_bus_TX" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020190 ComponentUUID=183
+Output Desc="i_high_TX" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020198 ComponentUUID=184
+Output Desc="i_low_TX" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510201A0 ComponentUUID=186
+Output Desc="v_highbus_TX" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510201A8 ComponentUUID=209
+Output Desc="v_dcc_TX" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510201B0 ComponentUUID=212
+Output Desc="PEBB_next_state" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510201B8 ComponentUUID=271
+Output Desc="SLC_current_state" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510201C0 ComponentUUID=276
+Output Desc="init_ok" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510201C8 ComponentUUID=282
+Output Desc="P_ulim" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510201D0 ComponentUUID=291
+Output Desc="PEBB_current_state" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510201D8 ComponentUUID=300
+Output Desc="bus_ok" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510201E0 ComponentUUID=349
+Output Desc="P_llim" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510201E8 ComponentUUID=374
+Output Desc="Q_ulim" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510201F0 ComponentUUID=381
+Output Desc="Q_llim" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510201F8 ComponentUUID=388
+Output Desc="switch_P_C" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020200 ComponentUUID=400
+Output Desc="switch_P_B" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020208 ComponentUUID=402
+Output Desc="PEBB_next_state_cmd" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020210 ComponentUUID=432
+Output Desc="PEBB_Power" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020218 ComponentUUID=445
+Output Desc="load_switch" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020220 ComponentUUID=792
+Output Desc="En" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020224 ComponentUUID=21
+Output Desc="packet_key" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020228 ComponentUUID=264
+Output Desc="switch_A" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020230 ComponentUUID=357
+Output Desc="SmpInputs" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=51020238 ComponentUUID=44
+Output Desc="switch_P" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020240 ComponentUUID=518
+Output Desc="ac_load_freq" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020248 ComponentUUID=893
+Output Desc="ac_load_phs" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020250 ComponentUUID=924
+Output Desc="i_ac_load" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020258 ComponentUUID=842
+Output Desc="i_hv_load" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020260 ComponentUUID=912
+Output Desc="i_lv_dc_load" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020268 ComponentUUID=840
+Output Desc="i_sq_load" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020270 ComponentUUID=901
+Output Desc="pebb_P_lim" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020278 ComponentUUID=907
+Output Desc="PEBB_Vbus_Setp" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020280 ComponentUUID=898
+Output Desc="R_load_in" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020288 ComponentUUID=832
+Output Desc="sq_load_freq" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020290 ComponentUUID=903
+Output Desc="sq_load_phs" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020298 ComponentUUID=927
+Output Desc="t_aurora_start" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510202A0 ComponentUUID=916
+Output Desc="trigger_delay" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510202A8 ComponentUUID=923
+Output Desc="HW_OC" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202B0 ComponentUUID=532
+Output Desc="comm_error" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202B4 ComponentUUID=576
+Output Desc="Loopback_delay" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202B8 ComponentUUID=138
+Output Desc="aurora_on" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202BC ComponentUUID=829
+Output Desc="forceFault_PEBB" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510202C0 ComponentUUID=895
+Output Desc="load_switch_in" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202C8 ComponentUUID=836
+Output Desc="NOISE_ON" Group="Subsystem #1|CTLs|Inputs" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020538 ComponentUUID=891
+Output Desc="run" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202CC ComponentUUID=953
+Output Desc="RXI_chil" Group="Subsystem #1|Substep|Ckt1|CTLs|Inputs" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202D0 ComponentUUID=960
+Output Desc="t" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510202D8 ComponentUUID=5
+Output Desc="lowside_contact_cmd" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202E0 ComponentUUID=247
+Output Desc="enable_P" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202E4 ComponentUUID=247
+Output Desc="highside_contact_cmd" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202E8 ComponentUUID=247
+Output Desc="notfault_P" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202EC ComponentUUID=247
+Output Desc="contact_cmd" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202F0 ComponentUUID=247
+Output Desc="batt_contact_cmd" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202F4 ComponentUUID=247
+Output Desc="precharge_contact_cmd" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202F8 ComponentUUID=247
+Output Desc="substep" Group="Subsystem #1|Substep|Ckt1|CTLs|Vars" Units=" " Type=INT Min=0 Max=1 Rack=11 Adr=510202FC ComponentUUID=11
+Output Desc="i_low" Group="Subsystem #1|Substep|Ckt1|Branch Currents" Units="KA" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020300 ComponentUUID=22602096
+Output Desc="i_high" Group="Subsystem #1|Substep|Ckt1|Branch Currents" Units="KA" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020308 ComponentUUID=22602096
+Output Desc="i_load" Group="Subsystem #1|Substep|Ckt1|Branch Currents" Units="KA" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020310 ComponentUUID=22602096
+Output Desc="S1) v_highbus" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020318 ComponentUUID=604
+Output Desc="S1) v_h" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020320 ComponentUUID=603
+Output Desc="S1) v_highpebb" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020328 ComponentUUID=663
+Output Desc="S1) v_dcc" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020330 ComponentUUID=613
+Output Desc="S1) v_bus2" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020338 ComponentUUID=660
+Output Desc="S1) 6" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020340 ComponentUUID=-1
+Output Desc="S1) v_bus" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020348 ComponentUUID=675
+Output Desc="S1) 8" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020350 ComponentUUID=-1
+Output Desc="S1) 9" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020358 ComponentUUID=-1
+Output Desc="S1) 10" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020360 ComponentUUID=-1
+Output Desc="S1) 11" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020368 ComponentUUID=-1
+Output Desc="S1) 12" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020370 ComponentUUID=-1
+Output Desc="S1) 13" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020378 ComponentUUID=-1
+Output Desc="S1) 14" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020380 ComponentUUID=-1
+Output Desc="S1) 15" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020388 ComponentUUID=-1
+Output Desc="S1) 16" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020390 ComponentUUID=-1
+Output Desc="S1) 17" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020398 ComponentUUID=-1
+Output Desc="S1) 18" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510203A0 ComponentUUID=-1
+Output Desc="S1) 19" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510203A8 ComponentUUID=-1
+Output Desc="S1) 20" Group="Subsystem #1|Substep|Ckt1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=510203B0 ComponentUUID=-1
+Output Desc="S1) 21" Group="Subsystem #1|Node Voltages" Units="kV" Type=DOUBLE Min=0.0000 Max=1.0000 Rack=11 Adr=51020408 ComponentUUID=-1
+Pushbutton Desc="Ftrg" Group="Subsystem #1|Sources|SRC0" Type=INT P0=0 P1=1 Rack=11 Adr=54004000 ComponentUUID=726
+Slider Desc="ABCmag" Group="Subsystem #1|Sources|SRC0" Type=IEEE Units="KV" InitValue=4.242600 Min=0.000000 Max=8.485200 Rack=11 Adr=54004008 ComponentUUID=726
+Slider Desc="Phase" Group="Subsystem #1|Sources|SRC0" Type=IEEE Units="Deg" InitValue=60.000000 Min=-360.000000 Max=360.000000 Rack=11 Adr=54004010 ComponentUUID=726
+Slider Desc="Freq" Group="Subsystem #1|Sources|SRC0" Type=IEEE Units="Hz" InitValue=60.000000 Min=0.000000 Max=70.000000 Rack=11 Adr=54004018 ComponentUUID=726
+Pushbutton Desc="manual_precharge" Group="Subsystem #1|CTLs|Inputs" Type=INT P0=0 P1=1 Rack=11 Adr=54004020 ComponentUUID=844
+Slider Desc="ac_load_freq" Group="Subsystem #1|CTLs|Inputs" Type=IEEE Units="Hz" InitValue=1.000000 Min=0.000000 Max=10000.000000 Rack=11 Adr=54004028 ComponentUUID=893
+Slider Desc="ac_load_phs" Group="Subsystem #1|CTLs|Inputs" Type=IEEE Units="rad" InitValue=0.000000 Min=-6.290000 Max=6.290000 Rack=11 Adr=54004030 ComponentUUID=924
+Slider Desc="i_ac_load" Group="Subsystem #1|CTLs|Inputs" Type=IEEE Units="kA" InitValue=0.000000 Min=0.000000 Max=2.000000 Rack=11 Adr=54004038 ComponentUUID=842
+Slider Desc="i_hv_load" Group="Subsystem #1|CTLs|Inputs" Type=IEEE Units="kA" InitValue=0.277600 Min=0.000000 Max=1.000000 Rack=11 Adr=54004040 ComponentUUID=912
+Slider Desc="i_lv_dc_load" Group="Subsystem #1|CTLs|Inputs" Type=IEEE Units="kA" InitValue=0.294100 Min=-1.500000 Max=1.500000 Rack=11 Adr=54004048 ComponentUUID=840
+Slider Desc="i_sq_load" Group="Subsystem #1|CTLs|Inputs" Type=IEEE Units="kA" InitValue=0.000000 Min=0.000000 Max=2.000000 Rack=11 Adr=54004050 ComponentUUID=901
+Slider Desc="pebb_P_lim" Group="Subsystem #1|CTLs|Inputs" Type=IEEE Units="MW" InitValue=1.500000 Min=-1.500000 Max=1.500000 Rack=11 Adr=54004058 ComponentUUID=907
+Slider Desc="PEBB_Vbus_Setp" Group="Subsystem #1|CTLs|Inputs" Type=IEEE Units="kV" InitValue=0.850000 Min=0.660000 Max=1.003200 Rack=11 Adr=54004060 ComponentUUID=898
+Slider Desc="R_load" Group="Subsystem #1|CTLs|Inputs" Type=IEEE Units="Ohm" InitValue=5.000000 Min=0.001000 Max=5000.000000 Rack=11 Adr=54004068 ComponentUUID=832
+Slider Desc="sq_load_freq" Group="Subsystem #1|CTLs|Inputs" Type=IEEE Units="Hz" InitValue=1.000000 Min=0.000000 Max=10000.000000 Rack=11 Adr=54004070 ComponentUUID=903
+Slider Desc="sq_load_phs" Group="Subsystem #1|CTLs|Inputs" Type=IEEE Units="rad" InitValue=0.000000 Min=-6.290000 Max=6.290000 Rack=11 Adr=54004078 ComponentUUID=927
+Slider Desc="t_aurora_start" Group="Subsystem #1|CTLs|Inputs" Type=IEEE Units="s" InitValue=9.000000 Min=0.500000 Max=20.000000 Rack=11 Adr=54004080 ComponentUUID=916
+Slider Desc="trigger_delay" Group="Subsystem #1|CTLs|Inputs" Type=IEEE Units="s" InitValue=2.000000 Min=0.000000 Max=200.000000 Rack=11 Adr=54004088 ComponentUUID=923
+Switch Desc="Aurora_On" Group="Subsystem #1|CTLs|Inputs" Type=INT P0=0 P1=1 InitValue=1 OnText="ON" OffText="OFF" Rack=11 Adr=54004090 ComponentUUID=829
+Switch Desc="forceFault_PEBB" Group="Subsystem #1|CTLs|Inputs" Type=IEEE P0=0.0000 P1=1.0000 InitValue=0.000000 OnText="ON" OffText="OFF" Rack=11 Adr=54004098 ComponentUUID=895
+Switch Desc="load_switch_in" Group="Subsystem #1|CTLs|Inputs" Type=INT P0=0 P1=1 InitValue=0 OnText="ON" OffText="OFF" Rack=11 Adr=540040A0 ComponentUUID=836
+Switch Desc="noise_on" Group="Subsystem #1|CTLs|Inputs" Type=IEEE P0=0.0000 P1=1.0000 InitValue=0.000000 OnText="ON" OffText="OFF" Rack=11 Adr=540040A8 ComponentUUID=891
+Switch Desc="run" Group="Subsystem #1|CTLs|Inputs" Type=INT P0=0 P1=1 InitValue=0 OnText="ON" OffText="OFF" Rack=11 Adr=540040B0 ComponentUUID=953
+Switch Desc="RXI_chil" Group="Subsystem #1|CTLs|Inputs" Type=INT P0=0 P1=1 InitValue=0 OnText="ON" OffText="OFF" Rack=11 Adr=540040B4 ComponentUUID=960
+Pushbutton Desc="Ftrg" Group="Subsystem #1|Sources|SRC2" Type=INT P0=0 P1=1 Rack=11 Adr=540040B8 ComponentUUID=665
+Pushbutton Desc="Ftrg" Group="Subsystem #1|Sources|SRC4" Type=INT P0=0 P1=1 Rack=11 Adr=540040BC ComponentUUID=650
+Slider Desc="Mag" Group="Subsystem #1|Sources|SRC4" Type=IEEE Units="KV" InitValue=0.940000 Min=0.000000 Max=460.000000 Rack=11 Adr=540040C0 ComponentUUID=650
+Pushbutton Desc="Ftrg" Group="Subsystem #1|Sources|SRC6" Type=INT P0=0 P1=1 Rack=11 Adr=540040C8 ComponentUUID=688
+String Desc="Draft file" Group="Annotation" InitValue="Draft file: C:\projects\Multiport\multiport_git\models\RTDS_CHIL\PEBB_DCDC\PEBB_DCDC.rtfx"
+String Desc="Draft file modification date" Group="Time tags" InitValue="2026/03/31 15:38:49"
+String Desc="Compile date" Group="Time tags" InitValue="2026/04/20 10:29:57"
+
+
+CHECKSUM_INFORMATION:
+checksum_record: subsystem=1 checksum=01A51E73
+
+
+COMPONENT_TIMING_INFORMATION:
+timing_record: subsystem=1 processor=0 processor_type=NOVACOR2.0
+timing_record: subsystem=1 processor=1 processor_type=NOVACOR2.0
+timing_record: subsystem=1 processor=2 processor_type=NOVACOR2.0
+timing_record: subsystem=1 processor=3 processor_type=NOVACOR2.0
+timing_record: subsystem=1 processor=4 processor_type=NOVACOR2.0
+timing_record: subsystem=1 processor=5 processor_type=NOVACOR2.0
+timing_record: timing_name=Ckt1 component_type=SUBSTEP subsystem=1 processor=0 processor_type=NOVACOR clock_index=0 enabled=true use=PSYS lf=360.000000
+timing_record: timing_name=1::_1 component_type=netsolCB subsystem=1 processor=1 processor_type=NOVACOR clock_index=1 enabled=true use=PSYS lf=360.000000 description=NetworkSolution
+timing_record: timing_name=(null) component_type=RANDOM subsystem=1 processor=2 processor_type=NOVACOR clock_index=1 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=864
+timing_record: timing_name=(null) component_type=RANDOM subsystem=1 processor=2 processor_type=NOVACOR clock_index=2 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=853
+timing_record: timing_name=(null) component_type=RANDOM subsystem=1 processor=2 processor_type=NOVACOR clock_index=3 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=876
+timing_record: timing_name=(null) component_type=RANDOM subsystem=1 processor=2 processor_type=NOVACOR clock_index=4 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=846
+timing_record: timing_name=(null) component_type=RANDOM subsystem=1 processor=2 processor_type=NOVACOR clock_index=5 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=870
+timing_record: timing_name=(null) component_type=RANDOM subsystem=1 processor=2 processor_type=NOVACOR clock_index=6 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=865
+timing_record: timing_name=(null) component_type=RANDOM subsystem=1 processor=2 processor_type=NOVACOR clock_index=7 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=867
+timing_record: timing_name=(null) component_type=mul_B subsystem=1 processor=2 processor_type=NOVACOR clock_index=11 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=847
+timing_record: timing_name=(null) component_type=mul_B subsystem=1 processor=2 processor_type=NOVACOR clock_index=12 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=856
+timing_record: timing_name=(null) component_type=mul_B subsystem=1 processor=2 processor_type=NOVACOR clock_index=13 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=860
+timing_record: timing_name=(null) component_type=mul_B subsystem=1 processor=2 processor_type=NOVACOR clock_index=14 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=862
+timing_record: timing_name=(null) component_type=mul_B subsystem=1 processor=2 processor_type=NOVACOR clock_index=15 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=872
+timing_record: timing_name=(null) component_type=mul_B subsystem=1 processor=2 processor_type=NOVACOR clock_index=16 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=875
+timing_record: timing_name=(null) component_type=mul_B subsystem=1 processor=2 processor_type=NOVACOR clock_index=17 enabled=false use=CTLS lf=-1.000000 logical_proc=1 uniqueID=877
+timing_record: timing_name=CONTROL_GROUP_1 component_type=CONTROL_GROUP_1 subsystem=1 processor=2 processor_type=NOVACOR clock_index=18 enabled=true use=CTLS lf=0.000000
+timing_record: timing_name=INORT31 component_type=nortoneq1p subsystem=1 processor=3 processor_type=NOVACOR clock_index=1 enabled=true use=PSYS lf=10.000000

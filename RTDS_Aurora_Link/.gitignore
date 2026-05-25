@@ -1,0 +1,12 @@
+# Vitis / Eclipse workspace caches (large, machine-local; do not version)
+**/.metadata/
+
+# IDE telemetry and oversized local logs
+**/.analytics
+**/IDE.log
+
+# Eclipse remote systems scratch
+**/RemoteSystemsTempFiles/
+
+# Windows artifacts
+*.lnk

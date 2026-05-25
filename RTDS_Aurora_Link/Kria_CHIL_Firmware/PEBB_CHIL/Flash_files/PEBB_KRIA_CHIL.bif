@@ -1,0 +1,8 @@
+the_ROM_image:
+{
+	[fsbl_config] a53_x64
+	[pmufw_image]pmufw.elf
+	[bootloader]fsbl.elf    
+	[destination_device=pl]top.bit
+	[destination_cpu=a53-0]xllfifo_interrupt_example_1.elf
+}

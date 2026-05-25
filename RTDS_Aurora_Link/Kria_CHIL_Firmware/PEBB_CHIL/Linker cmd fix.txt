@@ -1,0 +1,15 @@
+Paste the line below into C:\projects\Chil\Multiport_Chil\xllfifo_interrupt_example_1\Debug\objects.mk to fix the auto-generated makefile when it gives the following error:
+
+LIBS := -Wl,--start-group,-lxil,-lgcc,-lm,-lc,--end-group
+
+Error:
+
+'Building target: xllfifo_interrupt_example_1.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/projects/Chil/MFESM_Chil/top/export/top/sw/top/standalone_psu_cortexa53_0/bsplib/lib -o "xllfifo_interrupt_example_1.elf"  ./src/MVDC.CLI/ARY_BOOL_SUM.o ./src/MVDC.CLI/ENC_PROC.o ./src/MVDC.CLI/RTDS_CTRL.o ./src/MVDC.CLI/SIM_LR.o ./src/MVDC.CLI/VCO_FDBK.o ./src/MVDC.CLI/VF_CTRL.o ./src/MVDC.CLI/acpebb_states.o ./src/MVDC.CLI/boardtest_states.o ./src/MVDC.CLI/control_blocks.o ./src/MVDC.CLI/control_functions.o ./src/MVDC.CLI/dfig_states.o ./src/MVDC.CLI/general_states.o ./src/MVDC.CLI/hesm_states.o ./src/MVDC.CLI/plecs_interface.o ./src/MVDC.CLI/twosie_states.o ./src/MVDC.CLI/wind_states.o  ./src/APLM_Control.o ./src/APLM_Control_0.o ./src/APLM_Control_1.o ./src/Axi_IO.o ./src/Battery_Controller.o ./src/PEBB_Control.o ./src/PEBB_Control_0.o ./src/PEBB_Control_1.o ./src/PEBB_Control_2.o ./src/Ship_Level_Control.o ./src/Ship_Level_Control_0.o ./src/UART.o ./src/codegen.o ./src/internalComms.o ./src/main.o   -l-Wl,--start-group,-lxil,-lgcc,-lm,-lc,--end-group -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/vitis/2022.1/gnu/aarch64/nt/aarch64-none/x86_64-oesdk-mingw32/usr/bin/aarch64-xilinx-elf/../../libexec/aarch64-xilinx-elf/gcc/aarch64-xilinx-elf/11.2.0/real-ld.exe: cannot find -l-Wl,--start-group,-lxil,-lgcc,-lm,-lc,--end-group
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:39: xllfifo_interrupt_example_1.elf] Error 1
+
+
+

@@ -1,0 +1,48 @@
+2023-11-01T17:37:52.300377300255-17:37:52 **** Incremental Build of configuration Debug for project xllfifo_interrupt_example_1 ****
+000-make all 
+000-'Building file: ../src/UART.c'
+000-'Invoking: ARM v8 gcc compiler'
+000-aarch64-none-elf-gcc -Wall -O0 -g3 -IC:/projects/Multiport/multiport_git/Kria_CHIL_Firmware/PEBB_CHIL/top/export/top/sw/top/standalone_psu_cortexa53_0/bspinclude/include -IC:/projects/Multiport/multiport_git/multiport_p80i_libs -c -fmessage-length=0 -MT"src/UART.o" -MMD -MP -MF"src/UART.d" -MT"src/UART.o" -o "src/UART.o" "../src/UART.c"
+000-In file included from C:/projects/Multiport/multiport_git/multiport_p80i_libs/MVDC.CLI\globals.h:14,
+000-                 from ../src/UART.c:29:
+000/xllfifo_interrupt_example_1/multiport_p80i_libs/MVDC.CLI/defines.h138-1-1"PI" redefined1-C:/projects/Multiport/multiport_git/multiport_p80i_libs/MVDC.CLI\defines.h:138: warning: "PI" redefined
+000-  138 | #define PI                  3.14159265 //PI
+000-      | 
+000-In file included from ../src/UART.c:27:
+000/xllfifo_interrupt_example_1/src/codegen.h20-1-1this is the location of the previous definition0-../src/codegen.h:20: note: this is the location of the previous definition
+000-   20 | #define PI 3.1415926535
+000-      | 
+000-In file included from C:/projects/Multiport/multiport_git/multiport_p80i_libs/MVDC.CLI\globals.h:14,
+000-                 from ../src/UART.c:29:
+000/xllfifo_interrupt_example_1/multiport_p80i_libs/MVDC.CLI/defines.h161-1-1"false" redefined1-C:/projects/Multiport/multiport_git/multiport_p80i_libs/MVDC.CLI\defines.h:161: warning: "false" redefined
+000-  161 | #define false               0.0
+000-      | 
+000-In file included from ../src/UART.c:18:
+000/xllfifo_interrupt_example_139-1-1this is the location of the previous definition0-c:\xilinx\vitis\2022.1\gnu\aarch64\nt\aarch64-none\x86_64-oesdk-mingw32\usr\lib\aarch64-xilinx-elf\gcc\aarch64-xilinx-elf\11.2.0\include\stdbool.h:39: note: this is the location of the previous definition
+000-   39 | #define false   0
+000-      | 
+000-In file included from C:/projects/Multiport/multiport_git/multiport_p80i_libs/MVDC.CLI\globals.h:14,
+000-                 from ../src/UART.c:29:
+000/xllfifo_interrupt_example_1/multiport_p80i_libs/MVDC.CLI/defines.h162-1-1"true" redefined1-C:/projects/Multiport/multiport_git/multiport_p80i_libs/MVDC.CLI\defines.h:162: warning: "true" redefined
+000-  162 | #define true                1.0
+000-      | 
+000-In file included from ../src/UART.c:18:
+000/xllfifo_interrupt_example_138-1-1this is the location of the previous definition0-c:\xilinx\vitis\2022.1\gnu\aarch64\nt\aarch64-none\x86_64-oesdk-mingw32\usr\lib\aarch64-xilinx-elf\gcc\aarch64-xilinx-elf\11.2.0\include\stdbool.h:38: note: this is the location of the previous definition
+000-   38 | #define true    1
+000-      | 
+000-'Finished building: ../src/UART.c'
+000-' '
+000-'Building target: xllfifo_interrupt_example_1.elf'
+000-'Invoking: ARM v8 gcc linker'
+000-aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/projects/Multiport/multiport_git/Kria_CHIL_Firmware/PEBB_CHIL/top/export/top/sw/top/standalone_psu_cortexa53_0/bsplib/lib -o "xllfifo_interrupt_example_1.elf"  ./src/Axi_IO.o ./src/PEBB_Control.o ./src/PEBB_Control_0.o ./src/PEBB_Control_1.o ./src/PEBB_Control_2.o ./src/PEBB_Control_3.o ./src/UART.o ./src/codegen.o ./src/main.o  ./multiport_p80i_libs/MVDC.CLI/plecs_interface.o   -Wl,--start-group,-lxil,-lgcc,-lm,-lc,--end-group
+000-'Finished building target: xllfifo_interrupt_example_1.elf'
+000-' '
+000-'Invoking: ARM v8 Print Size'
+000-aarch64-none-elf-size xllfifo_interrupt_example_1.elf  |tee "xllfifo_interrupt_example_1.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000- 200539	  12864	  33205	 246608	  3c350	xllfifo_interrupt_example_1.elf
+000-'Finished building: xllfifo_interrupt_example_1.elf.size'
+000-' '
+00255-
+17:37:56 Build Finished (took 3s.736ms)
+

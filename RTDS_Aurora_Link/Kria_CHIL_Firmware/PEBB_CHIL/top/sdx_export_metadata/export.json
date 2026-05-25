@@ -1,0 +1,25 @@
+{
+  "version": "2022.1",
+  "applications": [],
+  "platforms": [],
+  "systems": [
+    {
+      "name": "xllfifo_interrupt_example_1_system",
+      "platform": "C:/projects/Chil/kria/top/top/export/top/top.xpfm",
+      "sysConfig": "top",
+      "buildConfig": "Debug",
+      "applications": [
+        {
+          "name": "xllfifo_interrupt_example_1",
+          "platform": "C:/projects/Chil/kria/top/top/export/top/top.xpfm",
+          "platformPath": "C:\\projects\\Chil\\kria\\top\\top\\export\\top",
+          "sysConfig": "top",
+          "domain": "standalone_psu_cortexa53_0",
+          "system": "xllfifo_interrupt_example_1_system"
+        }
+      ],
+      "platformPath": "C:\\projects\\Chil\\kria\\top\\top\\export\\top"
+    }
+  ],
+  "others": []
+}

@@ -1,0 +1,11 @@
+*.o
+*.d
+*.deb
+.builder*
+bin
+lib
+html
+.idea
+.image*
+.dev_image*
+cmake-build-debug

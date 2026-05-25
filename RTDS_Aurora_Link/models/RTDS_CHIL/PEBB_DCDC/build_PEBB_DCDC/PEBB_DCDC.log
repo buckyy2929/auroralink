@@ -1,0 +1,13 @@
+MESSAGES:
+
+Compiling PEBB_DCDC for RTDS rack 11...
+Nodes and Wires...
+
+RTDSPC version = 6.7.1
+=======================
+
+Using configuration file: C:\Users\lg138523sd\Documents\RSCAD\HDWR\config_file_03.txt
+Substep box "Ckt1": mainstep: 125000ns, Substep Divisor: 36, substep: 3472ns
+End of process. Peak memory usage = 83943424 bytes
+
+Compile completed successfully.
