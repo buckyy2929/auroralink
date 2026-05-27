@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+# ============================================================================
+# aarch64-linux-gnu-g++ wrapper used by the libEGD ARM64 cross-build.
+#
+# Purpose: libEGD-master/CMakeLists.txt unconditionally appends the x86-only
+# Intel CET flags `-fcf-protection=full -mshstk` to CMAKE_CXX_FLAGS_RELEASE
+# AFTER our toolchain file sets a clean baseline. aarch64-linux-gnu-g++
+# rejects `-mshstk` outright. This wrapper filters those flags out and
+# forwards everything else verbatim, so we never have to patch GE's source.
+#
+# Used by:   cmake/toolchains/aarch64-linux-gnu.cmake (sets CMAKE_CXX_COMPILER)
+# Installed: /usr/local/bin/aarch64-linux-gnu-g++-wrapper inside the
+#            libegd-arm64:builder image (see Dockerfile.builder.arm64).
+# ============================================================================
+set -eu
+args=()
+for a in "$@"; do
+    case "$a" in
+        -fcf-protection|-fcf-protection=*|-mshstk|-mno-shstk)
+            : ;;
+        *)
+            args+=("$a") ;;
+    esac
+done
+exec /usr/bin/aarch64-linux-gnu-g++ "${args[@]}"

@@ -1,0 +1,8 @@
+# Force LF on all shell scripts and CMake/Docker files used by the M2-C
+# cross-build, so a Windows checkout (core.autocrlf=true) does not turn
+# their line endings into CRLF and break the Linux `/usr/bin/env bash\r`
+# shebang inside the libegd-arm64:builder container.
+*.sh             text eol=lf
+*.cmake          text eol=lf
+Dockerfile*      text eol=lf
+**/cross-wrappers/* text eol=lf

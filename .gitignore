@@ -1,0 +1,6 @@
+.DS_Store
+
+# M2-C cross-build artifacts (libEGD ARM64). Reproducible from source via
+# scripts/build_libegd_arm64.sh; never check in.
+out/
+.builder-*

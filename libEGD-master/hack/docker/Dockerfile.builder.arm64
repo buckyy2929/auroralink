@@ -1,0 +1,215 @@
+# ============================================================================
+# libEGD cross-build environment for Cortex-A53 (Kria PS, aarch64).
+#
+# Companion to hack/docker/Dockerfile.builder (which targets amd64). This
+# image carries:
+#   - aarch64-linux-gnu cross GCC/G++ 12 (Debian bookworm)
+#   - libssl-dev:arm64 + zlib1g-dev:arm64 via dpkg multiarch
+#   - statically cross-built libpsl 0.21.0, libnghttp2 1.40.0, libcurl 7.67.0
+#     (PIC, --enable-static --disable-shared), installed under
+#     /usr/local/aarch64-linux-gnu and symlinked into /usr/local/lib so the
+#     hard-coded STATIC_DEPS in libEGD's CMakeLists.txt resolve unchanged.
+#   - thin compiler wrappers in /usr/local/bin that strip x86-only flags
+#     (-fcf-protection=full, -mshstk) that libEGD's CMakeLists.txt appends
+#     to Release builds. See cmake/toolchains/aarch64-linux-gnu.cmake.
+#
+# This image deliberately does NOT contain the libEGD source. The build
+# script mounts the protocol_translator workspace at runtime so this image
+# is reusable across source changes.
+# ============================================================================
+FROM debian:bookworm-slim
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Optional: GE certificate, to mirror Dockerfile.builder. Harmless if unused.
+ENV GE_CRT_NAME="GE_External_Root_CA_2_1.crt"
+COPY hack/docker/${GE_CRT_NAME} /etc/ssl/certs/${GE_CRT_NAME}
+RUN cat /etc/ssl/certs/${GE_CRT_NAME} >> /etc/ssl/cert.pem
+
+# ----------------------------------------------------------------------------
+# Step 1: host-side build tools + aarch64 cross toolchain
+# ----------------------------------------------------------------------------
+RUN set -ex \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
+        ca-certificates \
+        curl \
+        git \
+        tar \
+        xz-utils \
+        file \
+        make \
+        cmake \
+        pkg-config \
+        autoconf \
+        automake \
+        libtool \
+        python3 \
+        gcc-aarch64-linux-gnu \
+        g++-aarch64-linux-gnu \
+        binutils-aarch64-linux-gnu \
+    && rm -rf /var/lib/apt/lists/* \
+    && ln -sf /usr/bin/python3 /usr/bin/python
+
+# ----------------------------------------------------------------------------
+# Step 2: arm64 system libraries (OpenSSL + zlib) via Debian multiarch.
+# These are dynamically linked by libEGD (`pthread ssl z` in CMakeLists.txt).
+# We do NOT cross-build OpenSSL from source: bookworm's libssl-dev:arm64
+# (OpenSSL 3.0) is exactly what Ubuntu 22.04+ on Kria ships at runtime, so
+# we want ABI parity, not a custom build.
+# ----------------------------------------------------------------------------
+RUN set -ex \
+    && dpkg --add-architecture arm64 \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends \
+        libssl-dev:arm64 \
+        zlib1g-dev:arm64 \
+    && rm -rf /var/lib/apt/lists/*
+
+# ----------------------------------------------------------------------------
+# Step 3: compiler wrappers.
+#
+# libEGD-master/CMakeLists.txt unconditionally appends
+#   -fcf-protection=full -mshstk
+# to CMAKE_<LANG>_FLAGS_RELEASE. Both are x86-only (Intel CET).
+# aarch64-linux-gnu-gcc rejects `-mshstk` outright. The wrappers below filter
+# those two flags out and forward everything else verbatim, so we can build
+# Release without touching the GE-owned libEGD source.
+# ----------------------------------------------------------------------------
+COPY hack/docker/cross-wrappers/aarch64-linux-gnu-gcc-wrapper /usr/local/bin/
+COPY hack/docker/cross-wrappers/aarch64-linux-gnu-g++-wrapper /usr/local/bin/
+# Belt-and-braces: strip any CRLF that may have been introduced by a
+# Windows checkout (git config core.autocrlf=true), otherwise the Linux
+# `/usr/bin/env bash\r` shebang would fail with "No such file or directory".
+RUN sed -i 's/\r$//' /usr/local/bin/aarch64-linux-gnu-gcc-wrapper \
+                     /usr/local/bin/aarch64-linux-gnu-g++-wrapper \
+    && chmod +x /usr/local/bin/aarch64-linux-gnu-gcc-wrapper \
+                /usr/local/bin/aarch64-linux-gnu-g++-wrapper \
+    && /usr/local/bin/aarch64-linux-gnu-gcc-wrapper --version \
+    && /usr/local/bin/aarch64-linux-gnu-g++-wrapper --version
+
+# ----------------------------------------------------------------------------
+# Common cross-compile environment for the dep builds below.
+# ----------------------------------------------------------------------------
+ENV CROSS_PREFIX=/usr/local/aarch64-linux-gnu \
+    CROSS_HOST=aarch64-linux-gnu \
+    CC=aarch64-linux-gnu-gcc \
+    CXX=aarch64-linux-gnu-g++ \
+    AR=aarch64-linux-gnu-ar \
+    RANLIB=aarch64-linux-gnu-ranlib \
+    STRIP=aarch64-linux-gnu-strip \
+    PKG_CONFIG_LIBDIR=/usr/lib/aarch64-linux-gnu/pkgconfig:/usr/local/aarch64-linux-gnu/lib/pkgconfig \
+    PKG_CONFIG_PATH=""
+
+# ----------------------------------------------------------------------------
+# Step 4: cross-build libpsl 0.21.0 (no runtime deps; ships PSL data file).
+# ----------------------------------------------------------------------------
+ENV PSL_VERSION=0.21.0
+RUN set -ex \
+    && curl -fsSLo /tmp/libpsl-${PSL_VERSION}.tar.gz \
+        https://github.com/rockdaboot/libpsl/releases/download/libpsl-${PSL_VERSION}/libpsl-${PSL_VERSION}.tar.gz \
+    && tar -xzf /tmp/libpsl-${PSL_VERSION}.tar.gz -C /tmp/ \
+    && cd /tmp/libpsl-${PSL_VERSION} \
+    && CFLAGS="-fPIC -O2" \
+       ./configure \
+            --host=${CROSS_HOST} \
+            --prefix=${CROSS_PREFIX} \
+            --with-pic \
+            --enable-static \
+            --disable-shared \
+            --disable-gtk-doc \
+            --disable-man \
+    && make -j"$(nproc)" \
+    && make install \
+    && rm -rf /tmp/libpsl-${PSL_VERSION} /tmp/libpsl-${PSL_VERSION}.tar.gz
+
+# ----------------------------------------------------------------------------
+# Step 5: cross-build libnghttp2 1.40.0 (no deps for the core lib).
+# ----------------------------------------------------------------------------
+ENV NGHTTP2_VERSION=1.40.0
+RUN set -ex \
+    && curl -fsSLo /tmp/nghttp2-${NGHTTP2_VERSION}.tar.gz \
+        https://github.com/nghttp2/nghttp2/releases/download/v${NGHTTP2_VERSION}/nghttp2-${NGHTTP2_VERSION}.tar.gz \
+    && tar -xzf /tmp/nghttp2-${NGHTTP2_VERSION}.tar.gz -C /tmp/ \
+    && cd /tmp/nghttp2-${NGHTTP2_VERSION} \
+    && CFLAGS="-fPIC -O2" CXXFLAGS="-fPIC -O2" \
+       ./configure \
+            --host=${CROSS_HOST} \
+            --prefix=${CROSS_PREFIX} \
+            --with-pic \
+            --enable-static \
+            --disable-shared \
+            --enable-lib-only \
+    && make -j"$(nproc)" \
+    && make install \
+    && rm -rf /tmp/nghttp2-${NGHTTP2_VERSION} /tmp/nghttp2-${NGHTTP2_VERSION}.tar.gz
+
+# ----------------------------------------------------------------------------
+# Step 6: cross-build libcurl 7.67.0 against arm64 OpenSSL + our cross-built
+# libpsl/libnghttp2. Mirrors the flag set used by Dockerfile.builder (the
+# amd64 builder) with --host and --with-ssl pointed at arm64 multiarch.
+# ----------------------------------------------------------------------------
+ENV CURL_VERSION=7.67.0
+RUN set -ex \
+    && curl -fsSLo /tmp/curl-${CURL_VERSION}.tar.gz \
+        https://github.com/curl/curl/releases/download/curl-7_67_0/curl-${CURL_VERSION}.tar.gz \
+    && tar -xzf /tmp/curl-${CURL_VERSION}.tar.gz -C /tmp/ \
+    && cd /tmp/curl-${CURL_VERSION} \
+    && CFLAGS="-fPIC -O2" \
+       CPPFLAGS="-I${CROSS_PREFIX}/include -I/usr/include/aarch64-linux-gnu" \
+       LDFLAGS="-L${CROSS_PREFIX}/lib -L/usr/lib/aarch64-linux-gnu" \
+       ./configure \
+            --host=${CROSS_HOST} \
+            --prefix=${CROSS_PREFIX} \
+            --enable-ipv6 \
+            --enable-unix-sockets \
+            --without-libidn \
+            --without-libidn2 \
+            --without-librtmp \
+            --without-brotli \
+            --disable-ldap \
+            --with-pic \
+            --with-ssl=/usr \
+            --with-libssl-prefix=/usr \
+            --with-nghttp2=${CROSS_PREFIX} \
+            --with-libpsl=${CROSS_PREFIX} \
+            --enable-static \
+            --disable-shared \
+    && make -j"$(nproc)" \
+    && make install \
+    && rm -rf /tmp/curl-${CURL_VERSION} /tmp/curl-${CURL_VERSION}.tar.gz
+
+# ----------------------------------------------------------------------------
+# Step 7: bridge the cross-built static archives into /usr/local/lib so that
+# libEGD's `set(STATIC_DEPS /usr/local/lib/libcurl.a ...)` works unmodified.
+# We only symlink the .a files we actually consume; we deliberately do NOT
+# touch /usr/local/include, /usr/local/bin etc., to avoid polluting the host
+# layout in case anyone shells into this image.
+#
+# Note: autotools installs static archives under whichever libdir layout it
+# picks for the host (plain lib/, lib64/, or lib/<multiarch>/). We `find`
+# each archive at its actual location instead of guessing a fixed path, so
+# this step is robust to libtool/autoconf heuristics. If anything is
+# missing, we dump the relevant trees to make the failure self-diagnosing.
+# ----------------------------------------------------------------------------
+RUN set -ex \
+    && echo "=== Inventory of cross-built static archives ===" \
+    && find ${CROSS_PREFIX} -type f -name 'lib*.a' -print \
+    && for lib in libcurl.a libnghttp2.a libpsl.a; do \
+         target="$(find ${CROSS_PREFIX} -type f -name "$lib" -print -quit)" ; \
+         if [ -z "$target" ]; then \
+             echo "ERROR: $lib was not produced under ${CROSS_PREFIX}." ; \
+             echo "Tree dump for diagnostics:" ; \
+             ls -lR ${CROSS_PREFIX} || true ; \
+             exit 1 ; \
+         fi ; \
+         ln -sf "$target" /usr/local/lib/"$lib" ; \
+         if [ ! -f /usr/local/lib/"$lib" ]; then \
+             echo "ERROR: symlink /usr/local/lib/$lib still broken after ln -sf -> $target" ; \
+             exit 1 ; \
+         fi ; \
+         echo "  /usr/local/lib/$lib -> $target" ; \
+       done \
+    && echo "Cross-built static deps in place."
+
+WORKDIR /home/edge/libEGD
