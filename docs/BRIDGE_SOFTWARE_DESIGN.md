@@ -67,6 +67,8 @@ The file header states explicitly: data is **to/from PL through the AXI FIFO** u
 
 **Design decision placeholder:** Record the conclusion as one line in the implementation guide, e.g. “RX: **IRQ-driven notification + CPU word-pull from AXI4 FIFO**” or “RX: **DMA SG to DDR + eventfd**”, once RTL + measurements are fixed.
 
+**→ Decision is closed.** See `milestone2/M2-D_application_design.md` §12 cross-reference table: RX is **IRQ-driven notification (`pl_ps_irq0` → UIO `/dev/uio0` → `poll()`) + CPU word-pull from AXI4 FIFO** (37 words per RC IRQ). FIFO MMIO is uncached; no cache coherency action needed. All four open items above are verified against `design_1.hwh` + PG080 v4.2 in M2-A §§3–4.
+
 ---
 
 ## 3. EGD side — libEGD
@@ -130,7 +132,7 @@ Threads vs single loop is an **implementation** choice; the **logical** separati
 
 **Option B — Sidecar process** — Separate process with shared memory / message queue between FIFO service and translator (cleaner isolation, more integration work).
 
-Record the chosen option in the next revision of this document.
+**Decision (closed by M2-D §3.2): Option A — Evolve in place** for the initial M3 implementation. The `aurora_adapter.h` interface is designed for in-process use; wrapping it for IPC adds complexity with no benefit at this stage. Option B (sidecar) is noted as the future path if the production system requires process-level fault isolation.
 
 ---
 
@@ -161,4 +163,4 @@ Align lab tests with:
 | ------- | ---- | ------ | ----- |
 | 0.1 | (initial) | — | Skeleton: Aurora + Axi_IO + libEGD + mediation; push/pull investigation framed |
 
-**Next edits:** Close Section 2.3 with BD-specific facts; add sequence diagrams for both directions; add API table for libEGD pages used.
+**Status:** Sections 2.3 and 4.3 placeholders closed by `docs/milestone2/M2-D_application_design.md` (2026-05-27). Threading model, buffer spec, EGD config fetch decisions, startup sequence, and M3 task list are all in M2-D. This document remains the architectural framing; M2-D is the detailed design.

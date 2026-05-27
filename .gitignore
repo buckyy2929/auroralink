@@ -1,1 +1,20 @@
 .DS_Store
+
+# Build / cross-compile artifacts (M2-C output, regenerable)
+out/
+build/
+*.o
+*.so
+*.so.*
+*.a
+
+# Vendor reference PDFs — kept locally for offline reading only
+docs/Reference_docs/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+Thumbs.db

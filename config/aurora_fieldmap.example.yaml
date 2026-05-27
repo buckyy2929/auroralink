@@ -1,0 +1,132 @@
+# =============================================================================
+# aurora_fieldmap.example.yaml
+#
+# Example field-map configuration for the protocol translator's Aurora
+# adapter (`bridge/include/aurora_adapter.h`).
+#
+# Every entry below is taken VERBATIM from the supplied CHIL reference at
+#   RTDS_Aurora_Link/Kria_CHIL_Firmware/PEBB_CHIL/xllfifo_interrupt_example_1/src/Axi_IO.c
+# This file is the design realisation of \u00a77 of docs/milestone2/M2-A_auroralink_findings.md
+# ("Configurable Field Map"): nothing here is invented, every word's
+# wire_type / local_type / scale matches the C-language struct initialiser
+# in Axi_IO.c.
+#
+# Loader expectations (formal schema in bridge/include/aurora_adapter.h):
+#   - rx.word_count MUST equal len(rx.fields), MUST equal Axi_IO.h:RECEIVE_LENGTH
+#   - tx.word_count MUST equal len(tx.fields), MUST equal Axi_IO.h:TRANSMIT_LENGTH
+#   - word_index is 0-based on the wire (word 0 is the first 32-bit beat
+#     after the AXI-Stream packet's start-of-frame).
+#   - wire_type values: s32 | u32 | float32
+#   - local_type values: s32 | u32 | float32 | float64 | packed_bits
+#   - scale is applied AFTER wire->local reinterpretation:
+#       local = (local_type) (scale * wire_value)
+#
+# Units convention (matches Axi_IO.c comments):
+#   - RTDS uses kA / kV / MW / MVA on the wire; we store A / V / W / VA locally.
+#   - That is why most float fields have scale = 1000 (UNIT_SCALE in Axi_IO.h)
+#     or scale = 1000000 (UNIT_SCALE * UNIT_SCALE for MW->W).
+#   - Boolean / integer fields use scale = 1.
+#
+# When the RTDS partner changes its frame layout, edit ONLY this file --
+# do not edit Axi_IO.c or the bridge source. The adapter rebuilds its RX/TX
+# tables from this config at startup.
+# =============================================================================
+
+schema_version: "1.0"
+
+aurora:
+  variant: aurora_8b10b           # PG046; matches top.xsa/design_1.hwh
+  line_rate_gbps: 2.0
+  lane_count: 1
+  lane_width_bytes: 4             # 32-bit AXI-Stream per beat
+  refclk_mhz: 125
+  framing_mode: framing           # tlast on last word per packet
+
+rx:
+  word_count: 37                  # Axi_IO.h: #define RECEIVE_LENGTH 37
+  fields:
+    - { word_index: 0,  name: key,                       wire_type: s32,     local_type: s32,     scale: 1.0,      notes: "Security/sync key; not decoded by controller" }
+    - { word_index: 1,  name: i_high,                    wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Phase A high-side current; kA->A" }
+    - { word_index: 2,  name: vhigh_B,                   wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Phase B AC voltage; kV->V" }
+    - { word_index: 3,  name: vhigh_A,                   wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Phase A AC voltage; kV->V" }
+    - { word_index: 4,  name: v_dcc,                     wire_type: float32, local_type: float64, scale: 1000.0,   notes: "DC capacitor voltage; kV->V" }
+    - { word_index: 5,  name: i_low,                     wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Low-side current; kA->A" }
+    - { word_index: 6,  name: rx_dummy_7,                wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Reserved by RTDS frame; unused locally" }
+    - { word_index: 7,  name: PEBB_NEXT_STATE_CMD,       wire_type: float32, local_type: float64, scale: 1.0,      notes: "Next state command" }
+    - { word_index: 8,  name: P_CMD,                     wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Active power command; MW (RTDS) -> kW (PLECS). scale=UNIT_SCALE per Axi_IO.c rxData9 comment" }
+    - { word_index: 9,  name: LOWSIDE_CONTACTOR_CMD,     wire_type: float32, local_type: float64, scale: 1.0,      notes: "Contactor command" }
+    - { word_index: 10, name: PEBB_POWER_LOWER_LIMIT,    wire_type: float32, local_type: float64, scale: 1000000.0, notes: "MW (RTDS) -> W (PLECS); UNIT_SCALE*UNIT_SCALE" }
+    - { word_index: 11, name: PEBB_POWER_UPPER_LIMIT,    wire_type: float32, local_type: float64, scale: 1000000.0, notes: "MW (RTDS) -> W (PLECS); UNIT_SCALE*UNIT_SCALE" }
+    - { word_index: 12, name: rx_dummy_13,               wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Reserved" }
+    - { word_index: 13, name: rx_dummy_14,               wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Reserved" }
+    - { word_index: 14, name: ctr,                       wire_type: s32,     local_type: s32,     scale: 1.0,      notes: "Sub-step counter" }
+    - { word_index: 15, name: rx_dummy_16,               wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Reserved" }
+    - { word_index: 16, name: rx_dummy_17,               wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Reserved" }
+    - { word_index: 17, name: rx_dummy_18,               wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Reserved" }
+    - { word_index: 18, name: rx_dummy_19,               wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Reserved" }
+    - { word_index: 19, name: V_CMD,                     wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Voltage command; kV->V" }
+    - { word_index: 20, name: ForceFault,                wire_type: float32, local_type: float64, scale: 1.0,      notes: "Force-fault command" }
+    - { word_index: 21, name: rx_dummy_22,               wire_type: float32, local_type: float64, scale: 1.0,      notes: "Reserved" }
+    - { word_index: 22, name: rx_dummy_23,               wire_type: float32, local_type: float64, scale: 1.0,      notes: "Reserved" }
+    - { word_index: 23, name: rx_dummy_24,               wire_type: float32, local_type: float64, scale: 1.0,      notes: "Reserved" }
+    - { word_index: 24, name: rx_dummy_25,               wire_type: float32, local_type: float64, scale: 1.0,      notes: "Reserved" }
+    - { word_index: 25, name: EN_GRID_SUPPORT,           wire_type: float32, local_type: float64, scale: 1.0,      notes: "Grid-support enable" }
+    - { word_index: 26, name: Q_CMD,                     wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Reactive power command; MVA (RTDS) -> kVA (PLECS); scale=UNIT_SCALE per rxData27 comment" }
+    - { word_index: 27, name: Q_LIMIT,                   wire_type: float32, local_type: float64, scale: 1000000.0, notes: "MVA (RTDS) -> VA (PLECS); UNIT_SCALE*UNIT_SCALE" }
+    - { word_index: 28, name: i_high_B,                  wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Phase B current; kA->A" }
+    - { word_index: 29, name: i_high_C,                  wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Phase C current; kA->A" }
+    - { word_index: 30, name: v_high_c,                  wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Phase C voltage; kV->V" }
+    - { word_index: 31, name: v_stator_A,                wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Stator voltage A; kV->V" }
+    - { word_index: 32, name: v_stator_B,                wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Stator voltage B; kV->V" }
+    - { word_index: 33, name: v_stator_C,                wire_type: float32, local_type: float64, scale: 1000.0,   notes: "Stator voltage C; kV->V" }
+    - { word_index: 34, name: run,                       wire_type: s32,     local_type: s32,     scale: 1.0,      notes: "1=run controller, 0=stop" }
+    - { word_index: 35, name: RXI_chil,                  wire_type: s32,     local_type: s32,     scale: 1.0,      notes: "Closed-loop flag" }
+    - { word_index: 36, name: seq,                       wire_type: s32,     local_type: s32,     scale: 1.0,      notes: "Sequence number (1..1000, wraps). Used by adapter to detect dropped frames." }
+
+  validation:
+    require_exact_length:    true   # discard frame if word count != word_count
+    nan_check_float_fields:  true   # set CHIL_error if any float field is NaN
+    sequence_continuity:     true   # set comm_glitch if seq != prev_seq + 1 (mod 1000)
+    comm_glitch_threshold:   10     # latches CHIL_error if exceeded; matches Axi_IO.c COMM_GLITCH_LIMIT
+
+tx:
+  word_count: 23                    # Axi_IO.h: #define TRANSMIT_LENGTH 23
+  fields:
+    - { word_index: 0,  name: phaseA_duty,               wire_type: float32, local_type: float64, scale: 1.0, notes: "PEBB_Control_Y.switch_1[0] -- AC Phase A duty" }
+    - { word_index: 1,  name: tx_dummy_2,                wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 2,  name: packed_bits,               wire_type: u32,     local_type: u32,     scale: 1.0, notes: "Bit-packed flags; see tx.bit_pack below" }
+    - { word_index: 3,  name: ctr,                       wire_type: s32,     local_type: s32,     scale: 1.0 }
+    - { word_index: 4,  name: tx_dummy_5,                wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 5,  name: tx_dummy_6,                wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 6,  name: tx_dummy_7,                wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 7,  name: tx_dummy_8,                wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 8,  name: tx_dummy_9,                wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 9,  name: tx_dummy_10,               wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 10, name: next_state,                wire_type: s32,     local_type: s32,     scale: 1.0 }
+    - { word_index: 11, name: tx_dummy_12,               wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 12, name: tx_dummy_13,               wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 13, name: tx_dummy_14,               wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 14, name: tx_dummy_15,               wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 15, name: tx_dummy_16,               wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 16, name: tx_dummy_17,               wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 17, name: phaseB_duty,               wire_type: float32, local_type: float64, scale: 1.0, notes: "PEBB_Control_Y.switch_1[1] -- AC Phase B duty" }
+    - { word_index: 18, name: phaseC_duty,               wire_type: float32, local_type: float64, scale: 1.0, notes: "PEBB_Control_Y.switch_1[2] -- AC Phase C duty" }
+    - { word_index: 19, name: current_state,             wire_type: s32,     local_type: s32,     scale: 1.0 }
+    - { word_index: 20, name: tx_dummy_21,               wire_type: float32, local_type: float64, scale: 1.0 }
+    - { word_index: 21, name: CHIL_error,                wire_type: s32,     local_type: s32,     scale: 1.0 }
+    - { word_index: 22, name: seq,                       wire_type: s32,     local_type: s32,     scale: 1.0, notes: "Mirror RX seq for closed-loop validation" }
+
+  # Bit-packed flags assembled into tx.fields[word_index=2] (packed_bits) at
+  # send time. Sources: PEBB_Control_Y boolean/double signals in Axi_IO.c
+  # bit0..bit7. See packBits() in Axi_IO.c.
+  bit_pack:
+    target_word_index: 2
+    bits:
+      - { bit_pos: 0, source: lowside_contact, source_type: double, notes: "0/1 from PEBB_Control_Y.lowside_contact" }
+      - { bit_pos: 1, source: enable,           source_type: double, notes: "0/1 from PEBB_Control_Y.enable" }
+      - { bit_pos: 2, source: highside_contact, source_type: double, notes: "0/1 from PEBB_Control_Y.highside_contact" }
+      - { bit_pos: 3, source: not_fault,        source_type: bool,   notes: "from PEBB_Control_Y.not_fault" }
+      - { bit_pos: 4, source: dummy_bool_tx,    source_type: bool,   notes: "Placeholder" }
+      - { bit_pos: 5, source: dummy_bool_tx,    source_type: bool,   notes: "Placeholder" }
+      - { bit_pos: 6, source: dummy_bool_tx,    source_type: bool,   notes: "Placeholder" }
+      - { bit_pos: 7, source: dummy_bool_tx,    source_type: bool,   notes: "Placeholder" }
